@@ -1,0 +1,96 @@
+/**
+ * API Endpoint: /api/search-description
+ * Search for ICD codes by clinical description
+ */
+
+import { NextRequest, NextResponse } from 'next/server'
+import { sql, handleDbError } from '../../../lib/db'
+
+export async function GET(request: NextRequest) {
+  try {
+    const searchParams = request.nextUrl.searchParams
+    const query = searchParams.get('query')
+    
+    if (!query || query.trim().length < 3) {
+      return NextResponse.json(
+        { error: 'Query must be at least 3 characters' },
+        { status: 400 }
+      )
+    }
+    
+    const searchTerms = query.trim().toLowerCase().split(/\s+/)
+    
+    // Search in ICD-10-CM descriptions
+    // Using word boundary regex for proper matching (not substring)
+    // This prevents matching "MI" in "miosis" or "anosmia"
+    const searchPattern = query.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    const icd10Results = await sql`
+      SELECT code, description
+      FROM icd10_codes
+      WHERE description ~* ${`(^|[^a-z])${searchPattern}([^a-z]|$)`}
+      ORDER BY LENGTH(description)
+      LIMIT 20
+    `
+    
+    // Note: ICD-9 table structure might be different
+    // Adjust if there's no description column
+    let icd9Results: any[] = []
+    try {
+      icd9Results = await sql`
+        SELECT code, '' as description
+        FROM icd9_codes
+        WHERE code ILIKE ${'%' + query.trim() + '%'}
+        LIMIT 10
+      `
+    } catch (e) {
+      // ICD-9 might not have descriptions, skip errors
+      console.log('ICD-9 search skipped:', e)
+    }
+    
+    // Combine results and calculate relevance
+    const allResults = [...icd10Results, ...icd9Results].map(row => {
+      const desc = (row.description || '').toLowerCase()
+      let relevance = 0
+      
+      // Exact phrase match
+      if (desc.includes(query.toLowerCase())) {
+        relevance = 1.0
+      } else {
+        // Calculate relevance based on matching terms
+        const matchCount = searchTerms.filter(term => desc.includes(term)).length
+        relevance = matchCount / searchTerms.length
+      }
+      
+      return {
+        code: row.code,
+        system: icd10Results.includes(row) ? 'ICD-10-CM' : 'ICD-9-CM',
+        description: row.description || `ICD code ${row.code}`,
+        relevance
+      }
+    })
+    
+    // Sort by relevance (highest first), then by description length
+    allResults.sort((a, b) => {
+      if (b.relevance !== a.relevance) {
+        return b.relevance - a.relevance
+      }
+      return a.description.length - b.description.length
+    })
+    
+    // Limit to top 15 results
+    const topResults = allResults.slice(0, 15)
+    
+    return NextResponse.json({
+      query,
+      count: topResults.length,
+      results: topResults
+    })
+    
+  } catch (error) {
+    console.error('Description search error:', error)
+    return NextResponse.json(
+      handleDbError(error),
+      { status: 500 }
+    )
+  }
+}

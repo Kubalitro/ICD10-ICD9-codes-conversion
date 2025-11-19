@@ -1,0 +1,409 @@
+
+export type Language = 'en' | 'es';
+
+export const translations = {
+    en: {
+        // Header
+        title: 'ICD Code Converter System',
+        subtitle: 'Medical diagnostic code conversion tool for ICD-10-CM and ICD-9-CM with integrated comorbidity classification (Elixhauser & Charlson Index)',
+        systemOperational: 'System Operational',
+        database: 'Database',
+
+        // Navigation
+        batchProcessing: 'Batch Processing',
+        documentation: 'Documentation',
+
+        // Search
+        searchByCode: 'Search by Code',
+        searchByDescription: 'Search by Description',
+        codeSearchHeader: 'Code Search',
+        icdCodeLabel: 'ICD-10-CM or ICD-9-CM Code',
+        enterCodeInstruction: 'Enter a complete code (e.g., E10.10) or a prefix (e.g., E10) for family search.',
+        executeSearch: 'Execute Search',
+        searching: 'Searching...',
+        sampleQueries: 'Sample Queries',
+        searchInstructionsHeader: 'Search Instructions',
+        searchInstructionsBody: 'Enter an ICD-10-CM or ICD-9-CM code in the search field to begin analysis',
+        specificCodeSearch: 'Specific code search',
+        familyCodeSearch: 'Family code search',
+
+        // Results Tabs
+        tabInformation: 'Information',
+        tabConversion: 'Conversion',
+        tabElixhauser: 'Elixhauser',
+        tabCharlson: 'Charlson',
+
+        // Information Tab
+        clinicalContext: 'Clinical Context',
+        codeSystem: 'Code System',
+        codeValue: 'Code Value',
+        codeType: 'Code Type',
+        specific: 'Specific',
+        family: 'Family',
+        completeBillable: 'Complete & Billable',
+        checkSpecificity: 'Check Specificity',
+        codeFamily: 'CODE FAMILY',
+
+        // Conversion Tab
+        conversionTo: 'Conversion to',
+        familyConversionSummary: 'Family Code Conversion Summary',
+        sourceFamilyCodes: 'Source Family Codes',
+        targetFamilies: 'Target Families',
+        totalConversions: 'Total Conversions',
+        targetCodeFamilies: 'Target Code Families:',
+        allConversions: 'All Conversions',
+        noConversionsFound: 'No conversions found for this code.',
+        approximate: 'Approximate',
+        noExactMap: 'No Exact Map',
+
+        // Elixhauser Tab
+        elixhauserComorbidities: 'Elixhauser Comorbidities',
+        category: 'category',
+        categories: 'categories',
+        noElixhauserFound: 'No Elixhauser comorbidities found for this code.',
+
+        // Charlson Tab
+        charlsonIndex: 'Charlson Comorbidity Index',
+        matchType: 'Match type',
+        exact: 'Exact',
+        score: 'Score',
+        noCharlsonFound: 'No Charlson score found for this code.',
+        charlsonDescription: 'The Charlson Comorbidity Index is a measure that predicts 10-year mortality. Higher scores indicate greater comorbidity burden and increased mortality risk.',
+
+        // Favorites
+        favoriteCodes: 'Favorite Codes',
+        noFavorites: 'No favorite codes yet. Click the star icon to save codes for quick access.',
+        clearAll: 'Clear All',
+        deleteFavoritesConfirm: 'Delete all favorite codes?',
+        yesDeleteAll: 'Yes, Delete All',
+        cancel: 'Cancel',
+        addToFavorites: 'Add to favorites',
+        removeFromFavorites: 'Remove from favorites',
+
+        // Info Cards
+        bidirectionalConversion: 'Bidirectional Conversion',
+        bidirectionalDesc: 'Converts codes between ICD-10-CM and ICD-9-CM using official CMS General Equivalence Mappings (GEMs).',
+        elixhauserTitle: 'Elixhauser Comorbidities',
+        elixhauserDesc: 'Classification into 39 comorbidity categories based on AHRQ methodology for risk adjustment.',
+        charlsonTitle: 'Charlson Index',
+        charlsonDesc: 'Calculates comorbidity score for mortality prediction and patient risk stratification.',
+
+        // Errors
+        errorHeader: 'ERROR',
+        searchError: 'An error occurred while searching for the code. Please try again.',
+        noCodeFound: 'Code not found. Try another code or prefix.',
+
+        // Footer
+        aboutApp: 'About the Application',
+        aboutAppDesc: 'Specialized tool for converting and analyzing ICD-10-CM and ICD-9-CM codes, designed for healthcare professionals, medical coders, and researchers.',
+        dataSources: 'Data Sources',
+        disclaimer: 'Disclaimer',
+        disclaimerText: 'This tool is for educational and reference purposes only. It does not replace professional clinical judgment or official coding guidelines.',
+        copyright: '© 2024 ICD Code Converter. All rights reserved.',
+
+        // Batch Page
+        batchProcessingTitle: 'Batch Processing',
+        batchProcessingDesc: 'Convert multiple ICD codes at once. Paste your codes below (one per line or comma-separated).',
+        codeEntry: 'Code Entry',
+        conversionDirection: 'Conversion Direction',
+        codesLabel: 'Enter ICD Codes',
+        codesPlaceholder10to9: 'E.g., E11.9, I10, J45.909...',
+        codesPlaceholder9to10: 'E.g., 250.00, 401.9, 493.90...',
+        processing: 'Processing...',
+        processCodes: 'Process Codes',
+        results: 'Results',
+        exportCSV: 'Export CSV',
+        noResultsYet: 'No results yet. Enter codes and click Process to see conversions.',
+        conversionCount: 'conversions found',
+        batchTipsTitle: 'Batch Processing Tips',
+        batchTip1: 'Enter one code per line or separate with commas',
+        batchTip2: 'Codes are automatically cleaned (dots/spaces removed)',
+        batchTip3: 'Invalid codes will be skipped',
+        batchTip4: 'Large batches may take a moment to process',
+        noConversionFound: 'No conversion found',
+        errorProcessing: 'Error processing',
+
+        // Docs Page
+        docsTitle: 'Documentation',
+        introTitle: 'Introduction',
+        introText1: 'The ICD Code Converter System is a comprehensive tool designed to bridge the gap between ICD-9-CM and ICD-10-CM coding systems. It leverages the Centers for Medicare & Medicaid Services (CMS) General Equivalence Mappings (GEMs) to provide accurate bidirectional conversions.',
+        introText2: 'Beyond simple conversion, the system integrates advanced clinical risk adjustment methodologies including the Elixhauser Comorbidity Index and the Charlson Comorbidity Index, providing immediate clinical context for diagnostic codes.',
+        icdSystemsTitle: 'ICD Systems Supported',
+        icd10Title: 'ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification)',
+        icd10Desc: 'The current standard for diagnostic coding in the US healthcare system.',
+        icd10List1: 'Format: 3-7 characters',
+        icd10List2: 'Structure: Alpha-numeric (e.g., E11.9)',
+        icd10List3: 'Specificity: High clinical detail',
+        icd10List4: 'Updates: Annual (October 1st)',
+        icd9Title: 'ICD-9-CM (International Classification of Diseases, 9th Revision, Clinical Modification)',
+        icd9Desc: 'The legacy coding system, still relevant for longitudinal studies and historical data analysis.',
+        icd9List1: 'Format: 3-5 characters',
+        icd9List2: 'Structure: Numeric (mostly) (e.g., 250.00)',
+        icd9List3: 'Specificity: Lower than ICD-10',
+        icd9List4: 'Legacy: Replaced Oct 1, 2015',
+        conversionTitle: 'Conversion Logic',
+        conversionDesc: 'The system uses the 2018 CMS GEMs files for authoritative mapping.',
+        mappingTypesTitle: 'Mapping Types',
+        mappingExact: 'Exact Match',
+        mappingExactDesc: 'Direct 1-to-1 correspondence between codes.',
+        mappingOneToMany: 'One-to-Many',
+        mappingOneToManyDesc: 'A single source code maps to multiple possible target codes (refinement).',
+        mappingManyToOne: 'Many-to-One',
+        mappingManyToOneDesc: 'Multiple source codes map to a single target code (generalization).',
+        mappingApprox: 'Approximate',
+        mappingApproxDesc: 'The match is clinically similar but not identical.',
+        elixhauserSource: 'Based on AHRQ comorbidity software v3.7',
+        elixhauserList: 'Identifies 31 comorbidity categories',
+        charlsonSource: 'Based on Charlson et al. (1987) and Deyo adaptation',
+        scoreInterpretation: 'Score Interpretation',
+        score0: 'Score 0',
+        score0Desc: 'Low mortality risk',
+        score1_2: 'Score 1-2',
+        score1_2Desc: 'Moderate mortality risk',
+        score3_4: 'Score 3-4',
+        score3_4Desc: 'High mortality risk',
+        score5plus: 'Score ≥5',
+        score5plusDesc: 'Very high mortality risk',
+        apiEndpointsTitle: 'API Endpoints',
+        apiDesc: 'The system exposes RESTful endpoints for integration:',
+        searchCode: 'Search for a code',
+        convertCode: 'Convert a code',
+        getElixhauser: 'Get Elixhauser data',
+        calcCharlson: 'Calculate Charlson score',
+        importantDisclaimer: 'IMPORTANT DISCLAIMER',
+        disclaimerFull1: 'This tool is intended for educational, research, and reference purposes only.',
+        disclaimerFull2: 'It is NOT a substitute for professional medical advice, diagnosis, or treatment. It is also NOT a substitute for professional certified medical coding.',
+        disclaimerFull3: 'While we strive for accuracy using official CMS GEMs, coding guidelines change, and clinical nuances require human judgment. Always verify codes with official manuals.',
+
+        // Quick Actions
+        copyCode: 'Copy Code',
+        copyDesc: 'Copy Description',
+        copyBoth: 'Copy Both',
+        exportPDF: 'Export PDF',
+
+        copied: 'Copied!',
+        failedToCopy: 'Failed to copy',
+
+        // Clinical Alerts
+        nonSpecificCode: 'NON-SPECIFIC CODE',
+        nonSpecificCodeMsg: 'This code is unspecified. Consider using a more specific code for better clinical documentation.',
+        codeFamilySearch: 'CODE FAMILY SEARCH',
+        codeFamilySearchMsg: 'You are viewing a category or family of codes. Specific codes are listed below.',
+        documentationRequired: 'DOCUMENTATION REQUIRED',
+        documentationRequiredMsg: 'Ensure clinical documentation supports the specific manifestation or complication.',
+        billableCode: 'BILLABLE CODE',
+        billableCodeMsg: 'This code is valid for submission for HIPAA-covered transactions.',
+
+        // Related Codes
+        relatedClinicalCodes: 'Related Clinical Codes',
+        frequentlyCodedTogether: 'Frequently Coded Together',
+        typicalComplications: 'Typical Complications',
+        excludesDoNotCodeTogether: 'Excludes (Do Not Code Together)',
+
+        // Search History
+        searchHistory: 'Search History',
+        clearHistory: 'Clear'
+    },
+    es: {
+        // Header
+        title: 'Sistema de Conversión de Códigos CIE',
+        subtitle: 'Herramienta de conversión de códigos de diagnóstico médico para CIE-10-CM y CIE-9-CM con clasificación de comorbilidad integrada (Índice de Elixhauser y Charlson)',
+        systemOperational: 'Sistema Operativo',
+        database: 'Base de Datos',
+
+        // Navigation
+        batchProcessing: 'Procesamiento por Lotes',
+        documentation: 'Documentación',
+
+        // Search
+        searchByCode: 'Buscar por Código',
+        searchByDescription: 'Buscar por Descripción',
+        codeSearchHeader: 'Búsqueda de Códigos',
+        icdCodeLabel: 'Código CIE-10-CM o CIE-9-CM',
+        enterCodeInstruction: 'Ingrese un código completo (ej. E10.10) o un prefijo (ej. E10) para búsqueda familiar.',
+        executeSearch: 'Ejecutar Búsqueda',
+        searching: 'Buscando...',
+        sampleQueries: 'Consultas de Ejemplo',
+        searchInstructionsHeader: 'Instrucciones de Búsqueda',
+        searchInstructionsBody: 'Ingrese un código CIE-10-CM o CIE-9-CM en el campo de búsqueda para comenzar el análisis',
+        specificCodeSearch: 'Búsqueda de código específico',
+        familyCodeSearch: 'Búsqueda de familia de códigos',
+
+        // Results Tabs
+        tabInformation: 'Información',
+        tabConversion: 'Conversión',
+        tabElixhauser: 'Elixhauser',
+        tabCharlson: 'Charlson',
+
+        // Information Tab
+        clinicalContext: 'Contexto Clínico',
+        codeSystem: 'Sistema de Códigos',
+        codeValue: 'Valor del Código',
+        codeType: 'Tipo de Código',
+        specific: 'Específico',
+        family: 'Familia',
+        completeBillable: 'Completo y Facturable',
+        checkSpecificity: 'Verificar Especificidad',
+        codeFamily: 'FAMILIA DE CÓDIGOS',
+
+        // Conversion Tab
+        conversionTo: 'Conversión a',
+        familyConversionSummary: 'Resumen de Conversión de Familia',
+        sourceFamilyCodes: 'Códigos de Familia Fuente',
+        targetFamilies: 'Familias Destino',
+        totalConversions: 'Conversiones Totales',
+        targetCodeFamilies: 'Familias de Códigos Destino:',
+        allConversions: 'Todas las Conversiones',
+        noConversionsFound: 'No se encontraron conversiones para este código.',
+        approximate: 'Aproximado',
+        noExactMap: 'Sin Mapa Exacto',
+
+        // Elixhauser Tab
+        elixhauserComorbidities: 'Comorbilidades de Elixhauser',
+        category: 'categoría',
+        categories: 'categorías',
+        noElixhauserFound: 'No se encontraron comorbilidades de Elixhauser para este código.',
+
+        // Charlson Tab
+        charlsonIndex: 'Índice de Comorbilidad de Charlson',
+        matchType: 'Tipo de coincidencia',
+        exact: 'Exacto',
+        score: 'Puntaje',
+        noCharlsonFound: 'No se encontró puntaje de Charlson para este código.',
+        charlsonDescription: 'El Índice de Comorbilidad de Charlson es una medida que predice la mortalidad a 10 años. Puntajes más altos indican mayor carga de comorbilidad y mayor riesgo de mortalidad.',
+
+        // Favorites
+        favoriteCodes: 'Códigos Favoritos',
+        noFavorites: 'No hay códigos favoritos aún. Haga clic en el icono de estrella para guardar códigos para acceso rápido.',
+        clearAll: 'Borrar Todo',
+        deleteFavoritesConfirm: '¿Eliminar todos los códigos favoritos?',
+        yesDeleteAll: 'Sí, Eliminar Todo',
+        cancel: 'Cancelar',
+        addToFavorites: 'Agregar a favoritos',
+        removeFromFavorites: 'Eliminar de favoritos',
+
+        // Info Cards
+        bidirectionalConversion: 'Conversión Bidireccional',
+        bidirectionalDesc: 'Convierte códigos entre CIE-10-CM y CIE-9-CM utilizando los Mapeos de Equivalencia General (GEMs) oficiales de CMS.',
+        elixhauserTitle: 'Comorbilidades de Elixhauser',
+        elixhauserDesc: 'Clasificación en 39 categorías de comorbilidad basada en la metodología AHRQ para ajuste de riesgo.',
+        charlsonTitle: 'Índice de Charlson',
+        charlsonDesc: 'Calcula el puntaje de comorbilidad para predicción de mortalidad y estratificación de riesgo del paciente.',
+
+        // Errors
+        errorHeader: 'ERROR',
+        searchError: 'Ocurrió un error al buscar el código. Por favor intente nuevamente.',
+        noCodeFound: 'Código no encontrado. Intente otro código o prefijo.',
+
+        // Footer
+        aboutApp: 'Sobre la Aplicación',
+        aboutAppDesc: 'Herramienta especializada para convertir y analizar códigos CIE-10-CM y CIE-9-CM, diseñada para profesionales de la salud, codificadores médicos e investigadores.',
+        dataSources: 'Fuentes de Datos',
+        disclaimer: 'Aviso Legal',
+        disclaimerText: 'Esta herramienta es solo para fines educativos y de referencia. No reemplaza el juicio clínico profesional ni las pautas oficiales de codificación.',
+        copyright: '© 2024 Conversor de Códigos CIE. Todos los derechos reservados.',
+
+        // Batch Page
+        batchProcessingTitle: 'Procesamiento por Lotes',
+        batchProcessingDesc: 'Convierta múltiples códigos CIE a la vez. Pegue sus códigos a continuación (uno por línea o separados por comas).',
+        codeEntry: 'Entrada de Códigos',
+        conversionDirection: 'Dirección de Conversión',
+        codesLabel: 'Ingrese Códigos CIE',
+        codesPlaceholder10to9: 'Ej., E11.9, I10, J45.909...',
+        codesPlaceholder9to10: 'Ej., 250.00, 401.9, 493.90...',
+        processing: 'Procesando...',
+        processCodes: 'Procesar Códigos',
+        results: 'Resultados',
+        exportCSV: 'Exportar CSV',
+        noResultsYet: 'Aún no hay resultados. Ingrese códigos y haga clic en Procesar para ver las conversiones.',
+        conversionCount: 'conversiones encontradas',
+        batchTipsTitle: 'Consejos de Procesamiento por Lotes',
+        batchTip1: 'Ingrese un código por línea o separe con comas',
+        batchTip2: 'Los códigos se limpian automáticamente (se eliminan puntos/espacios)',
+        batchTip3: 'Los códigos inválidos se omitirán',
+        batchTip4: 'Los lotes grandes pueden tardar un momento en procesarse',
+        noConversionFound: 'No se encontró conversión',
+        errorProcessing: 'Error al procesar',
+
+        // Docs Page
+        docsTitle: 'Documentación',
+        introTitle: 'Introducción',
+        introText1: 'El Sistema de Conversión de Códigos CIE es una herramienta integral diseñada para cerrar la brecha entre los sistemas de codificación CIE-9-CM y CIE-10-CM. Aprovecha los Mapeos de Equivalencia General (GEMs) de los Centros de Servicios de Medicare y Medicaid (CMS) para proporcionar conversiones bidireccionales precisas.',
+        introText2: 'Más allá de la simple conversión, el sistema integra metodologías avanzadas de ajuste de riesgo clínico, incluido el Índice de Comorbilidad de Elixhauser y el Índice de Comorbilidad de Charlson, proporcionando contexto clínico inmediato para los códigos de diagnóstico.',
+        icdSystemsTitle: 'Sistemas CIE Soportados',
+        icd10Title: 'CIE-10-CM (Clasificación Internacional de Enfermedades, 10.ª Revisión, Modificación Clínica)',
+        icd10Desc: 'El estándar actual para la codificación de diagnósticos en el sistema de salud de EE. UU.',
+        icd10List1: 'Formato: 3-7 caracteres',
+        icd10List2: 'Estructura: Alfanumérica (ej., E11.9)',
+        icd10List3: 'Especificidad: Alto detalle clínico',
+        icd10List4: 'Actualizaciones: Anuales (1 de octubre)',
+        icd9Title: 'CIE-9-CM (Clasificación Internacional de Enfermedades, 9.ª Revisión, Modificación Clínica)',
+        icd9Desc: 'El sistema de codificación heredado, aún relevante para estudios longitudinales y análisis de datos históricos.',
+        icd9List1: 'Formato: 3-5 caracteres',
+        icd9List2: 'Estructura: Numérica (mayormente) (ej., 250.00)',
+        icd9List3: 'Especificidad: Menor que CIE-10',
+        icd9List4: 'Legado: Reemplazado el 1 de oct de 2015',
+        conversionTitle: 'Lógica de Conversión',
+        conversionDesc: 'El sistema utiliza los archivos GEMs de CMS de 2018 para el mapeo autorizado.',
+        mappingTypesTitle: 'Tipos de Mapeo',
+        mappingExact: 'Coincidencia Exacta',
+        mappingExactDesc: 'Correspondencia directa 1 a 1 entre códigos.',
+        mappingOneToMany: 'Uno a Muchos',
+        mappingOneToManyDesc: 'Un solo código fuente se asigna a múltiples códigos destino posibles (refinamiento).',
+        mappingManyToOne: 'Muchos a Uno',
+        mappingManyToOneDesc: 'Múltiples códigos fuente se asignan a un solo código destino (generalización).',
+        mappingApprox: 'Aproximado',
+        mappingApproxDesc: 'La coincidencia es clínicamente similar pero no idéntica.',
+        elixhauserSource: 'Basado en el software de comorbilidad AHRQ v3.7',
+        elixhauserList: 'Identifica 31 categorías de comorbilidad',
+        charlsonSource: 'Basado en Charlson et al. (1987) y adaptación de Deyo',
+        scoreInterpretation: 'Interpretación del Puntaje',
+        score0: 'Puntaje 0',
+        score0Desc: 'Bajo riesgo de mortalidad',
+        score1_2: 'Puntaje 1-2',
+        score1_2Desc: 'Riesgo de mortalidad moderado',
+        score3_4: 'Puntaje 3-4',
+        score3_4Desc: 'Alto riesgo de mortalidad',
+        score5plus: 'Puntaje ≥5',
+        score5plusDesc: 'Muy alto riesgo de mortalidad',
+        apiEndpointsTitle: 'Endpoints de API',
+        apiDesc: 'El sistema expone endpoints RESTful para integración:',
+        searchCode: 'Buscar un código',
+        convertCode: 'Convertir un código',
+        getElixhauser: 'Obtener datos de Elixhauser',
+        calcCharlson: 'Calcular puntaje de Charlson',
+        importantDisclaimer: 'AVISO LEGAL IMPORTANTE',
+        disclaimerFull1: 'Esta herramienta está destinada únicamente a fines educativos, de investigación y de referencia.',
+        disclaimerFull2: 'NO sustituye el consejo médico profesional, diagnóstico o tratamiento. TAMPOCO sustituye la codificación médica certificada profesional.',
+        disclaimerFull3: 'Si bien nos esforzamos por la precisión utilizando los GEMs oficiales de CMS, las pautas de codificación cambian y los matices clínicos requieren juicio humano. Verifique siempre los códigos con los manuales oficiales.',
+
+        // Quick Actions
+        copyCode: 'Copiar Código',
+        copyDesc: 'Copiar Descripción',
+        copyBoth: 'Copiar Ambos',
+        exportPDF: 'Exportar PDF',
+
+        copied: '¡Copiado!',
+        failedToCopy: 'Error al copiar',
+
+        // Clinical Alerts
+        nonSpecificCode: 'CÓDIGO NO ESPECÍFICO',
+        nonSpecificCodeMsg: 'Este código no es específico. Considere usar un código más específico para una mejor documentación clínica.',
+        codeFamilySearch: 'BÚSQUEDA DE FAMILIA DE CÓDIGOS',
+        codeFamilySearchMsg: 'Está viendo una categoría o familia de códigos. Los códigos específicos se enumeran a continuación.',
+        documentationRequired: 'DOCUMENTACIÓN REQUERIDA',
+        documentationRequiredMsg: 'Asegúrese de que la documentación clínica respalde la manifestación o complicación específica.',
+        billableCode: 'CÓDIGO FACTURABLE',
+        billableCodeMsg: 'Este código es válido para su presentación en transacciones cubiertas por HIPAA.',
+
+        // Related Codes
+        relatedClinicalCodes: 'Códigos Clínicos Relacionados',
+        frequentlyCodedTogether: 'Frecuentemente Codificados Juntos',
+        typicalComplications: 'Complicaciones Típicas',
+        excludesDoNotCodeTogether: 'Excluye (No Codificar Juntos)',
+
+        // Search History
+        searchHistory: 'Historial de búsqueda',
+        clearHistory: 'Borrar'
+    }
+};

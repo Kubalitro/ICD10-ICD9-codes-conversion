@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor ICD10 a ICD9 - Con Elixhauser y Charlson</title>
+    <link rel="stylesheet" href="styles-professional.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <select id="languageSelector" onchange="changeLanguage()">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+
+            <h1 id="mainTitle">ICD Code Conversion System</h1>
+            <p id="mainSubtitle">Medical coding database | ICD-10-CM ⇄ ICD-9-CM</p>
+            <nav>
+                <a href="index.html" class="active" id="navSearch">Code Lookup</a>
+                <a href="docs.html" id="navDocs">Documentation</a>
+            </nav>
+        </header>
+
+        <!-- Disclaimer Legal -->
+        <div class="disclaimer" id="disclaimer">
+            <h2 id="disclaimerTitle">Legal Disclaimer and Limitation of Liability</h2>
+            <p id="disclaimerP1">
+                Esta aplicación es una herramienta educativa y de referencia. El creador <strong>no es un profesional de la salud</strong> 
+                y <strong>no se responsabiliza</strong> del uso que se le dé a esta aplicación ni de las consecuencias derivadas de su uso.
+            </p>
+            <p id="disclaimerP2">
+                <strong>Todos los códigos y conversiones deben ser revisados y validados por profesionales médicos cualificados.</strong> 
+                No utilice esta información para diagnósticos, tratamientos o decisiones clínicas sin la supervisión apropiada.
+            </p>
+            <p id="disclaimerP3">
+                Los datos provienen de fuentes oficiales (CMS.org, NBER.org, HCUP-US-AHRQ.gov, PMC-NCBI.NLM.NIH.gov), 
+                pero pueden contener errores o estar desactualizados.
+            </p>
+        </div>
+
+        <!-- Área de Búsqueda -->
+        <main>
+            <div class="search-section">
+                <h2>Buscar Código</h2>
+                <div class="search-box">
+                    <input type="text" 
+                           id="codeInput" 
+                           placeholder="Ej: E10.10, E10, 25000" 
+                           autocomplete="off">
+                    <button id="searchBtn">Buscar</button>
+                    <button id="clearBtn" class="secondary">Limpiar</button>
+                </div>
+                <p class="help-text">
+                    Note: You can search for specific codes (E10.10) or entire families (E10). 
+                    The notation "E10.x" means all codes in the E10 family.
+                </p>
+            </div>
+
+            <!-- Historial de Búsquedas -->
+            <div class="history-section" id="historySection" style="display: none;">
+                <h3>Recent Searches</h3>
+                <div id="historyList"></div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Search Results</h2>
+                
+                <!-- Código Original -->
+                <div class="result-card">
+                    <h3>Original Code</h3>
+                    <div id="originalCodeInfo"></div>
+                </div>
+
+                <!-- Conversión ICD -->
+                <div class="result-card">
+                    <h3>ICD Conversion</h3>
+                    <div id="conversionInfo"></div>
+                </div>
+
+                <!-- Elixhauser -->
+                <div class="result-card">
+                    <h3>Elixhauser Comorbidities</h3>
+                    <div id="elixhauserInfo"></div>
+                </div>
+
+                <!-- Charlson -->
+                <div class="result-card">
+                    <h3>Charlson Index</h3>
+                    <div id="charlsonInfo"></div>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Cargando datos...</p>
+            </div>
+
+            <!-- Error Messages -->
+            <div class="error" id="errorMsg" style="display: none;"></div>
+        </main>
+
+        <footer>
+            <p>
+                Datos oficiales de 
+                <a href="https://www.cms.gov" target="_blank">CMS.gov</a>, 
+                <a href="https://www.nber.org" target="_blank">NBER.org</a>, 
+                <a href="https://hcup-us.ahrq.gov" target="_blank">HCUP-US-AHRQ.gov</a>, 
+                <a href="https://pmc.ncbi.nlm.nih.gov" target="_blank">PMC-NCBI.NLM.NIH.gov</a>
+            </p>
+            <p>© 2025 - Herramienta educativa sin garantías</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

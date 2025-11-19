@@ -1,0 +1,1114 @@
+{
+  "I21": {
+    "condition": "Myocardial Infarction",
+    "score": 1
+  },
+  "I22": {
+    "condition": "Myocardial Infarction",
+    "score": 1
+  },
+  "I25.2": {
+    "condition": "Old Myocardial Infarction",
+    "score": 1
+  },
+  "I09.9": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I11.0": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I13.0": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I13.2": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I25.5": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I42": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I43": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I50": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "P29.0": {
+    "condition": "Congestive Heart Failure",
+    "score": 1
+  },
+  "I70": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I71": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I73.1": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I73.8": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I73.9": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I77.1": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I79.0": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "I79.2": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "K55.1": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "K55.8": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "K55.9": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "Z95.8": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "Z95.9": {
+    "condition": "Peripheral Vascular Disease",
+    "score": 1
+  },
+  "G45": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "G46": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "H34.0": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I60": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I61": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I62": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I63": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I64": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I65": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I66": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I67": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I68": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "I69": {
+    "condition": "Cerebrovascular Disease",
+    "score": 1
+  },
+  "F00": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "F01": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "F02": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "F03": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "F04": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "F05.1": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "G30": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "G31.1": {
+    "condition": "Dementia",
+    "score": 1
+  },
+  "I27.8": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "I27.9": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J40": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J41": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J42": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J43": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J44": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J45": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J46": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J47": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J60": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J61": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J62": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J63": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J64": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J65": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J66": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "J67": {
+    "condition": "Chronic Pulmonary Disease",
+    "score": 1
+  },
+  "M05": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M06": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M31.5": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M32": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M33": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M34": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M35.1": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M35.3": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "M36.0": {
+    "condition": "Rheumatic Disease",
+    "score": 1
+  },
+  "K25": {
+    "condition": "Peptic Ulcer Disease",
+    "score": 1
+  },
+  "K26": {
+    "condition": "Peptic Ulcer Disease",
+    "score": 1
+  },
+  "K27": {
+    "condition": "Peptic Ulcer Disease",
+    "score": 1
+  },
+  "K28": {
+    "condition": "Peptic Ulcer Disease",
+    "score": 1
+  },
+  "B18": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K70.0": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K70.1": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K70.2": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K70.3": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K70.9": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K71.3": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K71.4": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K71.5": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K71.7": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K73": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K74": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.0": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.2": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.3": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.4": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.8": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "K76.9": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "Z94.4": {
+    "condition": "Mild Liver Disease",
+    "score": 1
+  },
+  "E08.0": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E08.1": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E09.0": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E09.1": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E10.0": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E10.1": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E11.0": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E11.1": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E13.0": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E13.1": {
+    "condition": "Diabetes without Complications",
+    "score": 1
+  },
+  "E08.2": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.3": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.4": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.5": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.6": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.7": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.8": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E08.9": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.2": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.3": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.4": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.5": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.6": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.7": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.8": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E09.9": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.2": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.3": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.4": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.5": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.6": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.7": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.8": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E10.9": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.2": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.3": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.4": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.5": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.6": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.7": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.8": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E11.9": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.2": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.3": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.4": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.5": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.6": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.7": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.8": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "E13.9": {
+    "condition": "Diabetes with Complications",
+    "score": 2
+  },
+  "G04.1": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G11.4": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G80.1": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G80.2": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G81": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G82": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.0": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.1": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.2": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.3": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.4": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "G83.9": {
+    "condition": "Hemiplegia or Paraplegia",
+    "score": 2
+  },
+  "I12.0": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "I13.1": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.2": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.3": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.4": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.5": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.6": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N03.7": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.2": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.3": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.4": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.5": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.6": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N05.7": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N18": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N19": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "N25.0": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "Z49.0": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "Z49.1": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "Z49.2": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "Z94.0": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "Z99.2": {
+    "condition": "Renal Disease",
+    "score": 2
+  },
+  "C00": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C01": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C02": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C03": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C04": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C05": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C06": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C07": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C08": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C09": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C10": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C11": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C12": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C13": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C14": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C15": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C16": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C17": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C18": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C19": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C20": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C21": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C22": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C23": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C24": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C25": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C26": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C30": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C31": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C32": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C33": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C34": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C37": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C38": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C39": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C40": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C41": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C43": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C45": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C46": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C47": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C48": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C49": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C50": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C51": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C52": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C53": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C54": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C55": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C56": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C57": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C58": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C60": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C61": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C62": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C63": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C64": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C65": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C66": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C67": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C68": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C69": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C70": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C71": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C72": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C73": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C74": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C75": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C76": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C81": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C82": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C83": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C84": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C85": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C86": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C88": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C90": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C91": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C92": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C93": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C94": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C95": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "C96": {
+    "condition": "Any Malignancy",
+    "score": 2
+  },
+  "I85.0": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "I85.9": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "I86.4": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "I98.2": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K70.4": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K71.1": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K72": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K76.5": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K76.6": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "K76.7": {
+    "condition": "Moderate or Severe Liver Disease",
+    "score": 3
+  },
+  "C77": {
+    "condition": "Metastatic Solid Tumor",
+    "score": 6
+  },
+  "C78": {
+    "condition": "Metastatic Solid Tumor",
+    "score": 6
+  },
+  "C79": {
+    "condition": "Metastatic Solid Tumor",
+    "score": 6
+  },
+  "C80": {
+    "condition": "Metastatic Solid Tumor",
+    "score": 6
+  },
+  "B20": {
+    "condition": "AIDS/HIV",
+    "score": 6
+  }
+}

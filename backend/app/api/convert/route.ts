@@ -1,6 +1,7 @@
 /**
  * API Endpoint: /api/convert
- * Convert between ICD-10 and ICD-9 codes
+ * Convert ICD codes between ICD-10 and ICD-9
+ * Supports family conversion with .x notation (e.g., I50.x → 428.x)
  */
 
 import { NextRequest, NextResponse } from 'next/server';
@@ -15,13 +16,80 @@ export async function GET(request: NextRequest) {
 
     if (!code || !from || !to) {
       return NextResponse.json(
-        { error: 'Required parameters: code, from, to' },
+        { error: 'Code, from, and to parameters are required' },
         { status: 400 }
       );
     }
 
+    // Check if user wants family conversion with .x notation (e.g., I50.x)
+    const isFamilyConversion = code.includes('.x') || code.endsWith('x');
+
     // Remove dots from ICD codes (stored without dots in DB)
-    const cleanCode = code.trim().toUpperCase().replace(/\./g, '');
+    let cleanCode = code.trim().toUpperCase().replace(/\./g, '');
+    if (isFamilyConversion) {
+      cleanCode = cleanCode.replace(/X$/g, ''); // Remove trailing X
+    }
+
+    // ICD-10 to ICD-9 - Family Conversion
+    if (from === 'icd10' && to === 'icd9' && isFamilyConversion) {
+      // Get all codes in the family
+      const familyCodes = await sql`
+        SELECT code, description
+        FROM icd10_codes
+        WHERE code LIKE ${cleanCode + '%'}
+        ORDER BY code
+        LIMIT 100
+      `;
+
+      if (familyCodes.length === 0) {
+        return NextResponse.json(
+          { error: 'No codes found in this family', code: cleanCode },
+          { status: 404 }
+        );
+      }
+
+      // Get all conversions for the family
+      const familyConversions = await sql`
+        SELECT DISTINCT
+          m.icd9_code as target_code,
+          m.icd10_code as source_code,
+          ic.description as source_description
+        FROM icd10_to_icd9_mapping m
+        LEFT JOIN icd10_codes ic ON m.icd10_code = ic.code
+        WHERE m.icd10_code LIKE ${cleanCode + '%'}
+        ORDER BY m.icd9_code ASC
+      `;
+
+      // Group by ICD-9 family (get the prefix)
+      const icd9Families = new Set();
+      familyConversions.forEach(conv => {
+        // Extract family prefix (e.g., 428 from 42810)
+        const prefix = conv.target_code.substring(0, 3);
+        icd9Families.add(prefix);
+      });
+
+      return NextResponse.json({
+        sourceCode: cleanCode,
+        sourceCodeOriginal: code,
+        sourceSystem: 'ICD-10-CM',
+        targetSystem: 'ICD-9-CM',
+        isFamily: true,
+        isFamilyConversion: true,
+        sourceFamilyCount: familyCodes.length,
+        sourceFamilyCodes: familyCodes.map(c => ({
+          code: c.code,
+          description: c.description
+        })),
+        targetFamilies: Array.from(icd9Families).map(prefix => `${prefix}.x`),
+        targetFamiliesCount: icd9Families.size,
+        allConversions: familyConversions.map(c => ({
+          sourceCode: c.source_code,
+          sourceDescription: c.source_description,
+          targetCode: c.target_code
+        })),
+        totalConversions: familyConversions.length
+      });
+    }
 
     // ICD-10 to ICD-9
     if (from === 'icd10' && to === 'icd9') {
@@ -36,7 +104,7 @@ export async function GET(request: NextRequest) {
           m.scenario,
           m.choice_list
         FROM icd10_to_icd9_mapping m
-        JOIN icd10_codes ic ON m.icd10_code = ic.code
+        LEFT JOIN icd10_codes ic ON m.icd10_code = ic.code
         WHERE m.icd10_code = ${cleanCode}
         ORDER BY m.approximate ASC, m.icd9_code ASC
       `;
@@ -65,6 +133,66 @@ export async function GET(request: NextRequest) {
       });
     }
 
+    // ICD-9 to ICD-10 - Family Conversion
+    if (from === 'icd9' && to === 'icd10' && isFamilyConversion) {
+      // Get all codes in the family
+      const familyCodes = await sql`
+        SELECT code
+        FROM icd9_codes
+        WHERE code LIKE ${cleanCode + '%'}
+        ORDER BY code
+        LIMIT 100
+      `;
+
+      if (familyCodes.length === 0) {
+        return NextResponse.json(
+          { error: 'No codes found in this family', code: cleanCode },
+          { status: 404 }
+        );
+      }
+
+      // Get all conversions for the family
+      const familyConversions = await sql`
+        SELECT DISTINCT
+          m.icd10_code as target_code,
+          m.icd9_code as source_code,
+          ic.description as target_description
+        FROM icd9_to_icd10_mapping m
+        LEFT JOIN icd10_codes ic ON m.icd10_code = ic.code
+        WHERE m.icd9_code LIKE ${cleanCode + '%'}
+        ORDER BY m.icd10_code ASC
+      `;
+
+      // Group by ICD-10 family (get the prefix)
+      const icd10Families = new Set();
+      familyConversions.forEach(conv => {
+        // Extract family prefix (e.g., I50 from I5010)
+        const prefix = conv.target_code.substring(0, 3);
+        icd10Families.add(prefix);
+      });
+
+      return NextResponse.json({
+        sourceCode: cleanCode,
+        sourceCodeOriginal: code,
+        sourceSystem: 'ICD-9-CM',
+        targetSystem: 'ICD-10-CM',
+        isFamily: true,
+        isFamilyConversion: true,
+        sourceFamilyCount: familyCodes.length,
+        sourceFamilyCodes: familyCodes.map(c => ({
+          code: c.code
+        })),
+        targetFamilies: Array.from(icd10Families).map(prefix => `${prefix}.x`),
+        targetFamiliesCount: icd10Families.size,
+        allConversions: familyConversions.map(c => ({
+          sourceCode: c.source_code,
+          targetCode: c.target_code,
+          targetDescription: c.target_description
+        })),
+        totalConversions: familyConversions.length
+      });
+    }
+
     // ICD-9 to ICD-10
     if (from === 'icd9' && to === 'icd10') {
       const conversions = await sql`
@@ -78,7 +206,7 @@ export async function GET(request: NextRequest) {
           m.scenario,
           m.choice_list
         FROM icd9_to_icd10_mapping m
-        JOIN icd10_codes ic ON m.icd10_code = ic.code
+        LEFT JOIN icd10_codes ic ON m.icd10_code = ic.code
         WHERE m.icd9_code = ${cleanCode}
         ORDER BY m.approximate ASC, m.icd10_code ASC
       `;

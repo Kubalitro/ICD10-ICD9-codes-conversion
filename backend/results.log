@@ -1,0 +1,30 @@
+Starting Comprehensive Verification...
+================================================================
+Code       | Status | Details
+----------------------------------------------------------------
+MATCH      E10.10     | Web: 1 | DB: 1
+MATCH      I10        | Web: 3 | DB: 3
+MATCH      J44.9      | Web: 3 | DB: 3
+MATCH      F41.1      | Web: 1 | DB: 1
+MATCH      M54.5      | Web: 1 | DB: 1
+ERROR      M54.50     | API Err: Status 404 | DB Err: None | DB Count: 0
+MATCH      R05        | Web: 1 | DB: 1
+ERROR      R05.9      | API Err: Status 404 | DB Err: None | DB Count: 0
+ERROR      S82.801A   | API Err: Status 404 | DB Err: None | DB Count: 0
+MATCH      Z00.00     | Web: 1 | DB: 1
+MATCH      A00.0      | Web: 1 | DB: 1
+MATCH      C50.911    | Web: 1 | DB: 1
+MATCH      O80        | Web: 1 | DB: 1
+MATCH      E11.9      | Web: 1 | DB: 1
+MATCH      B34.9      | Web: 1 | DB: 1
+MATCH      K21.9      | Web: 1 | DB: 1
+MATCH      N39.0      | Web: 1 | DB: 1
+MATCH      R10.9      | Web: 1 | DB: 1
+MATCH      H10.9      | Web: 1 | DB: 1
+MATCH      J02.9      | Web: 1 | DB: 1
+MATCH      L03.90     | Web: 1 | DB: 1
+MATCH      M25.50     | Web: 1 | DB: 1
+ERROR      R51.9      | API Err: Status 404 | DB Err: None | DB Count: 0
+ERROR      U07.1      | API Err: Status 404 | DB Err: None | DB Count: 0
+================================================================
+Verification Complete.

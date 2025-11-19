@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Conversor ICD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Documentación</h1>
+            <p class="subtitle">Guía completa y referencias del Conversor ICD</p>
+            <nav>
+                <a href="index.html">Buscador</a>
+                <a href="docs.html" class="active">Documentación</a>
+            </nav>
+        </header>
+
+        <div class="docs-content">
+            <h2>📖 Introducción</h2>
+            <p>
+                Esta aplicación web permite convertir códigos diagnósticos entre las clasificaciones ICD-10-CM e ICD-9-CM, 
+                además de proporcionar información sobre comorbilidades Elixhauser y el índice de Charlson.
+            </p>
+
+            <h2>🔍 Cómo Usar la Aplicación</h2>
+            
+            <h3>Búsqueda de Códigos</h3>
+            <p>Puede buscar códigos de dos maneras:</p>
+            <ul>
+                <li><strong>Código específico:</strong> Introduzca un código completo como <code>E10.10</code> o <code>25000</code></li>
+                <li><strong>Familia de códigos:</strong> Introduzca un código parcial como <code>E10</code> para obtener todos los códigos relacionados</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Consejo:</strong> La notación <code>E10.x</code> o <code>E10.XX</code> indica que se incluyen todos los códigos 
+                que comienzan con E10 (por ejemplo: E10.10, E10.11, E10.21, etc.)
+            </div>
+
+            <h3>Interpretación de Resultados</h3>
+            <p>La aplicación muestra cuatro secciones de resultados:</p>
+            
+            <ol>
+                <li>
+                    <strong>Código Original:</strong> Muestra el código buscado y su descripción (si está disponible)
+                </li>
+                <li>
+                    <strong>Conversión ICD:</strong> Lista los códigos equivalentes en la otra clasificación
+                    <ul>
+                        <li>Códigos con fondo azul: conversión exacta</li>
+                        <li>Códigos con fondo morado: familia de códigos</li>
+                        <li>Badge "Aproximado": la conversión no es exacta (1:1)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Comorbilidades Elixhauser:</strong> Muestra las comorbilidades asociadas al código
+                </li>
+                <li>
+                    <strong>Índice Charlson:</strong> Calcula el score de comorbilidad de Charlson y muestra las condiciones encontradas
+                </li>
+            </ol>
+
+            <h2>📊 Sistemas de Clasificación</h2>
+
+            <h3>ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification)</h3>
+            <p>
+                Sistema de codificación utilizado actualmente en Estados Unidos desde octubre de 2015. 
+                Proporciona mayor especificidad que ICD-9 con aproximadamente 70,000 códigos.
+            </p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Códigos alfanuméricos de 3-7 caracteres</li>
+                <li>Primer carácter siempre es una letra</li>
+                <li>Mayor especificidad anatómica y clínica</li>
+                <li>Ejemplo: <code>E10.10</code> - Diabetes tipo 1 con cetoacidosis sin coma</li>
+            </ul>
+
+            <h3>ICD-9-CM (International Classification of Diseases, 9th Revision, Clinical Modification)</h3>
+            <p>
+                Sistema de codificación anterior utilizado en Estados Unidos hasta septiembre de 2015. 
+                Contiene aproximadamente 14,000 códigos.
+            </p>
+            <p><strong>Características:</strong></p>
+            <ul>
+                <li>Códigos de 3-5 caracteres</li>
+                <li>Principalmente numéricos, algunos comienzan con V o E</li>
+                <li>Menor especificidad que ICD-10</li>
+                <li>Ejemplo: <code>250.00</code> - Diabetes mellitus sin mención de complicación</li>
+            </ul>
+
+            <h2>🏷️ Comorbilidades Elixhauser</h2>
+            <p>
+                Las comorbilidades Elixhauser son un conjunto de 31 condiciones clínicas utilizadas para ajustar 
+                el riesgo en estudios de resultados de salud. Fueron desarrolladas por Anne Elixhauser y colaboradores.
+            </p>
+
+            <h3>Condiciones Incluidas</h3>
+            <p>Las 31 comorbilidades Elixhauser refinadas incluyen:</p>
+            <ul style="column-count: 2;">
+                <li>AIDS</li>
+                <li>ALCOHOL (Abuso de alcohol)</li>
+                <li>ANEMDEF (Anemia por deficiencia)</li>
+                <li>AUTOIMMUNE (Enfermedades autoinmunes)</li>
+                <li>BLDLOSS (Pérdida de sangre)</li>
+                <li>CANCER_LEUK (Leucemia)</li>
+                <li>CANCER_LYMPH (Linfoma)</li>
+                <li>CANCER_METS (Cáncer metastásico)</li>
+                <li>CANCER_NSITU (Cáncer in situ)</li>
+                <li>CANCER_SOLID (Tumor sólido)</li>
+                <li>CBVD_POA (Enfermedad cerebrovascular presente en admisión)</li>
+                <li>CBVD_SQLA (Enfermedad cerebrovascular como secuela)</li>
+                <li>COAG (Coagulopatía)</li>
+                <li>DEMENTIA (Demencia)</li>
+                <li>DEPRESS (Depresión)</li>
+                <li>DIAB_CX (Diabetes con complicaciones)</li>
+                <li>DIAB_UNCX (Diabetes sin complicaciones)</li>
+                <li>DRUG_ABUSE (Abuso de drogas)</li>
+                <li>HF (Insuficiencia cardíaca)</li>
+                <li>HTN_CX (Hipertensión complicada)</li>
+                <li>HTN_UNCX (Hipertensión sin complicaciones)</li>
+                <li>LIVER_MLD (Enfermedad hepática leve)</li>
+                <li>LIVER_SEV (Enfermedad hepática severa)</li>
+                <li>LUNG_CHRONIC (Enfermedad pulmonar crónica)</li>
+                <li>NEURO_MOVT (Trastornos del movimiento)</li>
+                <li>NEURO_OTH (Otros trastornos neurológicos)</li>
+                <li>NEURO_SEIZ (Trastornos convulsivos)</li>
+                <li>OBESE (Obesidad)</li>
+                <li>PARALYSIS (Parálisis)</li>
+                <li>PERIVASC (Enfermedad vascular periférica)</li>
+                <li>PSYCHOSES (Psicosis)</li>
+                <li>PULMCIRC (Trastornos circulatorios pulmonares)</li>
+                <li>RENLFL_MOD (Insuficiencia renal moderada)</li>
+                <li>RENLFL_SEV (Insuficiencia renal severa)</li>
+                <li>THYROID_HYPO (Hipotiroidismo)</li>
+                <li>THYROID_OTH (Otros trastornos tiroideos)</li>
+                <li>ULCER_PEPTIC (Úlcera péptica)</li>
+                <li>VALVE (Enfermedad valvular)</li>
+                <li>WGHTLOSS (Pérdida de peso)</li>
+            </ul>
+
+            <h2>📈 Índice de Charlson</h2>
+            <p>
+                El Índice de Comorbilidad de Charlson es un método de categorización de comorbilidades que predice 
+                la mortalidad a un año en pacientes con múltiples condiciones. Fue desarrollado por Mary Charlson en 1987.
+            </p>
+
+            <h3>Puntuación</h3>
+            <p>Cada condición recibe un peso basado en el riesgo ajustado de mortalidad:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Puntos</th>
+                        <th>Condiciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            Infarto de miocardio<br>
+                            Insuficiencia cardíaca congestiva<br>
+                            Enfermedad vascular periférica<br>
+                            Enfermedad cerebrovascular<br>
+                            Demencia<br>
+                            Enfermedad pulmonar crónica<br>
+                            Enfermedad del tejido conectivo<br>
+                            Úlcera péptica<br>
+                            Enfermedad hepática leve<br>
+                            Diabetes sin complicaciones
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            Hemiplejía o paraplejía<br>
+                            Enfermedad renal<br>
+                            Diabetes con complicaciones<br>
+                            Cualquier tumor maligno
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            Enfermedad hepática moderada o severa
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            Tumor sólido metastásico<br>
+                            AIDS/HIV
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="warning-box">
+                <strong>⚠️ Nota Importante:</strong> El sistema aplica jerarquía automáticamente. Por ejemplo, si un paciente 
+                tiene "Diabetes con complicaciones" (2 puntos), no se suma también "Diabetes sin complicaciones" (1 punto). 
+                Solo se cuenta la condición más grave.
+            </div>
+
+            <h3>Interpretación del Score</h3>
+            <ul>
+                <li><strong>0 puntos:</strong> Sin comorbilidades significativas</li>
+                <li><strong>1-2 puntos:</strong> Comorbilidad leve</li>
+                <li><strong>3-4 puntos:</strong> Comorbilidad moderada</li>
+                <li><strong>≥5 puntos:</strong> Comorbilidad severa</li>
+            </ul>
+
+            <h2>🔗 Fuentes de Datos y Referencias</h2>
+
+            <h3>Mapeos ICD-10 ↔ ICD-9</h3>
+            <a href="https://www.cms.gov/medicare/coding-billing/icd-10-codes" target="_blank" class="reference-link">
+                <strong>CMS.gov</strong> - Centers for Medicare & Medicaid Services<br>
+                General Equivalence Mappings (GEMs) oficiales
+            </a>
+
+            <a href="https://www.nber.org/research/data/icd-9-cm-and-icd-10-cm-and-icd-10-pcs-crosswalk-or-general-equivalence-mappings" target="_blank" class="reference-link">
+                <strong>NBER.org</strong> - National Bureau of Economic Research<br>
+                ICD-9-CM y ICD-10-CM Crosswalks
+            </a>
+
+            <h3>Comorbilidades Elixhauser</h3>
+            <a href="https://hcup-us.ahrq.gov/toolssoftware/comorbidityicd10/comorbidity_icd10.jsp" target="_blank" class="reference-link">
+                <strong>HCUP-US-AHRQ.gov</strong> - Healthcare Cost and Utilization Project<br>
+                Elixhauser Comorbidity Software Refined for ICD-10-CM
+            </a>
+
+            <p><strong>Publicaciones clave:</strong></p>
+            <ul>
+                <li>Elixhauser A, et al. "Comorbidity measures for use with administrative data." Med Care. 1998;36(1):8-27.</li>
+                <li>Quan H, et al. "Coding algorithms for defining comorbidities in ICD-9-CM and ICD-10 administrative data." Med Care. 2005;43(11):1130-1139.</li>
+            </ul>
+
+            <h3>Índice de Charlson</h3>
+            <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6684052/" target="_blank" class="reference-link">
+                <strong>PMC-NCBI.NLM.NIH.gov</strong> - PubMed Central<br>
+                "Charlson Comorbidity Index: ICD-9 Update and ICD-10 Translation" (CDMF CCI)
+            </a>
+
+            <p><strong>Publicaciones clave:</strong></p>
+            <ul>
+                <li>Charlson ME, et al. "A new method of classifying prognostic comorbidity in longitudinal studies: development and validation." J Chronic Dis. 1987;40(5):373-383.</li>
+                <li>Deyo RA, et al. "Adapting a clinical comorbidity index for use with ICD-9-CM administrative databases." J Clin Epidemiol. 1992;45(6):613-619.</li>
+                <li>Quan H, et al. "Updating and validating the Charlson comorbidity index and score for risk adjustment in hospital discharge abstracts using data from 6 countries." Am J Epidemiol. 2011;173(6):676-682.</li>
+                <li>Cartwright J, et al. "Charlson Comorbidity Index: ICD-9 Update and ICD-10 Translation." Am Health Drug Benefits. 2019;12(4):188-197.</li>
+            </ul>
+
+            <h2>⚙️ Metodología Técnica</h2>
+
+            <h3>Conversión de Códigos</h3>
+            <p>
+                La conversión entre ICD-10 e ICD-9 utiliza los General Equivalence Mappings (GEMs) oficiales de CMS. 
+                Estos mapeos incluyen:
+            </p>
+            <ul>
+                <li><strong>Mapeos 1:1:</strong> Un código ICD-10 corresponde a un código ICD-9</li>
+                <li><strong>Mapeos 1:N:</strong> Un código ICD-10 puede corresponder a múltiples códigos ICD-9</li>
+                <li><strong>Mapeos N:1:</strong> Múltiples códigos ICD-10 pueden corresponder a un código ICD-9</li>
+                <li><strong>Mapeos aproximados:</strong> Marcados con el indicador "approximate" cuando la equivalencia no es exacta</li>
+            </ul>
+
+            <h3>Búsqueda por Familia</h3>
+            <p>
+                Cuando se busca un código parcial (como "E10"), la aplicación busca todos los códigos que comienzan 
+                con esa secuencia. Esto permite:
+            </p>
+            <ul>
+                <li>Encontrar todas las variantes de un diagnóstico</li>
+                <li>Ver el rango completo de especificidad disponible</li>
+                <li>Identificar todas las conversiones posibles para una familia de códigos</li>
+            </ul>
+
+            <h3>Algoritmo de Charlson</h3>
+            <p>
+                El cálculo del índice Charlson sigue este proceso:
+            </p>
+            <ol>
+                <li>Busca primero en códigos ICD-10 (preferencia)</li>
+                <li>Si no encuentra coincidencias, busca en códigos ICD-9</li>
+                <li>Aplica coincidencias exactas y por familia (códigos que comienzan con el mismo prefijo)</li>
+                <li>Aplica jerarquía: condiciones más graves sobrescriben las menos graves del mismo tipo</li>
+                <li>Suma los puntos de todas las condiciones únicas encontradas</li>
+            </ol>
+
+            <h2>🔐 Privacidad y Almacenamiento</h2>
+            <p>
+                La aplicación funciona completamente en el navegador del usuario. Los datos:
+            </p>
+            <ul>
+                <li>✅ Se cargan una sola vez desde archivos JSON locales</li>
+                <li>✅ No se envían a ningún servidor externo</li>
+                <li>✅ El historial de búsqueda se guarda solo en localStorage del navegador</li>
+                <li>✅ Puede usar la aplicación sin conexión a internet después de la carga inicial</li>
+            </ul>
+
+            <h2>❓ Preguntas Frecuentes</h2>
+
+            <h3>¿Por qué algunos códigos muestran "Aproximado"?</h3>
+            <p>
+                ICD-10 tiene mucha más especificidad que ICD-9. Cuando un código ICD-10 muy específico se convierte 
+                a ICD-9, a veces no hay un equivalente exacto, solo uno aproximado que captura la condición general.
+            </p>
+
+            <h3>¿Por qué no encuentro comorbilidades Elixhauser para algunos códigos?</h3>
+            <p>
+                Las comorbilidades Elixhauser solo están definidas para códigos ICD-10-CM y solo para condiciones 
+                que son relevantes como comorbilidades en estudios de salud. No todos los códigos diagnósticos 
+                tienen una comorbilidad Elixhauser asignada.
+            </p>
+
+            <h3>¿Cómo se aplica la jerarquía en el índice Charlson?</h3>
+            <p>
+                El índice Charlson tiene reglas específicas de jerarquía:
+            </p>
+            <ul>
+                <li>"Diabetes con complicaciones" excluye "Diabetes sin complicaciones"</li>
+                <li>"Enfermedad hepática severa" excluye "Enfermedad hepática leve"</li>
+                <li>"Tumor metastásico" puede coexistir con "Cualquier tumor maligno"</li>
+            </ul>
+
+            <h3>¿Puedo usar esta aplicación para codificación médica oficial?</h3>
+            <p>
+                <strong>NO.</strong> Esta aplicación es solo para referencia educativa. La codificación médica 
+                oficial debe ser realizada por profesionales certificados usando las guías oficiales de codificación 
+                y considerando el contexto clínico completo.
+            </p>
+
+            <h2>📝 Limitaciones y Advertencias</h2>
+
+            <div class="warning-box">
+                <ul>
+                    <li>Los mapeos GEMs no son siempre bidireccionales perfectos</li>
+                    <li>Algunos códigos ICD-10 no tienen equivalente directo en ICD-9</li>
+                    <li>Los datos pueden no incluir las últimas actualizaciones de los códigos</li>
+                    <li>El contexto clínico completo puede afectar la elección del código correcto</li>
+                    <li>Las reglas de codificación varían según el país y el contexto (inpatient, outpatient, etc.)</li>
+                    <li>Esta aplicación no incluye códigos de procedimientos (ICD-10-PCS, ICD-9-CM Vol 3)</li>
+                </ul>
+            </div>
+
+            <h2>📄 Licencia y Créditos</h2>
+            <p>
+                Esta aplicación es de código abierto y se proporciona "tal cual" sin garantías de ningún tipo.
+                Los datos utilizados provienen de fuentes gubernamentales y académicas de dominio público.
+            </p>
+
+            <p><strong>Fuentes de datos:</strong></p>
+            <ul>
+                <li>CMS.gov - General Equivalence Mappings</li>
+                <li>NBER.org - ICD Crosswalks</li>
+                <li>HCUP-US-AHRQ.gov - Elixhauser Comorbidity Software</li>
+                <li>PMC-NCBI.NLM.NIH.gov - Charlson Comorbidity Index Research</li>
+            </ul>
+
+            <h2>📧 Contacto y Soporte</h2>
+            <p>
+                Esta es una herramienta educativa desarrollada de forma independiente. 
+                Para preguntas sobre codificación médica oficial, consulte con profesionales certificados 
+                o las guías oficiales de CMS y WHO.
+            </p>
+
+            <div class="info-box">
+                <p>
+                    <strong>Última actualización de datos:</strong> 2025-2026<br>
+                    <strong>Versión ICD-10-CM:</strong> 2026<br>
+                    <strong>Elixhauser:</strong> Versión Refinada 2025.1
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <a href="index.html">← Volver al Buscador</a>
+            </p>
+            <p>© 2025 - Herramienta educativa sin garantías</p>
+        </footer>
+    </div>
+</body>
+</html>

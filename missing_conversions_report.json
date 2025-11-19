@@ -1,0 +1,432 @@
+{
+  "total_icd10_codes": 74719,
+  "icd10_with_conversion": 69832,
+  "icd10_without_conversion": 5879,
+  "percentage_missing": 7.87,
+  "families_affected": 421,
+  "top_families": [
+    {
+      "prefix": "S99",
+      "count": 378,
+      "examples": [
+        "S99001A",
+        "S99001B",
+        "S99001D",
+        "S99001G",
+        "S99001K"
+      ]
+    },
+    {
+      "prefix": "S02",
+      "count": 318,
+      "examples": [
+        "S02101A",
+        "S02101B",
+        "S02101D",
+        "S02101G",
+        "S02101K"
+      ]
+    },
+    {
+      "prefix": "O35",
+      "count": 175,
+      "examples": [
+        "O3500X0",
+        "O3500X1",
+        "O3500X2",
+        "O3500X3",
+        "O3500X4"
+      ]
+    },
+    {
+      "prefix": "N80",
+      "count": 135,
+      "examples": [
+        "N8000",
+        "N8001",
+        "N8002",
+        "N8003",
+        "N80101"
+      ]
+    },
+    {
+      "prefix": "W44",
+      "count": 126,
+      "examples": [
+        "W44A0XA",
+        "W44A0XD",
+        "W44A0XS",
+        "W44A1XA",
+        "W44A1XD"
+      ]
+    },
+    {
+      "prefix": "L98",
+      "count": 122,
+      "examples": [
+        "L98415",
+        "L98416",
+        "L98418",
+        "L98425",
+        "L98426"
+      ]
+    },
+    {
+      "prefix": "T83",
+      "count": 111,
+      "examples": [
+        "T83011A",
+        "T83011D",
+        "T83011S",
+        "T83012A",
+        "T83012D"
+      ]
+    },
+    {
+      "prefix": "S31",
+      "count": 108,
+      "examples": [
+        "S31106A",
+        "S31106D",
+        "S31106S",
+        "S31107A",
+        "S31107D"
+      ]
+    },
+    {
+      "prefix": "V29",
+      "count": 96,
+      "examples": [
+        "V29001A",
+        "V29001D",
+        "V29001S",
+        "V29008A",
+        "V29008D"
+      ]
+    },
+    {
+      "prefix": "S06",
+      "count": 92,
+      "examples": [
+        "S060XAA",
+        "S060XAD",
+        "S060XAS",
+        "S061XAA",
+        "S061XAD"
+      ]
+    },
+    {
+      "prefix": "T40",
+      "count": 90,
+      "examples": [
+        "T40411A",
+        "T40411D",
+        "T40411S",
+        "T40412A",
+        "T40412D"
+      ]
+    },
+    {
+      "prefix": "T85",
+      "count": 84,
+      "examples": [
+        "T85113A",
+        "T85113D",
+        "T85113S",
+        "T85123A",
+        "T85123D"
+      ]
+    },
+    {
+      "prefix": "Y35",
+      "count": 78,
+      "examples": [
+        "Y35009A",
+        "Y35009D",
+        "Y35009S",
+        "Y35019A",
+        "Y35019D"
+      ]
+    },
+    {
+      "prefix": "L97",
+      "count": 63,
+      "examples": [
+        "L97105",
+        "L97106",
+        "L97108",
+        "L97115",
+        "L97116"
+      ]
+    },
+    {
+      "prefix": "M84",
+      "count": 60,
+      "examples": [
+        "M84750A",
+        "M84750D",
+        "M84750G",
+        "M84750K",
+        "M84750P"
+      ]
+    },
+    {
+      "prefix": "E10",
+      "count": 55,
+      "examples": [
+        "E103211",
+        "E103212",
+        "E103213",
+        "E103219",
+        "E103291"
+      ]
+    },
+    {
+      "prefix": "E11",
+      "count": 55,
+      "examples": [
+        "E1110",
+        "E1111",
+        "E113211",
+        "E113212",
+        "E113213"
+      ]
+    },
+    {
+      "prefix": "S20",
+      "count": 54,
+      "examples": [
+        "S20213A",
+        "S20213D",
+        "S20213S",
+        "S20214A",
+        "S20214D"
+      ]
+    },
+    {
+      "prefix": "V86",
+      "count": 54,
+      "examples": [
+        "V8605XA",
+        "V8605XD",
+        "V8605XS",
+        "V8606XA",
+        "V8606XD"
+      ]
+    },
+    {
+      "prefix": "E08",
+      "count": 52,
+      "examples": [
+        "E083211",
+        "E083212",
+        "E083213",
+        "E083219",
+        "E083291"
+      ]
+    }
+  ],
+  "important_missing": [
+    {
+      "code": "C50A0",
+      "description": "Malignant inflammatory neoplasm of unspecified breast"
+    },
+    {
+      "code": "C50A1",
+      "description": "Malignant inflammatory neoplasm of right breast"
+    },
+    {
+      "code": "C50A2",
+      "description": "Malignant inflammatory neoplasm of left breast"
+    },
+    {
+      "code": "E103211",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, right eye"
+    },
+    {
+      "code": "E103212",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, left eye"
+    },
+    {
+      "code": "E103213",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, bilateral"
+    },
+    {
+      "code": "E103219",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+    },
+    {
+      "code": "E103291",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, right eye"
+    },
+    {
+      "code": "E103292",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, left eye"
+    },
+    {
+      "code": "E103293",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, bilateral"
+    },
+    {
+      "code": "E103299",
+      "description": "Type 1 diabetes mellitus with mild nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+    },
+    {
+      "code": "E103311",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, right eye"
+    },
+    {
+      "code": "E103312",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, left eye"
+    },
+    {
+      "code": "E103313",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, bilateral"
+    },
+    {
+      "code": "E103319",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+    },
+    {
+      "code": "E103391",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, right eye"
+    },
+    {
+      "code": "E103392",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, left eye"
+    },
+    {
+      "code": "E103393",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, bilateral"
+    },
+    {
+      "code": "E103399",
+      "description": "Type 1 diabetes mellitus with moderate nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+    },
+    {
+      "code": "E103411",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, right eye"
+    },
+    {
+      "code": "E103412",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, left eye"
+    },
+    {
+      "code": "E103413",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, bilateral"
+    },
+    {
+      "code": "E103419",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy with macular edema, unspecified eye"
+    },
+    {
+      "code": "E103491",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, right eye"
+    },
+    {
+      "code": "E103492",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, left eye"
+    },
+    {
+      "code": "E103493",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, bilateral"
+    },
+    {
+      "code": "E103499",
+      "description": "Type 1 diabetes mellitus with severe nonproliferative diabetic retinopathy without macular edema, unspecified eye"
+    },
+    {
+      "code": "E103511",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, right eye"
+    },
+    {
+      "code": "E103512",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, left eye"
+    },
+    {
+      "code": "E103513",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, bilateral"
+    },
+    {
+      "code": "E103519",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with macular edema, unspecified eye"
+    },
+    {
+      "code": "E103521",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, right eye"
+    },
+    {
+      "code": "E103522",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, left eye"
+    },
+    {
+      "code": "E103523",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, bilateral"
+    },
+    {
+      "code": "E103529",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment involving the macula, unspecified eye"
+    },
+    {
+      "code": "E103531",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, right eye"
+    },
+    {
+      "code": "E103532",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, left eye"
+    },
+    {
+      "code": "E103533",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, bilateral"
+    },
+    {
+      "code": "E103539",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with traction retinal detachment not involving the macula, unspecified eye"
+    },
+    {
+      "code": "E103541",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, right eye"
+    },
+    {
+      "code": "E103542",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, left eye"
+    },
+    {
+      "code": "E103543",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, bilateral"
+    },
+    {
+      "code": "E103549",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy with combined traction retinal detachment and rhegmatogenous retinal detachment, unspecified eye"
+    },
+    {
+      "code": "E103551",
+      "description": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, right eye"
+    },
+    {
+      "code": "E103552",
+      "description": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, left eye"
+    },
+    {
+      "code": "E103553",
+      "description": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, bilateral"
+    },
+    {
+      "code": "E103559",
+      "description": "Type 1 diabetes mellitus with stable proliferative diabetic retinopathy, unspecified eye"
+    },
+    {
+      "code": "E103591",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, right eye"
+    },
+    {
+      "code": "E103592",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, left eye"
+    },
+    {
+      "code": "E103593",
+      "description": "Type 1 diabetes mellitus with proliferative diabetic retinopathy without macular edema, bilateral"
+    }
+  ],
+  "unidirectional_count": 669
+}

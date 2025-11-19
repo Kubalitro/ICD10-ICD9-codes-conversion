@@ -20,12 +20,42 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // Check if user wants family search with .x notation (e.g., I50.x)
+    const isFamilySearch = code.includes('.x') || code.endsWith('x');
+    
     // Remove dots from ICD codes (stored without dots in DB)
-    const cleanCode = code.trim().toUpperCase().replace(/\./g, '');
+    // For family search, remove the 'x' as well
+    let cleanCode = code.trim().toUpperCase().replace(/\./g, '');
+    if (isFamilySearch) {
+      cleanCode = cleanCode.replace(/X$/g, ''); // Remove trailing X
+    }
     let result: any = null;
 
     // Search ICD-10
     if (type === 'auto' || type === 'icd10') {
+      // If user explicitly requested family search with .x notation
+      if (isFamilySearch) {
+        const familyResults = await sql`
+          SELECT code, description
+          FROM icd10_codes
+          WHERE code LIKE ${cleanCode + '%'}
+          ORDER BY code
+          LIMIT 100
+        `;
+
+        if (familyResults.length > 0) {
+          return NextResponse.json({
+            code: cleanCode,
+            system: 'ICD-10-CM',
+            description: `Family code ${code} - ${familyResults.length} codes found`,
+            isFamily: true,
+            isFamilySearch: true,
+            familyCodes: familyResults,
+            totalCount: familyResults.length
+          });
+        }
+      }
+      
       if (fuzzy) {
         // Fuzzy search by description
         const icd10Results = await sql`
@@ -84,6 +114,29 @@ export async function GET(request: NextRequest) {
 
     // Search ICD-9
     if (type === 'auto' || type === 'icd9') {
+      // If user explicitly requested family search with .x notation
+      if (isFamilySearch) {
+        const familyResults = await sql`
+          SELECT code
+          FROM icd9_codes
+          WHERE code LIKE ${cleanCode + '%'}
+          ORDER BY code
+          LIMIT 100
+        `;
+
+        if (familyResults.length > 0) {
+          return NextResponse.json({
+            code: cleanCode,
+            system: 'ICD-9-CM',
+            description: `Family code ${code} - ${familyResults.length} codes found`,
+            isFamily: true,
+            isFamilySearch: true,
+            familyCodes: familyResults,
+            totalCount: familyResults.length
+          });
+        }
+      }
+      
       const icd9Result = await sql`
         SELECT code
         FROM icd9_codes

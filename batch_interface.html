@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch ICD Code Processor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        h1 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        .radio-group {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        .radio-group label {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .radio-group input {
+            margin-right: 8px;
+        }
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #1e3a8a;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #6b7280;
+            color: white;
+            margin-left: 10px;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #1e3a8a;
+        }
+        .spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #1e3a8a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .error {
+            background: #fee2e2;
+            border: 2px solid #fecaca;
+            color: #991b1b;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .results {
+            display: none;
+            margin-top: 30px;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .stat-card {
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+        .stat-card p {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .blue { background: #dbeafe; color: #1e40af; }
+        .green { background: #dcfce7; color: #166534; }
+        .red { background: #fee2e2; color: #991b1b; }
+        .purple { background: #e0e7ff; color: #4338ca; }
+        .section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .conversion-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border-left: 4px solid #1e3a8a;
+        }
+        .code-badge {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+        .description {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+        .charlson-item, .elixhauser-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .score-badge {
+            background: #1e3a8a;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        .total-score {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            pointer-events: none;
+        }
+        .autocomplete-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 2px solid #1e3a8a;
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .autocomplete-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s;
+        }
+        .autocomplete-item:hover {
+            background: #f8fafc;
+        }
+        .autocomplete-item:last-child {
+            border-bottom: none;
+        }
+        .autocomplete-code {
+            font-weight: 700;
+            color: #1e3a8a;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+        .autocomplete-desc {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+        .autocomplete-match {
+            background: #fef3c7;
+            padding: 0 2px;
+        }
+        .no-results {
+            padding: 15px;
+            text-align: center;
+            color: #64748b;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Language Selector -->
+        <div style="text-align: right; margin-bottom: 15px;">
+            <label style="font-weight: 600; margin-right: 10px; color: #64748b;">🌐 Language:</label>
+            <select id="languageSelector" onchange="changeLanguage()" style="padding: 8px 15px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 14px; cursor: pointer; background: white;">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+            </select>
+        </div>
+
+        <h1 id="title">📋 Batch ICD Code Processor</h1>
+        <p class="subtitle" id="subtitle">Procesa múltiples códigos ICD simultáneamente con puntuaciones agregadas de comorbilidad</p>
+
+        <div class="error" id="error"></div>
+
+        <!-- Search / Autocomplete -->
+        <div class="search-container">
+            <label id="searchLabel" style="display: block; font-weight: 600; margin-bottom: 10px; color: #334155;">
+                🔍 Buscar código ICD por código o descripción:
+            </label>
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Ej: diabetes, C509, infarto, I21..."
+                autocomplete="off"
+            />
+            <span class="search-icon">🔍</span>
+            <div id="autocompleteDropdown" class="autocomplete-dropdown"></div>
+        </div>
+
+        <div>
+            <label id="codesLabel" style="display: block; font-weight: 600; margin-bottom: 10px; color: #334155;">
+                Introducir Códigos ICD (separados por comas, espacios o líneas):
+            </label>
+            <textarea id="codesInput" placeholder="Ej:&#10;C509, I509, J449, N185, B20&#10;o&#10;C509&#10;I509&#10;J449&#10;N185&#10;B20"></textarea>
+
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="system" value="icd10" checked>
+                    ICD-10-CM
+                </label>
+                <label>
+                    <input type="radio" name="system" value="icd9">
+                    ICD-9-CM
+                </label>
+            </div>
+
+            <button class="btn-primary" onclick="processBatch()">🔄 Procesar Códigos</button>
+            <button class="btn-secondary" onclick="clearResults()">🗑️ Limpiar</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Procesando códigos...</p>
+        </div>
+
+        <div class="results" id="results">
+            <!-- Summary Stats -->
+            <div class="stats">
+                <div class="stat-card blue">
+                    <h3 id="totalCodes">0</h3>
+                    <p>Códigos Totales</p>
+                </div>
+                <div class="stat-card green">
+                    <h3 id="successCodes">0</h3>
+                    <p>Convertidos</p>
+                </div>
+                <div class="stat-card red">
+                    <h3 id="failedCodes">0</h3>
+                    <p>Fallidos</p>
+                </div>
+                <div class="stat-card purple">
+                    <h3 id="successRate">0%</h3>
+                    <p>Tasa de Éxito</p>
+                </div>
+            </div>
+
+            <!-- Charlson Section -->
+            <div class="section">
+                <h2>📊 Índice Charlson (Agregado)</h2>
+                <div class="total-score" id="charlsonScore">0</div>
+                <p style="text-align: center; color: #64748b; margin-bottom: 20px;">
+                    Basado en <span id="charlsonCondCount">0</span> condición(es)
+                </p>
+                <div id="charlsonList"></div>
+            </div>
+
+            <!-- Elixhauser Section -->
+            <div class="section">
+                <h2>🏷️ Categorías Elixhauser (Agregadas)</h2>
+                <p style="text-align: center; margin-bottom: 15px;">
+                    <span style="font-size: 2rem; font-weight: 700; color: #059669;" id="elixhauserCount">0</span>
+                    categorías únicas encontradas
+                </p>
+                <div id="elixhauserList"></div>
+            </div>
+
+            <!-- Conversions Section -->
+            <div class="section">
+                <h2>🔄 Conversiones Individuales</h2>
+                <div id="conversionsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Internationalization (i18n)
+        const translations = {
+            es: {
+                title: "📋 Procesador Batch de Códigos ICD",
+                subtitle: "Procesa múltiples códigos ICD simultáneamente con puntuaciones agregadas de comorbilidad",
+                searchLabel: "🔍 Buscar código ICD por código o descripción:",
+                searchPlaceholder: "Ej: diabetes, C509, infarction, I21...",
+                codesLabel: "Introducir Códigos ICD (separados por comas, espacios o líneas):",
+                codesPlaceholder: "Ej:\\nC509, I509, J449, N185, B20\\no\\nC509\\nI509\\nJ449\\nN185\\nB20",
+                btnProcess: "🔄 Procesar Códigos",
+                btnClear: "🗑️ Limpiar",
+                processing: "Procesando códigos...",
+                errorNoCode: "Por favor, introduzca al menos un código",
+                errorNoCodes: "No se encontraron códigos válidos",
+                errorProcessing: "Error al procesar códigos",
+                totalCodes: "Códigos Totales",
+                converted: "Convertidos",
+                failed: "Fallidos",
+                successRate: "Tasa de Éxito",
+                charlsonTitle: "📊 Índice Charlson (Agregado)",
+                basedOn: "Basado en",
+                conditions: "condición(es)",
+                codesLabel2: "Códigos:",
+                elixhauserTitle: "🏷️ Categorías Elixhauser (Agregadas)",
+                uniqueCategories: "categorías únicas encontradas",
+                conversionsTitle: "🔄 Conversiones Individuales",
+                foundCodes: "📋 Códigos específicos encontrados:",
+                noResults: "No se encontraron resultados",
+                conversionTo: "conversión(es) a"
+            },
+            en: {
+                title: "📋 Batch ICD Code Processor",
+                subtitle: "Process multiple ICD codes simultaneously with aggregated comorbidity scores",
+                searchLabel: "🔍 Search ICD code by code or description:",
+                searchPlaceholder: "Ex: diabetes, C509, infarction, I21...",
+                codesLabel: "Enter ICD Codes (separated by commas, spaces, or lines):",
+                codesPlaceholder: "Ex:\\nC509, I509, J449, N185, B20\\nor\\nC509\\nI509\\nJ449\\nN185\\nB20",
+                btnProcess: "🔄 Process Codes",
+                btnClear: "🗑️ Clear",
+                processing: "Processing codes...",
+                errorNoCode: "Please enter at least one code",
+                errorNoCodes: "No valid codes found",
+                errorProcessing: "Error processing codes",
+                totalCodes: "Total Codes",
+                converted: "Converted",
+                failed: "Failed",
+                successRate: "Success Rate",
+                charlsonTitle: "📊 Charlson Index (Aggregated)",
+                basedOn: "Based on",
+                conditions: "condition(s)",
+                codesLabel2: "Codes:",
+                elixhauserTitle: "🏷️ Elixhauser Categories (Aggregated)",
+                uniqueCategories: "unique categories found",
+                conversionsTitle: "🔄 Individual Conversions",
+                foundCodes: "📋 Specific codes found:",
+                noResults: "No results found",
+                conversionTo: "conversion(s) to"
+            }
+        };
+
+        let currentLanguage = 'es';
+
+        function changeLanguage() {
+            currentLanguage = document.getElementById('languageSelector').value;
+            const trans = translations[currentLanguage];
+            
+            // Update all translatable elements
+            document.getElementById('title').textContent = trans.title;
+            document.getElementById('subtitle').textContent = trans.subtitle;
+            document.getElementById('searchLabel').textContent = trans.searchLabel;
+            document.getElementById('searchInput').placeholder = trans.searchPlaceholder;
+            document.getElementById('codesLabel').textContent = trans.codesLabel;
+            document.getElementById('codesInput').placeholder = trans.codesPlaceholder.replace(/\\n/g, '\n');
+            document.querySelector('.btn-primary').textContent = trans.btnProcess;
+            document.querySelector('.btn-secondary').textContent = trans.btnClear;
+            
+            // Update stats labels
+            const statCards = document.querySelectorAll('.stat-card p');
+            if (statCards.length >= 4) {
+                statCards[0].textContent = trans.totalCodes;
+                statCards[1].textContent = trans.converted;
+                statCards[2].textContent = trans.failed;
+                statCards[3].textContent = trans.successRate;
+            }
+            
+            // Update section titles
+            const sections = document.querySelectorAll('.section h2');
+            if (sections.length >= 3) {
+                sections[0].textContent = trans.charlsonTitle;
+                sections[1].textContent = trans.elixhauserTitle;
+                sections[2].textContent = trans.conversionsTitle;
+            }
+            
+            // Update loading text
+            document.querySelector('.loading p').textContent = trans.processing;
+            
+            // Update "basedOn" text if results are shown
+            const basedOnText = document.querySelector('.section p');
+            if (basedOnText && document.getElementById('results').style.display !== 'none') {
+                const count = document.getElementById('charlsonCondCount').textContent;
+                basedOnText.innerHTML = `${trans.basedOn} <span id="charlsonCondCount">${count}</span> ${trans.conditions}`;
+            }
+            
+            // Update elixhauser text
+            const elixSection = document.querySelectorAll('.section p')[1];
+            if (elixSection && document.getElementById('results').style.display !== 'none') {
+                const count = document.getElementById('elixhauserCount').textContent;
+                elixSection.innerHTML = `<span style="font-size: 2rem; font-weight: 700; color: #059669;" id="elixhauserCount">${count}</span> ${trans.uniqueCategories}`;
+            }
+        }
+
+        function t(key) {
+            return translations[currentLanguage][key] || key;
+        }
+
+        async function processBatch() {
+            const input = document.getElementById('codesInput').value.trim();
+            const system = document.querySelector('input[name="system"]:checked').value;
+            const errorDiv = document.getElementById('error');
+            const loadingDiv = document.getElementById('loading');
+            const resultsDiv = document.getElementById('results');
+
+            if (!input) {
+                errorDiv.textContent = t('errorNoCode');
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            // Parse codes
+            const codes = input.split(/[\n,\s]+/).map(c => c.trim().toUpperCase()).filter(c => c.length > 0);
+
+            if (codes.length === 0) {
+                errorDiv.textContent = t('errorNoCodes');
+                errorDiv.style.display = 'block';
+                return;
+            }
+
+            errorDiv.style.display = 'none';
+            loadingDiv.style.display = 'block';
+            resultsDiv.style.display = 'none';
+
+            try {
+                const response = await fetch('http://localhost:3001/api/batch', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ codes, system })
+                });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Error al procesar códigos');
+                }
+
+                displayResults(data);
+
+            } catch (error) {
+                errorDiv.textContent = 'Error: ' + error.message;
+                errorDiv.style.display = 'block';
+            } finally {
+                loadingDiv.style.display = 'none';
+            }
+        }
+
+        function displayResults(data) {
+            // Summary
+            document.getElementById('totalCodes').textContent = data.summary.totalInputCodes;
+            document.getElementById('successCodes').textContent = data.summary.successfulConversions;
+            document.getElementById('failedCodes').textContent = data.summary.failedConversions;
+            const rate = Math.round((data.summary.successfulConversions / data.summary.totalInputCodes) * 100);
+            document.getElementById('successRate').textContent = rate + '%';
+
+            // Charlson
+            document.getElementById('charlsonScore').textContent = data.aggregatedCharlson.totalScore;
+            document.getElementById('charlsonCondCount').textContent = data.aggregatedCharlson.conditions.length;
+            
+            const charlsonList = document.getElementById('charlsonList');
+            charlsonList.innerHTML = '';
+            data.aggregatedCharlson.conditions.forEach(cond => {
+                charlsonList.innerHTML += `
+                    <div class="charlson-item">
+                        <div>
+                            <strong>${cond.condition}</strong>
+                            <div class="description">Códigos: ${cond.codes.join(', ')}</div>
+                        </div>
+                        <span class="score-badge">+${cond.score}</span>
+                    </div>
+                `;
+            });
+
+            // Elixhauser
+            document.getElementById('elixhauserCount').textContent = data.aggregatedElixhauser.totalCategories;
+            
+            const elixhauserList = document.getElementById('elixhauserList');
+            elixhauserList.innerHTML = '';
+            data.aggregatedElixhauser.categories.forEach(cat => {
+                elixhauserList.innerHTML += `
+                    <div class="elixhauser-item">
+                        <div>
+                            <strong style="color: #059669;">${cat.name}</strong>
+                            <div class="description">${cat.description}</div>
+                            <div class="description">Códigos ICD-10: ${cat.icdCodes.join(', ')}</div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Conversions
+            const conversionsList = document.getElementById('conversionsList');
+            conversionsList.innerHTML = '';
+            data.conversions.forEach(conv => {
+                const error = conv.error ? `<div style="color: #dc2626; margin-top: 5px;">⚠️ ${conv.error}</div>` : '';
+                const targetInfo = conv.targetCodes.length > 0 
+                    ? `→ ${conv.targetCodes.length} conversión(es) a ${conv.targetSystem}` 
+                    : '';
+                
+                // Mostrar códigos específicos encontrados (para búsqueda por familia)
+                let foundCodesInfo = '';
+                if (conv.foundSourceCodes && conv.foundSourceCodes.length > 1) {
+                    foundCodesInfo = `<div class="description" style="margin-top: 8px; padding: 8px; background: #f0f9ff; border-left: 3px solid #0284c7;">
+                        <strong>📋 Códigos específicos encontrados:</strong><br>
+                        ${conv.foundSourceCodes.map(code => `<span class="code-badge" style="font-size: 0.85rem; margin: 2px;">${code}</span>`).join(' ')}
+                    </div>`;
+                }
+                
+                conversionsList.innerHTML += `
+                    <div class="conversion-item">
+                        <div><span class="code-badge">${conv.sourceCode}</span> <span style="color: #64748b;">${conv.sourceSystem}</span></div>
+                        ${conv.sourceDescription ? `<div class="description">${conv.sourceDescription}</div>` : ''}
+                        ${foundCodesInfo}
+                        ${error}
+                        ${targetInfo ? `<div class="description">${targetInfo}</div>` : ''}
+                    </div>
+                `;
+            });
+
+            document.getElementById('results').style.display = 'block';
+        }
+
+        function clearResults() {
+            document.getElementById('codesInput').value = '';
+            document.getElementById('results').style.display = 'none';
+            document.getElementById('error').style.display = 'none';
+        }
+
+        // Autocomplete functionality
+        let debounceTimer;
+        const searchInput = document.getElementById('searchInput');
+        const dropdown = document.getElementById('autocompleteDropdown');
+        const codesInput = document.getElementById('codesInput');
+
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.trim();
+            
+            clearTimeout(debounceTimer);
+            
+            if (query.length < 2) {
+                dropdown.style.display = 'none';
+                return;
+            }
+            
+            debounceTimer = setTimeout(() => {
+                performAutocomplete(query);
+            }, 300);
+        });
+
+        searchInput.addEventListener('focus', function(e) {
+            if (e.target.value.trim().length >= 2) {
+                performAutocomplete(e.target.value.trim());
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+
+        async function performAutocomplete(query) {
+            const system = document.querySelector('input[name="system"]:checked').value;
+            
+            try {
+                const response = await fetch(`http://localhost:3001/api/autocomplete?q=${encodeURIComponent(query)}&system=${system}&limit=10`);
+                const data = await response.json();
+                
+                displayAutocomplete(data.results, query);
+            } catch (error) {
+                console.error('Autocomplete error:', error);
+                dropdown.style.display = 'none';
+            }
+        }
+
+        function displayAutocomplete(results, query) {
+            if (!results || results.length === 0) {
+                dropdown.innerHTML = `<div class="no-results">${t('noResults')}</div>`;
+                dropdown.style.display = 'block';
+                return;
+            }
+            
+            dropdown.innerHTML = '';
+            
+            results.forEach(result => {
+                const item = document.createElement('div');
+                item.className = 'autocomplete-item';
+                
+                // Highlight matching text
+                const highlightedDesc = highlightMatch(result.description, query);
+                const highlightedCode = highlightMatch(result.code, query);
+                
+                item.innerHTML = `
+                    <div class="autocomplete-code">${highlightedCode}</div>
+                    <div class="autocomplete-desc">${highlightedDesc}</div>
+                `;
+                
+                item.addEventListener('click', () => {
+                    addCodeToInput(result.code);
+                    searchInput.value = '';
+                    dropdown.style.display = 'none';
+                });
+                
+                dropdown.appendChild(item);
+            });
+            
+            dropdown.style.display = 'block';
+        }
+
+        function highlightMatch(text, query) {
+            const regex = new RegExp(`(${escapeRegex(query)})`, 'gi');
+            return text.replace(regex, '<span class="autocomplete-match">$1</span>');
+        }
+
+        function escapeRegex(str) {
+            return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function addCodeToInput(code) {
+            const currentValue = codesInput.value.trim();
+            if (currentValue) {
+                codesInput.value = currentValue + ', ' + code;
+            } else {
+                codesInput.value = code;
+            }
+            codesInput.focus();
+        }
+    </script>
+</body>
+</html>

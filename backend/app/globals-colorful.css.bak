@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* Custom utility classes without @apply */
+.btn-primary {
+  background-color: rgb(37, 99, 235);
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 200ms;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, rgb(29, 78, 216) 0%, rgb(30, 64, 175) 100%);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: rgb(229, 231, 235);
+  color: rgb(31, 41, 55);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(209, 213, 219);
+  transform: translateY(-1px);
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  border: 1px solid rgb(229, 231, 235);
+  transition: all 300ms;
+}
+
+.hover-scale:hover {
+  box-shadow: 0 10px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+.gradient-green {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 200ms;
+}
+
+.input:focus {
+  ring: 2px;
+  ring-color: rgb(59, 130, 246);
+  border-color: transparent;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.badge-primary {
+  background-color: rgb(219, 234, 254);
+  color: rgb(30, 64, 175);
+}
+
+.badge-secondary {
+  background-color: rgb(209, 250, 229);
+  color: rgb(6, 78, 59);
+}
+
+.badge-warning {
+  background-color: rgb(254, 243, 199);
+  color: rgb(120, 53, 15);
+}
