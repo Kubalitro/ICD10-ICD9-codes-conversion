@@ -6,6 +6,7 @@ import ClinicalAlerts from './ClinicalAlerts'
 import QuickActions from './QuickActions'
 import RelatedCodes from './RelatedCodes'
 import FavoriteButton from './FavoriteButton'
+import Tooltip from './Tooltip'
 import { formatIcdCode } from '../utils/format-code'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -22,10 +23,29 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
   const { t } = useLanguage()
 
   const tabs = [
-    { id: 'info' as const, label: t('tabInformation') },
-    { id: 'conversion' as const, label: t('tabConversion'), badge: conversions.length },
-    { id: 'elixhauser' as const, label: t('tabElixhauser'), badge: elixhauser?.totalCategories },
-    { id: 'charlson' as const, label: t('tabCharlson'), badge: charlson?.score },
+    {
+      id: 'info' as const,
+      label: t('tabInformation'),
+      tooltip: 'View detailed code information and clinical context'
+    },
+    {
+      id: 'conversion' as const,
+      label: t('tabConversion'),
+      badge: conversions.length,
+      tooltip: 'Convert between ICD-10 and ICD-9 using official CMS GEM mappings'
+    },
+    {
+      id: 'elixhauser' as const,
+      label: t('tabElixhauser'),
+      badge: elixhauser?.totalCategories,
+      tooltip: 'View comorbidity categories based on AHRQ Elixhauser methodology for risk adjustment'
+    },
+    {
+      id: 'charlson' as const,
+      label: t('tabCharlson'),
+      badge: charlson?.score,
+      tooltip: 'Charlson Comorbidity Index score for mortality prediction (0-6+ points)'
+    },
   ]
 
   return (
@@ -46,6 +66,13 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
               <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-blue-100 text-blue-900 rounded">
                 {tab.badge}
               </span>
+            )}
+            {tab.tooltip && (
+              <Tooltip content={tab.tooltip}>
+                <svg className="w-4 h-4 ml-1.5 text-gray-400 hover:text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
+              </Tooltip>
             )}
           </button>
         ))}
@@ -266,8 +293,22 @@ function ElixhauserTab({ elixhauser }: { elixhauser: { categories: ElixhauserCat
 
   if (!elixhauser || elixhauser.totalCategories === 0) {
     return (
-      <div className="text-center py-8 text-gray-500">
-        {t('noElixhauserFound')}
+      <div className="clinical-context bg-gray-50 dark:bg-gray-800/50 text-center py-12">
+        <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+          {t('noElixhauserFound')}
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+          This code is not currently mapped to any Elixhauser comorbidity categories. The Elixhauser index is primarily used for specific diagnosis codes in risk adjustment and outcome prediction.
+        </p>
+        <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg inline-block text-left max-w-md">
+          <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold mb-2">📖 About Elixhauser</p>
+          <p className="text-xs text-gray-600 dark:text-gray-400">
+            The Elixhauser Comorbidity Index identifies 31 categories of comorbidities based on ICD codes, used for risk adjustment in healthcare outcomes research.
+          </p>
+        </div>
       </div>
     )
   }
@@ -306,8 +347,22 @@ function CharlsonTab({ charlson }: { charlson: CharlsonResult | null }) {
 
   if (!charlson) {
     return (
-      <div className="text-center py-8 text-gray-500">
-        {t('noCharlsonFound')}
+      <div className="clinical-context bg-gray-50 dark:bg-gray-800/50 text-center py-12">
+        <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+        <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+          {t('noCharlsonFound')}
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+          This code is not associated with any Charlson comorbidity condition. The Charlson Index focuses on specific conditions that predict mortality risk.
+        </p>
+        <div className="mt-4 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg inline-block text-left max-w-md">
+          <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold mb-2">📊 About Charlson Index</p>
+          <p className="text-xs text-gray-600 dark:text-gray-400">
+            The Charlson Comorbidity Index predicts 10-year survival based on age and 17 comorbidity categories. Scores range from 0-6+, with higher scores indicating greater mortality risk.
+          </p>
+        </div>
       </div>
     )
   }
