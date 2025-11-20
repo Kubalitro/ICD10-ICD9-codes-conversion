@@ -70,10 +70,10 @@ export default function SearchPage() {
       const conversionResult = await convertCode(codeResult.code.replace('.', ''), system, targetSystem)
 
       // Obtener Elixhauser
-      const elixhauserResult = await getElixhauser(codeResult.code.replace('.', ''))
+      const elixhauserResult = await getElixhauser(codeResult.code, system)
 
       // Obtener Charlson
-      const charlsonResult = await getCharlson(codeResult.code.replace('.', ''), system)
+      const charlsonResult = await getCharlson(codeResult.code, system)
 
       setResult({
         code: codeResult,

@@ -6,10 +6,10 @@ export async function searchCode(code: string, fuzzy: boolean = false): Promise<
   try {
     const params = new URLSearchParams({ code })
     if (fuzzy) params.append('fuzzy', 'true')
-    
+
     const response = await fetch(`${API_BASE}/search?${params}`)
     if (!response.ok) return null
-    
+
     return await response.json()
   } catch (error) {
     console.error('Error searching code:', error)
@@ -21,7 +21,7 @@ export async function searchFamily(prefix: string): Promise<ICDCode[]> {
   try {
     const response = await fetch(`${API_BASE}/family?prefix=${prefix}`)
     if (!response.ok) return []
-    
+
     const data = await response.json()
     return data.codes || []
   } catch (error) {
@@ -31,8 +31,8 @@ export async function searchFamily(prefix: string): Promise<ICDCode[]> {
 }
 
 export async function convertCode(
-  code: string, 
-  from: 'icd10' | 'icd9', 
+  code: string,
+  from: 'icd10' | 'icd9',
   to: 'icd10' | 'icd9'
 ): Promise<{ conversions: ConversionResult[], isFamily?: boolean, familyData?: any } | null> {
   try {
@@ -40,9 +40,9 @@ export async function convertCode(
       `${API_BASE}/convert?code=${code}&from=${from}&to=${to}`
     )
     if (!response.ok) return null
-    
+
     const data = await response.json()
-    
+
     // If it's a family conversion, normalize the response structure
     if (data.isFamilyConversion) {
       return {
@@ -56,7 +56,7 @@ export async function convertCode(
         }
       }
     }
-    
+
     return data
   } catch (error) {
     console.error('Error converting code:', error)
@@ -64,14 +64,17 @@ export async function convertCode(
   }
 }
 
-export async function getElixhauser(code: string): Promise<{
+export async function getElixhauser(code: string, system?: 'icd10' | 'icd9'): Promise<{
   categories: ElixhauserCategory[]
   totalCategories: number
 } | null> {
   try {
-    const response = await fetch(`${API_BASE}/elixhauser?code=${code}`)
+    const params = new URLSearchParams({ code })
+    if (system) params.append('system', system)
+
+    const response = await fetch(`${API_BASE}/elixhauser?${params}`)
     if (!response.ok) return null
-    
+
     return await response.json()
   } catch (error) {
     console.error('Error getting Elixhauser:', error)
@@ -83,7 +86,7 @@ export async function getCharlson(code: string, system: 'icd10' | 'icd9'): Promi
   try {
     const response = await fetch(`${API_BASE}/charlson?code=${code}&system=${system}`)
     if (!response.ok) return null
-    
+
     return await response.json()
   } catch (error) {
     console.error('Error getting Charlson:', error)

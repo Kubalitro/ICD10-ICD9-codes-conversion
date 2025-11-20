@@ -1,0 +1,7582 @@
+{
+  "179": {
+    "description": "Malignant neoplasm of uterus, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "181": {
+    "description": "Malignant neoplasm of placenta",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "185": {
+    "description": "Malignant neoplasm of prostate",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "193": {
+    "description": "Malignant neoplasm of thyroid gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "243": {
+    "description": "Congenital iodine-deficiency syndrome, unspecified",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "260": {
+    "description": "Kwashiorkor",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "261": {
+    "description": "Nutritional marasmus",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "262": {
+    "description": "Unspecified severe protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "311": {
+    "description": "Major depressive disorder, single episode, unspecified",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "340": {
+    "description": "",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "490": {
+    "description": "Bronchitis, not specified as acute or chronic",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "496": {
+    "description": "Chronic obstructive pulmonary disease, unspecified",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "500": {
+    "description": "Coalworker's pneumoconiosis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "501": {
+    "description": "Pneumoconiosis due to asbestos and other mineral fibers",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "502": {
+    "description": "Pneumoconiosis due to other dust containing silica",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "503": {
+    "description": "Aluminosis (of lung)",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "504": {
+    "description": "Byssinosis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "505": {
+    "description": "Unspecified pneumoconiosis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "570": {
+    "description": "Acute and subacute hepatic failure without coma",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "586": {
+    "description": "Unspecified kidney failure",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "725": {
+    "description": "Polymyalgia rheumatica",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "1400": {
+    "description": "Malignant neoplasm of external upper lip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1401": {
+    "description": "Malignant neoplasm of external lower lip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1403": {
+    "description": "Malignant neoplasm of upper lip, inner aspect",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1404": {
+    "description": "Malignant neoplasm of lower lip, inner aspect",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1405": {
+    "description": "Malignant neoplasm of lip, unspecified, inner aspect",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1406": {
+    "description": "Malignant neoplasm of commissure of lip, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1408": {
+    "description": "Malignant neoplasm of overlapping sites of lip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1409": {
+    "description": "Malignant neoplasm of external lip, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1410": {
+    "description": "Malignant neoplasm of base of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1411": {
+    "description": "Malignant neoplasm of dorsal surface of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1412": {
+    "description": "Malignant neoplasm of border of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1413": {
+    "description": "Malignant neoplasm of ventral surface of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1414": {
+    "description": "Malignant neoplasm of anterior two-thirds of tongue, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1415": {
+    "description": "Malignant neoplasm of overlapping sites of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1416": {
+    "description": "Malignant neoplasm of lingual tonsil",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1418": {
+    "description": "Malignant neoplasm of overlapping sites of tongue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1419": {
+    "description": "Malignant neoplasm of tongue, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1420": {
+    "description": "Malignant neoplasm of parotid gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1421": {
+    "description": "Malignant neoplasm of submandibular gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1422": {
+    "description": "Malignant neoplasm of sublingual gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1428": {
+    "description": "Malignant neoplasm of major salivary gland, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1429": {
+    "description": "Malignant neoplasm of major salivary gland, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1430": {
+    "description": "Malignant neoplasm of upper gum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1431": {
+    "description": "Malignant neoplasm of lower gum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1438": {
+    "description": "Malignant neoplasm of gum, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1439": {
+    "description": "Malignant neoplasm of gum, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1440": {
+    "description": "Malignant neoplasm of anterior floor of mouth",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1441": {
+    "description": "Malignant neoplasm of lateral floor of mouth",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1448": {
+    "description": "Malignant neoplasm of overlapping sites of floor of mouth",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1449": {
+    "description": "Malignant neoplasm of floor of mouth, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1450": {
+    "description": "Malignant neoplasm of cheek mucosa",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1451": {
+    "description": "Malignant neoplasm of vestibule of mouth",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1452": {
+    "description": "Malignant neoplasm of hard palate",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1453": {
+    "description": "Malignant neoplasm of soft palate",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1454": {
+    "description": "Malignant neoplasm of uvula",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1455": {
+    "description": "Malignant neoplasm of palate, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1456": {
+    "description": "Malignant neoplasm of retromolar area",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1458": {
+    "description": "Malignant neoplasm of overlapping sites of other parts of mouth",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1459": {
+    "description": "Malignant neoplasm of mouth, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1460": {
+    "description": "Malignant neoplasm of tonsil, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1461": {
+    "description": "Malignant neoplasm of tonsillar fossa",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1462": {
+    "description": "Malignant neoplasm of tonsillar pillar (anterior) (posterior)",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1463": {
+    "description": "Malignant neoplasm of vallecula",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1464": {
+    "description": "Malignant neoplasm of anterior surface of epiglottis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1465": {
+    "description": "Malignant neoplasm of overlapping sites of oropharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1466": {
+    "description": "Malignant neoplasm of lateral wall of oropharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1467": {
+    "description": "Malignant neoplasm of posterior wall of oropharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1468": {
+    "description": "Malignant neoplasm of branchial cleft",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1469": {
+    "description": "Malignant neoplasm of oropharynx, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1470": {
+    "description": "Malignant neoplasm of superior wall of nasopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1471": {
+    "description": "Malignant neoplasm of posterior wall of nasopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1472": {
+    "description": "Malignant neoplasm of lateral wall of nasopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1473": {
+    "description": "Malignant neoplasm of anterior wall of nasopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1478": {
+    "description": "Malignant neoplasm of overlapping sites of nasopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1479": {
+    "description": "Malignant neoplasm of nasopharynx, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1480": {
+    "description": "Malignant neoplasm of postcricoid region",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1481": {
+    "description": "Malignant neoplasm of pyriform sinus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1482": {
+    "description": "Malignant neoplasm of aryepiglottic fold, hypopharyngeal aspect",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1483": {
+    "description": "Malignant neoplasm of posterior wall of hypopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1488": {
+    "description": "Malignant neoplasm of overlapping sites of hypopharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1489": {
+    "description": "Malignant neoplasm of hypopharynx, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1490": {
+    "description": "Malignant neoplasm of pharynx, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1491": {
+    "description": "Malignant neoplasm of Waldeyer's ring",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1498": {
+    "description": "Malignant neoplasm of overlapping sites of lip, oral cavity and pharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1499": {
+    "description": "Malignant neoplasm of overlapping sites of lip, oral cavity and pharynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1500": {
+    "description": "Malignant neoplasm of upper third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1501": {
+    "description": "Malignant neoplasm of middle third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1502": {
+    "description": "Malignant neoplasm of lower third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1503": {
+    "description": "Malignant neoplasm of upper third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1504": {
+    "description": "Malignant neoplasm of middle third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1505": {
+    "description": "Malignant neoplasm of lower third of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1508": {
+    "description": "Malignant neoplasm of overlapping sites of esophagus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1509": {
+    "description": "Malignant neoplasm of esophagus, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1510": {
+    "description": "Malignant neoplasm of cardia",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1511": {
+    "description": "Malignant neoplasm of pylorus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1512": {
+    "description": "Malignant neoplasm of pyloric antrum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1513": {
+    "description": "Malignant neoplasm of fundus of stomach",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1514": {
+    "description": "Malignant neoplasm of body of stomach",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1515": {
+    "description": "Malignant neoplasm of lesser curvature of stomach, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1516": {
+    "description": "Malignant neoplasm of greater curvature of stomach, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1518": {
+    "description": "Malignant neoplasm of overlapping sites of stomach",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1519": {
+    "description": "Malignant neoplasm of stomach, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1520": {
+    "description": "Malignant neoplasm of duodenum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1521": {
+    "description": "Malignant neoplasm of jejunum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1522": {
+    "description": "Malignant neoplasm of ileum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1523": {
+    "description": "Meckel's diverticulum, malignant",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1528": {
+    "description": "Malignant neoplasm of overlapping sites of small intestine",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1529": {
+    "description": "Malignant neoplasm of small intestine, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1530": {
+    "description": "Malignant neoplasm of hepatic flexure",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1531": {
+    "description": "Malignant neoplasm of transverse colon",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1532": {
+    "description": "Malignant neoplasm of descending colon",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1533": {
+    "description": "Malignant neoplasm of sigmoid colon",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1534": {
+    "description": "Malignant neoplasm of cecum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1535": {
+    "description": "Malignant neoplasm of appendix",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1536": {
+    "description": "Malignant neoplasm of ascending colon",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1537": {
+    "description": "Malignant neoplasm of splenic flexure",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1538": {
+    "description": "Malignant neoplasm of overlapping sites of colon",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1539": {
+    "description": "Malignant neoplasm of colon, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1540": {
+    "description": "Malignant neoplasm of rectosigmoid junction",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1541": {
+    "description": "Malignant neoplasm of rectum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1542": {
+    "description": "Malignant neoplasm of anal canal",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1543": {
+    "description": "Malignant neoplasm of anus, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1548": {
+    "description": "Malignant neoplasm of overlapping sites of rectum, anus and anal canal",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1550": {
+    "description": "Liver cell carcinoma",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1551": {
+    "description": "Intrahepatic bile duct carcinoma",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1552": {
+    "description": "Malignant neoplasm of liver, not specified as primary or secondary",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1560": {
+    "description": "Malignant neoplasm of gallbladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1561": {
+    "description": "Malignant neoplasm of extrahepatic bile duct",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1562": {
+    "description": "Malignant neoplasm of ampulla of Vater",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1568": {
+    "description": "Malignant neoplasm of overlapping sites of biliary tract",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1569": {
+    "description": "Malignant neoplasm of biliary tract, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1570": {
+    "description": "Malignant neoplasm of head of pancreas",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1571": {
+    "description": "Malignant neoplasm of body of pancreas",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1572": {
+    "description": "Malignant neoplasm of tail of pancreas",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1573": {
+    "description": "Malignant neoplasm of pancreatic duct",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1574": {
+    "description": "Malignant neoplasm of endocrine pancreas",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1578": {
+    "description": "Malignant neoplasm of other parts of pancreas",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1579": {
+    "description": "Malignant neoplasm of pancreas, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1580": {
+    "description": "Malignant neoplasm of retroperitoneum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1588": {
+    "description": "Malignant neoplasm of specified parts of peritoneum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1589": {
+    "description": "Malignant neoplasm of peritoneum, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1590": {
+    "description": "Malignant neoplasm of intestinal tract, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1591": {
+    "description": "Malignant neoplasm of spleen",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1598": {
+    "description": "Malignant neoplasm of ill-defined sites within the digestive system",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1599": {
+    "description": "Malignant neoplasm of ill-defined sites within the digestive system",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1600": {
+    "description": "Malignant neoplasm of nasal cavity",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1601": {
+    "description": "Malignant neoplasm of middle ear",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1602": {
+    "description": "Malignant neoplasm of maxillary sinus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1603": {
+    "description": "Malignant neoplasm of ethmoidal sinus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1604": {
+    "description": "Malignant neoplasm of frontal sinus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1605": {
+    "description": "Malignant neoplasm of sphenoid sinus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1608": {
+    "description": "Malignant neoplasm of overlapping sites of accessory sinuses",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1609": {
+    "description": "Malignant neoplasm of accessory sinus, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1610": {
+    "description": "Malignant neoplasm of glottis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1611": {
+    "description": "Malignant neoplasm of supraglottis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1612": {
+    "description": "Malignant neoplasm of subglottis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1613": {
+    "description": "Malignant neoplasm of laryngeal cartilage",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1618": {
+    "description": "Malignant neoplasm of overlapping sites of larynx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1619": {
+    "description": "Malignant neoplasm of larynx, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1620": {
+    "description": "Malignant neoplasm of trachea",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1622": {
+    "description": "Malignant neoplasm of unspecified main bronchus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1623": {
+    "description": "Malignant neoplasm of upper lobe, unspecified bronchus or lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1624": {
+    "description": "Malignant neoplasm of middle lobe, bronchus or lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1625": {
+    "description": "Malignant neoplasm of lower lobe, unspecified bronchus or lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1628": {
+    "description": "Malignant neoplasm of overlapping sites of unspecified bronchus and lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1629": {
+    "description": "Malignant neoplasm of unspecified part of unspecified bronchus or lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1630": {
+    "description": "Malignant neoplasm of pleura",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1631": {
+    "description": "Malignant neoplasm of pleura",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1638": {
+    "description": "Malignant neoplasm of pleura",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1639": {
+    "description": "Malignant neoplasm of pleura",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1640": {
+    "description": "Malignant neoplasm of thymus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1641": {
+    "description": "Malignant neoplasm of heart",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1642": {
+    "description": "Malignant neoplasm of anterior mediastinum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1643": {
+    "description": "Malignant neoplasm of posterior mediastinum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1648": {
+    "description": "Malignant neoplasm of overlapping sites of heart, mediastinum and pleura",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1649": {
+    "description": "Malignant neoplasm of mediastinum, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1650": {
+    "description": "Malignant neoplasm of upper respiratory tract, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1658": {
+    "description": "Malignant neoplasm of lower respiratory tract, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1659": {
+    "description": "Malignant neoplasm of lower respiratory tract, part unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1700": {
+    "description": "Malignant neoplasm of bones of skull and face",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1701": {
+    "description": "Malignant neoplasm of mandible",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1702": {
+    "description": "Malignant neoplasm of vertebral column",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1703": {
+    "description": "Malignant neoplasm of ribs, sternum and clavicle",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1704": {
+    "description": "Malignant neoplasm of scapula and long bones of unspecified upper limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1705": {
+    "description": "Malignant neoplasm of short bones of unspecified upper limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1706": {
+    "description": "Malignant neoplasm of pelvic bones, sacrum and coccyx",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1707": {
+    "description": "Malignant neoplasm of long bones of unspecified lower limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1708": {
+    "description": "Malignant neoplasm of short bones of unspecified lower limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1709": {
+    "description": "Malignant neoplasm of bone and articular cartilage, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1710": {
+    "description": "Malignant neoplasm of connective and soft tissue of head, face and neck",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1712": {
+    "description": "Malignant neoplasm of connective and soft tissue of unspecified upper limb, including shoulder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1713": {
+    "description": "Malignant neoplasm of connective and soft tissue of unspecified lower limb, including hip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1714": {
+    "description": "Malignant neoplasm of connective and soft tissue of thorax",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1715": {
+    "description": "Malignant neoplasm of connective and soft tissue of abdomen",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1716": {
+    "description": "Malignant neoplasm of connective and soft tissue of pelvis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1717": {
+    "description": "Malignant neoplasm of connective and soft tissue of trunk, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1718": {
+    "description": "Malignant neoplasm of overlapping sites of peripheral nerves and autonomic nervous system",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1719": {
+    "description": "Malignant neoplasm of connective and soft tissue, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1720": {
+    "description": "Malignant melanoma of lip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1721": {
+    "description": "Malignant melanoma of unspecified eyelid, including canthus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1722": {
+    "description": "Malignant melanoma of unspecified ear and external auricular canal",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1723": {
+    "description": "Malignant melanoma of unspecified part of face",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1724": {
+    "description": "Malignant melanoma of scalp and neck",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1725": {
+    "description": "Malignant melanoma of other part of trunk",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1726": {
+    "description": "Malignant melanoma of unspecified upper limb, including shoulder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1727": {
+    "description": "Malignant melanoma of unspecified lower limb, including hip",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1728": {
+    "description": "Malignant melanoma of overlapping sites of skin",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1729": {
+    "description": "Malignant melanoma of skin, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1740": {
+    "description": "Malignant neoplasm of nipple and areola, unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1741": {
+    "description": "Malignant neoplasm of central portion of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1742": {
+    "description": "Malignant neoplasm of upper-inner quadrant of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1743": {
+    "description": "Malignant neoplasm of lower-inner quadrant of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1744": {
+    "description": "Malignant neoplasm of upper-outer quadrant of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1745": {
+    "description": "Malignant neoplasm of lower-outer quadrant of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1746": {
+    "description": "Malignant neoplasm of axillary tail of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1748": {
+    "description": "Malignant neoplasm of overlapping sites of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1749": {
+    "description": "Malignant neoplasm of unspecified site of unspecified female breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1750": {
+    "description": "Malignant neoplasm of nipple and areola, unspecified male breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1759": {
+    "description": "Malignant neoplasm of unspecified site of unspecified male breast",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1760": {
+    "description": "Kaposi's sarcoma of skin",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1761": {
+    "description": "Kaposi's sarcoma of soft tissue",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1762": {
+    "description": "Kaposi's sarcoma of palate",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1763": {
+    "description": "Kaposi's sarcoma of gastrointestinal sites",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1764": {
+    "description": "Kaposi's sarcoma of unspecified lung",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1765": {
+    "description": "Kaposi's sarcoma of lymph nodes",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1768": {
+    "description": "Kaposi's sarcoma of other sites",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1769": {
+    "description": "Kaposi's sarcoma, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1800": {
+    "description": "Malignant neoplasm of endocervix",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1801": {
+    "description": "Malignant neoplasm of exocervix",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1808": {
+    "description": "Malignant neoplasm of overlapping sites of cervix uteri",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1809": {
+    "description": "Malignant neoplasm of cervix uteri, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1820": {
+    "description": "Malignant neoplasm of endometrium",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1821": {
+    "description": "Malignant neoplasm of isthmus uteri",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1828": {
+    "description": "Malignant neoplasm of overlapping sites of corpus uteri",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1830": {
+    "description": "Malignant neoplasm of unspecified ovary",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1832": {
+    "description": "Malignant neoplasm of unspecified fallopian tube",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1833": {
+    "description": "Malignant neoplasm of unspecified broad ligament",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1834": {
+    "description": "Malignant neoplasm of parametrium",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1835": {
+    "description": "Malignant neoplasm of unspecified round ligament",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1838": {
+    "description": "Malignant neoplasm of uterine adnexa, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1839": {
+    "description": "Malignant neoplasm of uterine adnexa, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1840": {
+    "description": "Malignant neoplasm of vagina",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1841": {
+    "description": "Malignant neoplasm of labium majus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1842": {
+    "description": "Malignant neoplasm of labium minus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1843": {
+    "description": "Malignant neoplasm of clitoris",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1844": {
+    "description": "Malignant neoplasm of vulva, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1848": {
+    "description": "Malignant neoplasm of other specified female genital organs",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1849": {
+    "description": "Malignant neoplasm of female genital organ, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1860": {
+    "description": "Malignant neoplasm of unspecified undescended testis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1869": {
+    "description": "Malignant neoplasm of unspecified descended testis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1871": {
+    "description": "Malignant neoplasm of prepuce",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1872": {
+    "description": "Malignant neoplasm of glans penis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1873": {
+    "description": "Malignant neoplasm of body of penis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1874": {
+    "description": "Malignant neoplasm of penis, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1875": {
+    "description": "Malignant neoplasm of unspecified epididymis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1876": {
+    "description": "Malignant neoplasm of unspecified spermatic cord",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1877": {
+    "description": "Malignant neoplasm of scrotum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1878": {
+    "description": "Malignant neoplasm of overlapping sites of penis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1879": {
+    "description": "Malignant neoplasm of male genital organ, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1880": {
+    "description": "Malignant neoplasm of trigone of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1881": {
+    "description": "Malignant neoplasm of dome of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1882": {
+    "description": "Malignant neoplasm of lateral wall of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1883": {
+    "description": "Malignant neoplasm of anterior wall of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1884": {
+    "description": "Malignant neoplasm of posterior wall of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1885": {
+    "description": "Malignant neoplasm of bladder neck",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1886": {
+    "description": "Malignant neoplasm of ureteric orifice",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1887": {
+    "description": "Malignant neoplasm of urachus",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1888": {
+    "description": "Malignant neoplasm of overlapping sites of bladder",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1889": {
+    "description": "Malignant neoplasm of bladder, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1890": {
+    "description": "Malignant neoplasm of unspecified kidney, except renal pelvis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1891": {
+    "description": "Malignant neoplasm of unspecified renal pelvis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1892": {
+    "description": "Malignant neoplasm of unspecified ureter",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1893": {
+    "description": "Malignant neoplasm of urethra",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1894": {
+    "description": "Malignant neoplasm of paraurethral glands",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1898": {
+    "description": "Malignant neoplasm of overlapping sites of urinary organs",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1899": {
+    "description": "Malignant neoplasm of urinary organ, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1900": {
+    "description": "Malignant neoplasm of unspecified ciliary body",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1901": {
+    "description": "Malignant neoplasm of unspecified orbit",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1902": {
+    "description": "Malignant neoplasm of unspecified lacrimal gland and duct",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1903": {
+    "description": "Malignant neoplasm of unspecified conjunctiva",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1904": {
+    "description": "Malignant neoplasm of unspecified cornea",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1905": {
+    "description": "Malignant neoplasm of unspecified retina",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1906": {
+    "description": "Malignant neoplasm of unspecified choroid",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1907": {
+    "description": "Malignant neoplasm of unspecified lacrimal gland and duct",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1908": {
+    "description": "Malignant neoplasm of overlapping sites of unspecified eye and adnexa",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1909": {
+    "description": "Malignant neoplasm of unspecified site of unspecified eye",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1910": {
+    "description": "Malignant neoplasm of cerebrum, except lobes and ventricles",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1911": {
+    "description": "Malignant neoplasm of frontal lobe",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1912": {
+    "description": "Malignant neoplasm of temporal lobe",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1913": {
+    "description": "Malignant neoplasm of parietal lobe",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1914": {
+    "description": "Malignant neoplasm of occipital lobe",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1915": {
+    "description": "Malignant neoplasm of cerebral ventricle",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1916": {
+    "description": "Malignant neoplasm of cerebellum",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1917": {
+    "description": "Malignant neoplasm of brain stem",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1918": {
+    "description": "Malignant neoplasm of overlapping sites of brain",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1919": {
+    "description": "Malignant neoplasm of brain, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1920": {
+    "description": "Malignant neoplasm of unspecified cranial nerve",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1921": {
+    "description": "Malignant neoplasm of cerebral meninges",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1922": {
+    "description": "Malignant neoplasm of spinal cord",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1923": {
+    "description": "Malignant neoplasm of spinal meninges",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1928": {
+    "description": "Malignant neoplasm of central nervous system, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1929": {
+    "description": "Malignant neoplasm of central nervous system, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1940": {
+    "description": "Malignant neoplasm of unspecified part of unspecified adrenal gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1941": {
+    "description": "Malignant neoplasm of parathyroid gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1943": {
+    "description": "Malignant neoplasm of pituitary gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1944": {
+    "description": "Malignant neoplasm of pineal gland",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1945": {
+    "description": "Malignant neoplasm of carotid body",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1946": {
+    "description": "Malignant neoplasm of aortic body and other paraganglia",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1948": {
+    "description": "Malignant neoplasm with pluriglandular involvement, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1949": {
+    "description": "Malignant neoplasm of endocrine gland, unspecified",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1950": {
+    "description": "Malignant neoplasm of head, face and neck",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1951": {
+    "description": "Malignant neoplasm of thorax",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1952": {
+    "description": "Malignant neoplasm of abdomen",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1953": {
+    "description": "Malignant neoplasm of pelvis",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1954": {
+    "description": "Malignant neoplasm of unspecified upper limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1955": {
+    "description": "Malignant neoplasm of unspecified lower limb",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1958": {
+    "description": "Malignant neoplasm of other specified ill-defined sites",
+    "comorbidities": [
+      "Solid tumor without metastasis"
+    ]
+  },
+  "1960": {
+    "description": "Secondary and unspecified malignant neoplasm of lymph nodes of head, face and neck",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1961": {
+    "description": "Secondary and unspecified malignant neoplasm of intrathoracic lymph nodes",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1962": {
+    "description": "Secondary and unspecified malignant neoplasm of intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1963": {
+    "description": "Secondary and unspecified malignant neoplasm of axilla and upper limb lymph nodes",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1965": {
+    "description": "Secondary and unspecified malignant neoplasm of inguinal and lower limb lymph nodes",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1966": {
+    "description": "Secondary and unspecified malignant neoplasm of intrapelvic lymph nodes",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1968": {
+    "description": "Secondary and unspecified malignant neoplasm of lymph nodes of multiple regions",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1969": {
+    "description": "Secondary and unspecified malignant neoplasm of lymph node, unspecified",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1970": {
+    "description": "Secondary malignant neoplasm of unspecified lung",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1971": {
+    "description": "Secondary malignant neoplasm of mediastinum",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1972": {
+    "description": "Secondary malignant neoplasm of pleura",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1973": {
+    "description": "Secondary malignant neoplasm of other respiratory organs",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1974": {
+    "description": "Secondary malignant neoplasm of small intestine",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1975": {
+    "description": "Secondary malignant neoplasm of large intestine and rectum",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1976": {
+    "description": "Secondary malignant neoplasm of retroperitoneum and peritoneum",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1977": {
+    "description": "Secondary malignant neoplasm of liver and intrahepatic bile duct",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1978": {
+    "description": "Secondary malignant neoplasm of liver and intrahepatic bile duct",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1980": {
+    "description": "Secondary malignant neoplasm of unspecified kidney and renal pelvis",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1981": {
+    "description": "Secondary malignant neoplasm of bladder",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1982": {
+    "description": "Secondary malignant neoplasm of skin",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1983": {
+    "description": "Secondary malignant neoplasm of brain",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1984": {
+    "description": "Secondary malignant neoplasm of cerebral meninges",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1985": {
+    "description": "Secondary malignant neoplasm of bone",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1986": {
+    "description": "Secondary malignant neoplasm of unspecified ovary",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1987": {
+    "description": "Secondary malignant neoplasm of unspecified adrenal gland",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1990": {
+    "description": "Disseminated malignant neoplasm, unspecified",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1991": {
+    "description": "Malignant (primary) neoplasm, unspecified",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "1992": {
+    "description": "Malignant neoplasm associated with transplanted organ",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "2386": {
+    "description": "Other specified neoplasms of uncertain behavior of lymphoid, hematopoietic and related tissue",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "2409": {
+    "description": "Iodine-deficiency related (endemic) goiter, unspecified",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2440": {
+    "description": "Postprocedural hypothyroidism",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2441": {
+    "description": "Postprocedural hypothyroidism",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2442": {
+    "description": "Hypothyroidism due to medicaments and other exogenous substances",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2443": {
+    "description": "Hypothyroidism due to medicaments and other exogenous substances",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2448": {
+    "description": "Other iodine-deficiency related thyroid disorders and allied conditions",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2449": {
+    "description": "Hypothyroidism, unspecified",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2461": {
+    "description": "Dyshormogenetic goiter",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2468": {
+    "description": "Atrophy of thyroid (acquired)",
+    "comorbidities": [
+      "Hypothyroidism"
+    ]
+  },
+  "2536": {
+    "description": "Syndrome of inappropriate secretion of antidiuretic hormone",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2630": {
+    "description": "Moderate protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "2631": {
+    "description": "Mild protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "2632": {
+    "description": "Retarded development following protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "2638": {
+    "description": "Unspecified protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "2639": {
+    "description": "Unspecified protein-calorie malnutrition",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "2652": {
+    "description": "Niacin deficiency [pellagra]",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2760": {
+    "description": "Hyperosmolality and hypernatremia",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2761": {
+    "description": "Hypo-osmolality and hyponatremia",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2762": {
+    "description": "",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2763": {
+    "description": "Alkalosis",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2764": {
+    "description": "Mixed disorder of acid-base balance",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2767": {
+    "description": "Hyperkalemia",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2768": {
+    "description": "Hypokalemia",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2769": {
+    "description": "Other disorders of electrolyte and fluid balance, not elsewhere classified",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "2800": {
+    "description": "Iron deficiency anemia secondary to blood loss (chronic)",
+    "comorbidities": [
+      "Blood loss anemia"
+    ]
+  },
+  "2801": {
+    "description": "Other iron deficiency anemias",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2808": {
+    "description": "Sideropenic dysphagia",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2809": {
+    "description": "Iron deficiency anemia, unspecified",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2810": {
+    "description": "Vitamin B12 deficiency anemia due to intrinsic factor deficiency",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2811": {
+    "description": "Vitamin B12 deficiency anemia due to selective vitamin B12 malabsorption with proteinuria",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2812": {
+    "description": "Dietary folate deficiency anemia",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2813": {
+    "description": "Other megaloblastic anemias, not elsewhere classified",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2814": {
+    "description": "Protein deficiency anemia",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2818": {
+    "description": "Scorbutic anemia",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2819": {
+    "description": "Nutritional anemia, unspecified",
+    "comorbidities": [
+      "Deficiency anemia"
+    ]
+  },
+  "2860": {
+    "description": "Hereditary factor VIII deficiency",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2861": {
+    "description": "Hereditary factor IX deficiency",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2862": {
+    "description": "Hereditary factor XI deficiency",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2863": {
+    "description": "Hereditary deficiency of other clotting factors",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2864": {
+    "description": "",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2866": {
+    "description": "Disseminated intravascular coagulation [defibrination syndrome]",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2867": {
+    "description": "Hemorrhagic disorder due to extrinsic circulating anticoagulants",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2869": {
+    "description": "Other specified coagulation defects",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2871": {
+    "description": "Qualitative platelet defects",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2875": {
+    "description": "Thrombocytopenia, unspecified",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "2911": {
+    "description": "Alcohol use, unspecified with alcohol-induced persisting amnestic disorder",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2912": {
+    "description": "Alcohol dependence with alcohol-induced persisting dementia",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2913": {
+    "description": "Alcohol use, unspecified with alcohol-induced psychotic disorder with hallucinations",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2915": {
+    "description": "Alcohol use, unspecified with alcohol-induced psychotic disorder with delusions",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2919": {
+    "description": "Alcohol use, unspecified with unspecified alcohol-induced disorder",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "2920": {
+    "description": "Other psychoactive substance use, unspecified with withdrawal, unspecified",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "2922": {
+    "description": "Other stimulant use, unspecified with intoxication, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "2929": {
+    "description": "Other psychoactive substance use, unspecified with unspecified psychoactive substance-induced disorder",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "2970": {
+    "description": "Delusional disorders",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2971": {
+    "description": "Delusional disorders",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2972": {
+    "description": "Delusional disorders",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2973": {
+    "description": "Shared psychotic disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2978": {
+    "description": "Delusional disorders",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2979": {
+    "description": "Brief psychotic disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2980": {
+    "description": "Major depressive disorder, single episode, severe with psychotic features",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2981": {
+    "description": "Other psychotic disorder not due to a substance or known physiological condition",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2982": {
+    "description": "Other dissociative and conversion disorders",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2983": {
+    "description": "Brief psychotic disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2984": {
+    "description": "Brief psychotic disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2988": {
+    "description": "Brief psychotic disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "2989": {
+    "description": "Unspecified psychosis not due to a substance or known physiological condition",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "3004": {
+    "description": "Dysthymic disorder",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3090": {
+    "description": "Adjustment disorder with depressed mood",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3091": {
+    "description": "Adjustment disorder with depressed mood",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3093": {
+    "description": "Adjustment disorder with disturbance of conduct",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3094": {
+    "description": "Adjustment disorder with mixed disturbance of emotions and conduct",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3099": {
+    "description": "Adjustment disorder, unspecified",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "3319": {
+    "description": "Degenerative disease of nervous system, unspecified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3320": {
+    "description": "",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3321": {
+    "description": "Neuroleptic induced parkinsonism",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3334": {
+    "description": "Huntington's disease",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3335": {
+    "description": "Drug-induced chorea",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3340": {
+    "description": "",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3341": {
+    "description": "Hereditary spastic paraplegia",
+    "comorbidities": [
+      "Paralysis",
+      "Other neurological disorders"
+    ]
+  },
+  "3342": {
+    "description": "Congenital nonprogressive ataxia",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3343": {
+    "description": "",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3344": {
+    "description": "Cerebellar ataxia in diseases classified elsewhere",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3348": {
+    "description": "Cerebellar ataxia with defective DNA repair",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3349": {
+    "description": "Hereditary ataxia, unspecified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3350": {
+    "description": "Infantile spinal muscular atrophy, type I [Werdnig-Hoffman]",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3358": {
+    "description": "Other spinal muscular atrophies and related syndromes",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3359": {
+    "description": "Spinal muscular atrophy, unspecified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3362": {
+    "description": "Subacute combined degeneration of spinal cord in diseases classified elsewhere",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3410": {
+    "description": "Neuromyelitis optica [Devic]",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3411": {
+    "description": "Diffuse sclerosis of central nervous system",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3418": {
+    "description": "Central demyelination of corpus callosum",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3419": {
+    "description": "Demyelinating disease of central nervous system, unspecified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3430": {
+    "description": "Spastic diplegic cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3431": {
+    "description": "Spastic hemiplegic cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3432": {
+    "description": "Spastic quadriplegic cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3433": {
+    "description": "Other cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3434": {
+    "description": "Spastic hemiplegic cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3438": {
+    "description": "Other cerebral palsy",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3439": {
+    "description": "Cerebral palsy, unspecified",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3441": {
+    "description": "Paraplegia, unspecified",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3442": {
+    "description": "Diplegia of upper limbs",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3445": {
+    "description": "Monoplegia, unspecified affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3449": {
+    "description": "Paralytic syndrome, unspecified",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "3452": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3453": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3481": {
+    "description": "Anoxic brain damage, not elsewhere classified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "3575": {
+    "description": "Alcoholic polyneuropathy",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "3940": {
+    "description": "Rheumatic mitral stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3941": {
+    "description": "Rheumatic mitral insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3942": {
+    "description": "Rheumatic mitral stenosis with insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3949": {
+    "description": "Other rheumatic mitral valve diseases",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3950": {
+    "description": "Rheumatic aortic stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3951": {
+    "description": "Rheumatic aortic insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3952": {
+    "description": "Rheumatic aortic stenosis with insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3959": {
+    "description": "Other rheumatic aortic valve diseases",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3960": {
+    "description": "Rheumatic disorders of both mitral and aortic valves",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3961": {
+    "description": "Rheumatic disorders of both mitral and aortic valves",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3962": {
+    "description": "Rheumatic disorders of both mitral and aortic valves",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3963": {
+    "description": "Rheumatic disorders of both mitral and aortic valves",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3968": {
+    "description": "Other rheumatic multiple valve diseases",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3969": {
+    "description": "Rheumatic multiple valve disease, unspecified",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3970": {
+    "description": "Rheumatic tricuspid insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3971": {
+    "description": "Other specified rheumatic heart diseases",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "3979": {
+    "description": "Rheumatic diseases of endocardium, valve unspecified",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "4010": {
+    "description": "Essential (primary) hypertension",
+    "comorbidities": [
+      "Hypertension, uncomplicated"
+    ]
+  },
+  "4011": {
+    "description": "Essential (primary) hypertension",
+    "comorbidities": [
+      "Hypertension, uncomplicated"
+    ]
+  },
+  "4019": {
+    "description": "Essential (primary) hypertension",
+    "comorbidities": [
+      "Hypertension, uncomplicated"
+    ]
+  },
+  "4150": {
+    "description": "Other pulmonary embolism with acute cor pulmonale",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4160": {
+    "description": "Primary pulmonary hypertension",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4161": {
+    "description": "Kyphoscoliotic heart disease",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4162": {
+    "description": "Chronic pulmonary embolism",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4168": {
+    "description": "",
+    "comorbidities": [
+      "Pulmonary circulation disorders",
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4169": {
+    "description": "Cor pulmonale (chronic)",
+    "comorbidities": [
+      "Pulmonary circulation disorders",
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4170": {
+    "description": "Arteriovenous fistula of pulmonary vessels",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4178": {
+    "description": "Other diseases of pulmonary vessels",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4179": {
+    "description": "Disease of pulmonary vessels, unspecified",
+    "comorbidities": [
+      "Pulmonary circulation disorders"
+    ]
+  },
+  "4240": {
+    "description": "Nonrheumatic mitral (valve) insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "4241": {
+    "description": "Nonrheumatic aortic (valve) stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "4242": {
+    "description": "Nonrheumatic tricuspid (valve) stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "4243": {
+    "description": "Nonrheumatic pulmonary valve stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "4254": {
+    "description": "Other restrictive cardiomyopathy",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4255": {
+    "description": "Alcoholic cardiomyopathy",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Alcohol abuse"
+    ]
+  },
+  "4257": {
+    "description": "Cardiomyopathy in diseases classified elsewhere",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4258": {
+    "description": "Cardiomyopathy in diseases classified elsewhere",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4259": {
+    "description": "Cardiomyopathy due to drug and external agent",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4260": {
+    "description": "Atrioventricular block, complete",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4267": {
+    "description": "Pre-excitation syndrome",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4269": {
+    "description": "Conduction disorder, unspecified",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4270": {
+    "description": "",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4271": {
+    "description": "",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4272": {
+    "description": "Paroxysmal tachycardia, unspecified",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4279": {
+    "description": "Cardiac arrhythmia, unspecified",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "4280": {
+    "description": "Heart failure, unspecified",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4281": {
+    "description": "Left ventricular failure, unspecified",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4289": {
+    "description": "Heart failure, unspecified",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "4373": {
+    "description": "Cerebral aneurysm, nonruptured",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4400": {
+    "description": "Atherosclerosis of aorta",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4401": {
+    "description": "Atherosclerosis of renal artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4404": {
+    "description": "Chronic total occlusion of artery of the extremities",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4408": {
+    "description": "Atherosclerosis of other arteries",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4409": {
+    "description": "Unspecified atherosclerosis",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4411": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4412": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4413": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4414": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4415": {
+    "description": "Aortic aneurysm of unspecified site, ruptured",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4416": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4417": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4419": {
+    "description": "Aortic aneurysm of unspecified site, without rupture",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4431": {
+    "description": "Thromboangiitis obliterans [Buerger's disease]",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4439": {
+    "description": "Peripheral vascular disease, unspecified",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4460": {
+    "description": "Polyarteritis nodosa",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4461": {
+    "description": "Mucocutaneous lymph node syndrome [Kawasaki]",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4463": {
+    "description": "Lethal midline granuloma",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4464": {
+    "description": "Wegener's granulomatosis without renal involvement",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4465": {
+    "description": "Other giant cell arteritis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4466": {
+    "description": "",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4467": {
+    "description": "Aortic arch syndrome [Takayasu]",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "4471": {
+    "description": "Stricture of artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "4560": {
+    "description": "Esophageal varices with bleeding",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "4561": {
+    "description": "Esophageal varices without bleeding",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "4910": {
+    "description": "Simple chronic bronchitis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4911": {
+    "description": "Mucopurulent chronic bronchitis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4918": {
+    "description": "Mixed simple and mucopurulent chronic bronchitis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4919": {
+    "description": "Unspecified chronic bronchitis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4920": {
+    "description": "Emphysema, unspecified",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4928": {
+    "description": "Emphysema, unspecified",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4940": {
+    "description": "Bronchiectasis, uncomplicated",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4941": {
+    "description": "Bronchiectasis with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4950": {
+    "description": "Farmer's lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4951": {
+    "description": "Bagassosis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4952": {
+    "description": "Bird fancier's lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4953": {
+    "description": "Suberosis",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4954": {
+    "description": "Maltworker's lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4955": {
+    "description": "Mushroom-worker's lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4956": {
+    "description": "Maple-bark-stripper's lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4957": {
+    "description": "Air conditioner and humidifier lung",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4958": {
+    "description": "Hypersensitivity pneumonitis due to other organic dusts",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "4959": {
+    "description": "Hypersensitivity pneumonitis due to unspecified organic dust",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "5064": {
+    "description": "Chronic respiratory conditions due to chemicals, gases, fumes and vapors",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "5081": {
+    "description": "Chronic and other pulmonary manifestations due to radiation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "5088": {
+    "description": "Respiratory conditions due to other specified external agents",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "5571": {
+    "description": "Chronic vascular disorders of intestine",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "5579": {
+    "description": "Vascular disorder of intestine, unspecified",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "5710": {
+    "description": "Alcoholic fatty liver",
+    "comorbidities": [
+      "Liver disease",
+      "Alcohol abuse"
+    ]
+  },
+  "5711": {
+    "description": "Alcoholic hepatitis without ascites",
+    "comorbidities": [
+      "Liver disease",
+      "Alcohol abuse"
+    ]
+  },
+  "5712": {
+    "description": "Alcoholic cirrhosis of liver without ascites",
+    "comorbidities": [
+      "Liver disease",
+      "Alcohol abuse"
+    ]
+  },
+  "5713": {
+    "description": "Alcoholic liver disease, unspecified",
+    "comorbidities": [
+      "Liver disease",
+      "Alcohol abuse"
+    ]
+  },
+  "5715": {
+    "description": "",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5716": {
+    "description": "Primary biliary cirrhosis",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5718": {
+    "description": "Fatty (change of) liver, not elsewhere classified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5719": {
+    "description": "Hepatic sclerosis",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5722": {
+    "description": "Hepatic failure, unspecified without coma",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5723": {
+    "description": "Portal hypertension",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5724": {
+    "description": "Hepatorenal syndrome",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5728": {
+    "description": "Chronic hepatic failure without coma",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5733": {
+    "description": "Toxic liver disease with hepatitis, not elsewhere classified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5734": {
+    "description": "Infarction of liver",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5738": {
+    "description": "Chronic passive congestion of liver",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5739": {
+    "description": "Liver disease, unspecified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "5851": {
+    "description": "Chronic kidney disease, stage 1",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5852": {
+    "description": "Chronic kidney disease, stage 2 (mild)",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5853": {
+    "description": "",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5854": {
+    "description": "Chronic kidney disease, stage 4 (severe)",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5855": {
+    "description": "Chronic kidney disease, stage 5",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5856": {
+    "description": "End stage renal disease",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5859": {
+    "description": "Chronic kidney disease, unspecified",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "5880": {
+    "description": "Renal osteodystrophy",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "7010": {
+    "description": "Lichen sclerosus et atrophicus",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7100": {
+    "description": "Systemic lupus erythematosus, organ or system involvement unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7101": {
+    "description": "Progressive systemic sclerosis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7102": {
+    "description": "Sjogren syndrome, unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7103": {
+    "description": "Dermatopolymyositis, unspecified, organ involvement unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7104": {
+    "description": "Polymyositis, organ involvement unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7108": {
+    "description": "Multifocal fibrosclerosis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7109": {
+    "description": "Systemic involvement of connective tissue, unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7140": {
+    "description": "Rheumatoid arthritis, unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7141": {
+    "description": "Felty's syndrome, unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7142": {
+    "description": "Rheumatoid heart disease with rheumatoid arthritis of unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7144": {
+    "description": "Chronic postrheumatic arthropathy [Jaccoud], unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7149": {
+    "description": "Inflammatory polyarthropathy",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7200": {
+    "description": "Ankylosing spondylitis of unspecified sites in spine",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7201": {
+    "description": "Spinal enthesopathy, site unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7202": {
+    "description": "Sacroiliitis, not elsewhere classified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7209": {
+    "description": "Unspecified inflammatory spondylopathy, site unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7285": {
+    "description": "Hypermobility syndrome",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "7463": {
+    "description": "Congenital stenosis of aortic valve",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "7464": {
+    "description": "Congenital insufficiency of aortic valve",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "7465": {
+    "description": "Congenital mitral stenosis",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "7466": {
+    "description": "Congenital mitral insufficiency",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "7843": {
+    "description": "Aphasia",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "7850": {
+    "description": "Tachycardia, unspecified",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "7994": {
+    "description": "Cachexia",
+    "comorbidities": [
+      "Weight loss"
+    ]
+  },
+  "9800": {
+    "description": "Toxic effect of ethanol, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "9801": {
+    "description": "Toxic effect of methanol, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "9802": {
+    "description": "Toxic effect of 2-Propanol, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "9803": {
+    "description": "Toxic effect of fusel oil, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "9808": {
+    "description": "Toxic effect of other alcohols, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "9809": {
+    "description": "Toxic effect of unspecified alcohol, accidental (unintentional), initial encounter",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "19881": {
+    "description": "Secondary malignant neoplasm of breast",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "19882": {
+    "description": "Secondary malignant neoplasm of genital organs",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "19889": {
+    "description": "Secondary malignant neoplasm of other specified sites",
+    "comorbidities": [
+      "Metastatic cancer"
+    ]
+  },
+  "20000": {
+    "description": "Diffuse large B-cell lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20001": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20002": {
+    "description": "Diffuse large B-cell lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20003": {
+    "description": "Diffuse large B-cell lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20004": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20005": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20006": {
+    "description": "Diffuse large B-cell lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20007": {
+    "description": "Diffuse large B-cell lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20008": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20010": {
+    "description": "Lymphoblastic (diffuse) lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20011": {
+    "description": "Lymphoblastic (diffuse) lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20012": {
+    "description": "Lymphoblastic (diffuse) lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20013": {
+    "description": "Lymphoblastic (diffuse) lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20014": {
+    "description": "Lymphoblastic (diffuse) lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20015": {
+    "description": "Lymphoblastic (diffuse) lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20016": {
+    "description": "Lymphoblastic (diffuse) lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20017": {
+    "description": "Lymphoblastic (diffuse) lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20018": {
+    "description": "Lymphoblastic (diffuse) lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20020": {
+    "description": "Burkitt lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20021": {
+    "description": "Burkitt lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20022": {
+    "description": "Burkitt lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20023": {
+    "description": "Burkitt lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20024": {
+    "description": "Burkitt lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20025": {
+    "description": "Burkitt lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20026": {
+    "description": "Burkitt lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20027": {
+    "description": "Burkitt lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20028": {
+    "description": "Burkitt lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20030": {
+    "description": "Other non-follicular lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20031": {
+    "description": "Other non-follicular lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20032": {
+    "description": "Other non-follicular lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20033": {
+    "description": "Other non-follicular lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20034": {
+    "description": "Other non-follicular lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20035": {
+    "description": "Other non-follicular lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20036": {
+    "description": "Other non-follicular lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20037": {
+    "description": "Other non-follicular lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20038": {
+    "description": "Other non-follicular lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20040": {
+    "description": "Mantle cell lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20041": {
+    "description": "Mantle cell lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20042": {
+    "description": "Mantle cell lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20043": {
+    "description": "Mantle cell lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20044": {
+    "description": "Mantle cell lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20045": {
+    "description": "Mantle cell lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20046": {
+    "description": "Mantle cell lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20047": {
+    "description": "Mantle cell lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20048": {
+    "description": "Mantle cell lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20050": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20051": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20052": {
+    "description": "Diffuse large B-cell lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20053": {
+    "description": "Diffuse large B-cell lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20054": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20055": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20056": {
+    "description": "Diffuse large B-cell lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20057": {
+    "description": "Diffuse large B-cell lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20058": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20060": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20061": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20062": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20063": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20064": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20065": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20066": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20067": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20068": {
+    "description": "Anaplastic large cell lymphoma, ALK-positive, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20070": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20071": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20072": {
+    "description": "Diffuse large B-cell lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20073": {
+    "description": "Diffuse large B-cell lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20074": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20075": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20076": {
+    "description": "Diffuse large B-cell lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20077": {
+    "description": "Diffuse large B-cell lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20078": {
+    "description": "Diffuse large B-cell lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20080": {
+    "description": "Other non-follicular lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20081": {
+    "description": "Other non-follicular lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20082": {
+    "description": "Other non-follicular lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20083": {
+    "description": "Other non-follicular lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20084": {
+    "description": "Other non-follicular lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20085": {
+    "description": "Other non-follicular lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20086": {
+    "description": "Other non-follicular lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20087": {
+    "description": "Other non-follicular lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20088": {
+    "description": "Other non-follicular lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20100": {
+    "description": "Other Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20101": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20102": {
+    "description": "Other Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20103": {
+    "description": "Other Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20104": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20105": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20106": {
+    "description": "Other Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20107": {
+    "description": "Other Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20108": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20110": {
+    "description": "Other Hodgkin lymphoma, extranodal and solid organ sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20111": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20112": {
+    "description": "Other Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20113": {
+    "description": "Other Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20114": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20115": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20116": {
+    "description": "Other Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20117": {
+    "description": "Other Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20118": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20120": {
+    "description": "Other Hodgkin lymphoma, extranodal and solid organ sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20121": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20122": {
+    "description": "Other Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20123": {
+    "description": "Other Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20124": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20125": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20126": {
+    "description": "Other Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20127": {
+    "description": "Other Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20128": {
+    "description": "Other Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20140": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20141": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20142": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20143": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20144": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20145": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20146": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20147": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20148": {
+    "description": "Nodular lymphocyte predominant Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20150": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20151": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20152": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20153": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20154": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20155": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20156": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20157": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20158": {
+    "description": "Nodular sclerosis Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20160": {
+    "description": "Mixed cellularity Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20161": {
+    "description": "Mixed cellularity Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20162": {
+    "description": "Mixed cellularity Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20163": {
+    "description": "Mixed cellularity Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20164": {
+    "description": "Mixed cellularity Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20165": {
+    "description": "Mixed cellularity Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20166": {
+    "description": "Mixed cellularity Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20167": {
+    "description": "Mixed cellularity Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20168": {
+    "description": "Mixed cellularity Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20170": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20171": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20172": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20173": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20174": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20175": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20176": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20177": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20178": {
+    "description": "Lymphocyte depleted Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20190": {
+    "description": "Hodgkin lymphoma, unspecified, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20191": {
+    "description": "Hodgkin lymphoma, unspecified, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20192": {
+    "description": "Hodgkin lymphoma, unspecified, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20193": {
+    "description": "Hodgkin lymphoma, unspecified, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20194": {
+    "description": "Hodgkin lymphoma, unspecified, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20195": {
+    "description": "Hodgkin lymphoma, unspecified, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20196": {
+    "description": "Hodgkin lymphoma, unspecified, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20197": {
+    "description": "Hodgkin lymphoma, unspecified, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20198": {
+    "description": "Hodgkin lymphoma, unspecified, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20200": {
+    "description": "Follicular lymphoma, unspecified, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20201": {
+    "description": "Follicular lymphoma, unspecified, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20202": {
+    "description": "Follicular lymphoma, unspecified, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20203": {
+    "description": "Follicular lymphoma, unspecified, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20204": {
+    "description": "Follicular lymphoma, unspecified, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20205": {
+    "description": "Follicular lymphoma, unspecified, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20206": {
+    "description": "Follicular lymphoma, unspecified, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20207": {
+    "description": "Follicular lymphoma, unspecified, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20208": {
+    "description": "Follicular lymphoma, unspecified, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20210": {
+    "description": "Mycosis fungoides, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20211": {
+    "description": "Mycosis fungoides, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20212": {
+    "description": "Mycosis fungoides, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20213": {
+    "description": "Mycosis fungoides, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20214": {
+    "description": "Mycosis fungoides, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20215": {
+    "description": "Mycosis fungoides, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20216": {
+    "description": "Mycosis fungoides, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20217": {
+    "description": "Mycosis fungoides, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20218": {
+    "description": "Mycosis fungoides, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20220": {
+    "description": "Sezary disease, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20221": {
+    "description": "Sezary disease, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20222": {
+    "description": "Sezary disease, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20223": {
+    "description": "Sezary disease, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20224": {
+    "description": "Sezary disease, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20225": {
+    "description": "Sezary disease, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20226": {
+    "description": "Sezary disease, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20227": {
+    "description": "Sezary disease, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20228": {
+    "description": "Sezary disease, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20230": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20231": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20232": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20233": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20234": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20235": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20236": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20237": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20238": {
+    "description": "Histiocytic sarcoma",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20240": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20241": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20242": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20243": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20244": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20245": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20246": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20247": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20248": {
+    "description": "Hairy cell leukemia not having achieved remission",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20250": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20251": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20252": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20253": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20254": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20255": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20256": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20257": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20258": {
+    "description": "Multifocal and multisystemic (disseminated) Langerhans-cell histiocytosis",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20260": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20261": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20262": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20263": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20264": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20265": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20266": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20267": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20268": {
+    "description": "",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20270": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20271": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20272": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20273": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20274": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20275": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20276": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20277": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20278": {
+    "description": "Peripheral T-cell lymphoma, not elsewhere classified, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20280": {
+    "description": "Other specified types of non-Hodgkin lymphoma, unspecified site",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20281": {
+    "description": "Other specified types of non-Hodgkin lymphoma, lymph nodes of head, face, and neck",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20282": {
+    "description": "Other specified types of non-Hodgkin lymphoma, intrathoracic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20283": {
+    "description": "Mature T/NK-cell lymphomas, unspecified, intra-abdominal lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20284": {
+    "description": "Other specified types of non-Hodgkin lymphoma, lymph nodes of axilla and upper limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20285": {
+    "description": "Other specified types of non-Hodgkin lymphoma, lymph nodes of inguinal region and lower limb",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20286": {
+    "description": "Other specified types of non-Hodgkin lymphoma, intrapelvic lymph nodes",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20287": {
+    "description": "Other specified types of non-Hodgkin lymphoma, spleen",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20288": {
+    "description": "Other specified types of non-Hodgkin lymphoma, lymph nodes of multiple sites",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20290": {
+    "description": "Sarcoma of dendritic cells (accessory cells)",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20291": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20292": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20293": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20294": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20295": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20296": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20297": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "20298": {
+    "description": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "comorbidities": [
+      "Lymphoma"
+    ]
+  },
+  "25000": {
+    "description": "Type 2 diabetes mellitus without complications",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25001": {
+    "description": "Type 1 diabetes mellitus without complications",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25002": {
+    "description": "Type 2 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25003": {
+    "description": "Type 1 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25010": {
+    "description": "Type 2 diabetes mellitus with other specified complication",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25011": {
+    "description": "Type 1 diabetes mellitus with ketoacidosis without coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25012": {
+    "description": "Type 2 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25013": {
+    "description": "Type 1 diabetes mellitus with ketoacidosis without coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25020": {
+    "description": "Type 2 diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25021": {
+    "description": "Type 1 diabetes mellitus with other specified complication",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25022": {
+    "description": "Type 2 diabetes mellitus with hyperosmolarity without nonketotic hyperglycemic-hyperosmolar coma (NKHHC)",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25023": {
+    "description": "Type 1 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25030": {
+    "description": "Type 2 diabetes mellitus with hypoglycemia with coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25031": {
+    "description": "Type 1 diabetes mellitus with ketoacidosis with coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25032": {
+    "description": "Type 2 diabetes mellitus with hyperosmolarity with coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25033": {
+    "description": "Type 1 diabetes mellitus with ketoacidosis with coma",
+    "comorbidities": [
+      "Diabetes, uncomplicated"
+    ]
+  },
+  "25040": {
+    "description": "Type 2 diabetes mellitus with other diabetic kidney complication",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25041": {
+    "description": "Type 1 diabetes mellitus with other diabetic kidney complication",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25042": {
+    "description": "Type 2 diabetes mellitus with diabetic nephropathy",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25043": {
+    "description": "Type 1 diabetes mellitus with diabetic nephropathy",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25050": {
+    "description": "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25051": {
+    "description": "Type 1 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25052": {
+    "description": "Type 2 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25053": {
+    "description": "Type 1 diabetes mellitus with unspecified diabetic retinopathy with macular edema",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25060": {
+    "description": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25061": {
+    "description": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25062": {
+    "description": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25063": {
+    "description": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25070": {
+    "description": "Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25071": {
+    "description": "Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25072": {
+    "description": "Type 2 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25073": {
+    "description": "Type 1 diabetes mellitus with diabetic peripheral angiopathy without gangrene",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25080": {
+    "description": "Type 2 diabetes mellitus with other diabetic arthropathy",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25081": {
+    "description": "Type 1 diabetes mellitus with other diabetic arthropathy",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25082": {
+    "description": "Type 2 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25083": {
+    "description": "Type 1 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25090": {
+    "description": "Type 2 diabetes mellitus with unspecified complications",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25091": {
+    "description": "Type 1 diabetes mellitus with unspecified complications",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25092": {
+    "description": "Type 2 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "25093": {
+    "description": "Type 1 diabetes mellitus with hyperglycemia",
+    "comorbidities": [
+      "Diabetes, complicated"
+    ]
+  },
+  "27650": {
+    "description": "Volume depletion, unspecified",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "27651": {
+    "description": "Dehydration",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "27652": {
+    "description": "Hypovolemia",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "27661": {
+    "description": "Transfusion associated circulatory overload",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "27669": {
+    "description": "Fluid overload, unspecified",
+    "comorbidities": [
+      "Fluid and electrolyte disorders"
+    ]
+  },
+  "28652": {
+    "description": "Acquired hemophilia",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28653": {
+    "description": "Antiphospholipid antibody with hemorrhagic disorder",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28659": {
+    "description": "Other hemorrhagic disorder due to intrinsic circulating anticoagulants, antibodies, or inhibitors",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28730": {
+    "description": "Essential (hemorrhagic) thrombocythemia",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28731": {
+    "description": "Immune thrombocytopenic purpura",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28732": {
+    "description": "Evans syndrome",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28733": {
+    "description": "Congenital and hereditary thrombocytopenia purpura",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28739": {
+    "description": "Other primary thrombocytopenia",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28741": {
+    "description": "Posttransfusion purpura",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "28749": {
+    "description": "Other secondary thrombocytopenia",
+    "comorbidities": [
+      "Coagulopathy"
+    ]
+  },
+  "29181": {
+    "description": "Alcohol dependence with withdrawal, unspecified",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "29182": {
+    "description": "Alcohol abuse with alcohol-induced sleep disorder",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "29189": {
+    "description": "Alcohol abuse with alcohol-induced psychotic disorder, unspecified",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "29211": {
+    "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced psychotic disorder with delusions",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29212": {
+    "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced psychotic disorder with hallucinations",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29281": {
+    "description": "Other psychoactive substance use, unspecified with intoxication with delirium",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29282": {
+    "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced persisting dementia",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29283": {
+    "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced persisting amnestic disorder",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29284": {
+    "description": "Other psychoactive substance use, unspecified with psychoactive substance-induced mood disorder",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29285": {
+    "description": "Opioid abuse with opioid-induced sleep disorder",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29289": {
+    "description": "Opioid abuse with opioid-induced psychotic disorder, unspecified",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "29500": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29501": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29502": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29503": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29504": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29505": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29510": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29511": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29512": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29513": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29514": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29515": {
+    "description": "Disorganized schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29520": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29521": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29522": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29523": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29524": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29525": {
+    "description": "Catatonic schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29530": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29531": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29532": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29533": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29534": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29535": {
+    "description": "Paranoid schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29540": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29541": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29542": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29543": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29544": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29545": {
+    "description": "Schizophreniform disorder",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29550": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29551": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29552": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29553": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29554": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29555": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29560": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29561": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29562": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29563": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29564": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29565": {
+    "description": "Residual schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29570": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29571": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29572": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29573": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29574": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29575": {
+    "description": "Schizoaffective disorder, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29580": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29581": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29582": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29583": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29584": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29585": {
+    "description": "Other schizophrenia",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29590": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29591": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29592": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29593": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29594": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29595": {
+    "description": "Schizophrenia, unspecified",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29604": {
+    "description": "Manic episode, severe with psychotic symptoms",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29614": {
+    "description": "Manic episode, severe with psychotic symptoms",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29644": {
+    "description": "Bipolar disorder, current episode manic severe with psychotic features",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "29654": {
+    "description": "Bipolar disorder, current episode depressed, severe, with psychotic features",
+    "comorbidities": [
+      "Psychoses"
+    ]
+  },
+  "30400": {
+    "description": "Opioid dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30401": {
+    "description": "Opioid dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30402": {
+    "description": "Opioid dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30403": {
+    "description": "Opioid dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30410": {
+    "description": "Sedative, hypnotic or anxiolytic dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30411": {
+    "description": "Sedative, hypnotic or anxiolytic dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30412": {
+    "description": "Sedative, hypnotic or anxiolytic dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30413": {
+    "description": "Sedative, hypnotic or anxiolytic dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30420": {
+    "description": "Cocaine dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30421": {
+    "description": "Cocaine dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30422": {
+    "description": "Cocaine dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30423": {
+    "description": "Cocaine dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30430": {
+    "description": "Cannabis dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30431": {
+    "description": "Cannabis dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30432": {
+    "description": "Cannabis dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30433": {
+    "description": "Cannabis dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30440": {
+    "description": "Other stimulant dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30441": {
+    "description": "Other stimulant dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30442": {
+    "description": "Other stimulant dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30443": {
+    "description": "Other stimulant dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30450": {
+    "description": "Hallucinogen dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30451": {
+    "description": "Hallucinogen dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30452": {
+    "description": "Hallucinogen dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30453": {
+    "description": "Hallucinogen dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30460": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30461": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30462": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30463": {
+    "description": "Other psychoactive substance dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30470": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30471": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30472": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30473": {
+    "description": "Other psychoactive substance dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30480": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30481": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30482": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30483": {
+    "description": "Other psychoactive substance dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30490": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30491": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30492": {
+    "description": "Other psychoactive substance dependence, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30493": {
+    "description": "Other psychoactive substance dependence, in remission",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30520": {
+    "description": "Cannabis abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30521": {
+    "description": "Cannabis abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30522": {
+    "description": "Cannabis abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30523": {
+    "description": "Cannabis abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30530": {
+    "description": "Hallucinogen abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30531": {
+    "description": "Hallucinogen abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30532": {
+    "description": "Hallucinogen abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30533": {
+    "description": "Hallucinogen abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30540": {
+    "description": "Sedative, hypnotic or anxiolytic abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30541": {
+    "description": "Sedative, hypnotic or anxiolytic abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30542": {
+    "description": "Sedative, hypnotic or anxiolytic abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30543": {
+    "description": "Sedative, hypnotic or anxiolytic abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30550": {
+    "description": "Opioid abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30551": {
+    "description": "Opioid abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30552": {
+    "description": "Opioid abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30553": {
+    "description": "Opioid abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30560": {
+    "description": "Cocaine abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30561": {
+    "description": "Cocaine abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30562": {
+    "description": "Cocaine abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30563": {
+    "description": "Cocaine abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30570": {
+    "description": "Other stimulant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30571": {
+    "description": "Other stimulant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30572": {
+    "description": "Other stimulant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30573": {
+    "description": "Other stimulant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30580": {
+    "description": "Other psychoactive substance abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30581": {
+    "description": "Other psychoactive substance abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30582": {
+    "description": "Other psychoactive substance abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30583": {
+    "description": "Other psychoactive substance abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30590": {
+    "description": "Inhalant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30591": {
+    "description": "Inhalant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30592": {
+    "description": "Inhalant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30593": {
+    "description": "Inhalant abuse, uncomplicated",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  },
+  "30921": {
+    "description": "Separation anxiety disorder of childhood",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30922": {
+    "description": "Other childhood disorders of social functioning",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30923": {
+    "description": "Other childhood disorders of social functioning",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30924": {
+    "description": "Adjustment disorder with anxiety",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30928": {
+    "description": "Adjustment disorder with mixed anxiety and depressed mood",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30929": {
+    "description": "Adjustment disorder with other symptoms",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30981": {
+    "description": "Post-traumatic stress disorder, unspecified",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30982": {
+    "description": "",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30983": {
+    "description": "",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "30989": {
+    "description": "",
+    "comorbidities": [
+      "Depression"
+    ]
+  },
+  "33392": {
+    "description": "Malignant neuroleptic syndrome",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33510": {
+    "description": "Spinal muscular atrophy, unspecified",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33511": {
+    "description": "Other inherited spinal muscular atrophy",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33519": {
+    "description": "Other spinal muscular atrophies and related syndromes",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33520": {
+    "description": "Amyotrophic lateral sclerosis",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33521": {
+    "description": "Amyotrophic lateral sclerosis",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33522": {
+    "description": "Progressive bulbar palsy",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33523": {
+    "description": "Other spinal muscular atrophies and related syndromes",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33524": {
+    "description": "Other motor neuron disease",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "33529": {
+    "description": "Other motor neuron disease",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34120": {
+    "description": "Acute transverse myelitis in demyelinating disease of central nervous system",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34121": {
+    "description": "Acute transverse myelitis in demyelinating disease of central nervous system",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34122": {
+    "description": "Acute transverse myelitis in demyelinating disease of central nervous system",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34200": {
+    "description": "Flaccid hemiplegia affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34201": {
+    "description": "Flaccid hemiplegia affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34202": {
+    "description": "Flaccid hemiplegia affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34210": {
+    "description": "Spastic hemiplegia affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34211": {
+    "description": "Spastic hemiplegia affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34212": {
+    "description": "Spastic hemiplegia affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34280": {
+    "description": "Hemiplegia, unspecified affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34281": {
+    "description": "Hemiplegia, unspecified affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34282": {
+    "description": "Hemiplegia, unspecified affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34290": {
+    "description": "Hemiplegia, unspecified affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34291": {
+    "description": "Hemiplegia, unspecified affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34292": {
+    "description": "Hemiplegia, unspecified affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34400": {
+    "description": "Quadriplegia, unspecified",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34401": {
+    "description": "Quadriplegia, C1-C4 complete",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34402": {
+    "description": "Quadriplegia, C1-C4 incomplete",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34403": {
+    "description": "Quadriplegia, C5-C7 complete",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34404": {
+    "description": "Quadriplegia, C5-C7 incomplete",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34409": {
+    "description": "Quadriplegia, unspecified",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34430": {
+    "description": "Monoplegia of lower limb affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34431": {
+    "description": "Monoplegia of lower limb affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34432": {
+    "description": "Monoplegia of lower limb affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34440": {
+    "description": "Monoplegia of upper limb affecting unspecified side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34441": {
+    "description": "Monoplegia of upper limb affecting right dominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34442": {
+    "description": "Monoplegia of upper limb affecting right nondominant side",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34460": {
+    "description": "Cauda equina syndrome",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34461": {
+    "description": "Cauda equina syndrome",
+    "comorbidities": [
+      "Paralysis"
+    ]
+  },
+  "34500": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, not intractable, without status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34501": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34510": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, not intractable, without status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34511": {
+    "description": "Generalized idiopathic epilepsy and epileptic syndromes, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34540": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34541": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34550": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34551": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34560": {
+    "description": "Other generalized epilepsy and epileptic syndromes, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34561": {
+    "description": "Other generalized epilepsy and epileptic syndromes, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34570": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34571": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34580": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34581": {
+    "description": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34590": {
+    "description": "Epilepsy, unspecified, not intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "34591": {
+    "description": "Epilepsy, unspecified, intractable, with status epilepticus",
+    "comorbidities": [
+      "Other neurological disorders"
+    ]
+  },
+  "39891": {
+    "description": "Rheumatic heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "40200": {
+    "description": "Hypertensive heart disease without heart failure",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40201": {
+    "description": "Hypertensive heart disease with heart failure",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40210": {
+    "description": "Hypertensive heart disease without heart failure",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40211": {
+    "description": "Hypertensive heart disease with heart failure",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40290": {
+    "description": "Hypertensive heart disease without heart failure",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40291": {
+    "description": "Hypertensive heart disease with heart failure",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40300": {
+    "description": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40301": {
+    "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40310": {
+    "description": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40311": {
+    "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40390": {
+    "description": "Hypertensive chronic kidney disease with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40391": {
+    "description": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40400": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40401": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40402": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40403": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40410": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40411": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40412": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40413": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40490": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40491": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated"
+    ]
+  },
+  "40492": {
+    "description": "Hypertensive heart and chronic kidney disease without heart failure, with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40493": {
+    "description": "Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease",
+    "comorbidities": [
+      "Congestive heart failure",
+      "Hypertension, complicated",
+      "Renal failure"
+    ]
+  },
+  "40501": {
+    "description": "Renovascular hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40509": {
+    "description": "Other secondary hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40511": {
+    "description": "Renovascular hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40519": {
+    "description": "Other secondary hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40591": {
+    "description": "Renovascular hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "40599": {
+    "description": "Other secondary hypertension",
+    "comorbidities": [
+      "Hypertension, complicated"
+    ]
+  },
+  "42490": {
+    "description": "Endocarditis, valve unspecified",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "42491": {
+    "description": "Endocarditis and heart valve disorders in diseases classified elsewhere",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "42499": {
+    "description": "Endocarditis, valve unspecified",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "42610": {
+    "description": "Unspecified atrioventricular block",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42612": {
+    "description": "Atrioventricular block, second degree",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42613": {
+    "description": "Atrioventricular block, second degree",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42731": {
+    "description": "Unspecified atrial fibrillation",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42732": {
+    "description": "Unspecified atrial flutter",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42741": {
+    "description": "Ventricular fibrillation",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42742": {
+    "description": "Ventricular flutter",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42760": {
+    "description": "Unspecified premature depolarization",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42761": {
+    "description": "Atrial premature depolarization",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42769": {
+    "description": "Ventricular premature depolarization",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42781": {
+    "description": "Sick sinus syndrome",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42789": {
+    "description": "Other specified cardiac arrhythmias",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "42820": {
+    "description": "Unspecified systolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42821": {
+    "description": "Acute systolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42822": {
+    "description": "Chronic systolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42823": {
+    "description": "Acute on chronic systolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42830": {
+    "description": "Unspecified diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42831": {
+    "description": "Acute diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42832": {
+    "description": "Chronic diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42833": {
+    "description": "Acute on chronic diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42840": {
+    "description": "Unspecified combined systolic (congestive) and diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42841": {
+    "description": "Acute combined systolic (congestive) and diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42842": {
+    "description": "Chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "42843": {
+    "description": "Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure",
+    "comorbidities": [
+      "Congestive heart failure"
+    ]
+  },
+  "44020": {
+    "description": "Unspecified atherosclerosis of native arteries of extremities, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44021": {
+    "description": "Atherosclerosis of native arteries of extremities with intermittent claudication, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44022": {
+    "description": "Atherosclerosis of native arteries of extremities with rest pain, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44023": {
+    "description": "Atherosclerosis of native arteries of other extremities with ulceration",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44024": {
+    "description": "Atherosclerosis of native arteries of extremities with gangrene, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44029": {
+    "description": "Other atherosclerosis of native arteries of extremities, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44030": {
+    "description": "Other atherosclerosis of unspecified type of bypass graft(s) of the extremities, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44031": {
+    "description": "Other atherosclerosis of autologous vein bypass graft(s) of the extremities, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44032": {
+    "description": "Other atherosclerosis of nonautologous biological bypass graft(s) of the extremities, unspecified extremity",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44100": {
+    "description": "Dissection of unspecified site of aorta",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44101": {
+    "description": "",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44102": {
+    "description": "Dissection of abdominal aorta",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44103": {
+    "description": "Dissection of thoracoabdominal aorta",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44321": {
+    "description": "Dissection of carotid artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44322": {
+    "description": "Dissection of iliac artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44323": {
+    "description": "Dissection of renal artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44324": {
+    "description": "Dissection of vertebral artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44329": {
+    "description": "Dissection of other specified artery",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44381": {
+    "description": "Other disorders of arteries, arterioles and capillaries in diseases classified elsewhere",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44382": {
+    "description": "Erythromelalgia",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44389": {
+    "description": "Other specified peripheral vascular diseases",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "44620": {
+    "description": "Hypersensitivity angiitis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "44621": {
+    "description": "Hypersensitivity angiitis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "44629": {
+    "description": "Hypersensitivity angiitis",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "45620": {
+    "description": "Secondary esophageal varices with bleeding",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "45621": {
+    "description": "Secondary esophageal varices without bleeding",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "49120": {
+    "description": "Chronic obstructive pulmonary disease, unspecified",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49121": {
+    "description": "Chronic obstructive pulmonary disease with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49122": {
+    "description": "Chronic obstructive pulmonary disease with (acute) lower respiratory infection",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49300": {
+    "description": "Mild intermittent asthma, uncomplicated",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49301": {
+    "description": "Mild intermittent asthma with status asthmaticus",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49302": {
+    "description": "Mild intermittent asthma with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49310": {
+    "description": "Mild intermittent asthma, uncomplicated",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49311": {
+    "description": "Mild intermittent asthma with status asthmaticus",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49312": {
+    "description": "Mild intermittent asthma with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49320": {
+    "description": "Chronic obstructive pulmonary disease, unspecified",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49321": {
+    "description": "Chronic obstructive pulmonary disease with (acute) lower respiratory infection",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49322": {
+    "description": "Chronic obstructive pulmonary disease with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49381": {
+    "description": "Exercise induced bronchospasm",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49382": {
+    "description": "Cough variant asthma",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49390": {
+    "description": "Unspecified asthma, uncomplicated",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49391": {
+    "description": "Unspecified asthma with status asthmaticus",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "49392": {
+    "description": "Unspecified asthma with (acute) exacerbation",
+    "comorbidities": [
+      "Chronic pulmonary disease"
+    ]
+  },
+  "57140": {
+    "description": "Chronic hepatitis, unspecified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "57141": {
+    "description": "Chronic persistent hepatitis, not elsewhere classified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "57142": {
+    "description": "Autoimmune hepatitis",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "57149": {
+    "description": "Chronic active hepatitis, not elsewhere classified",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "71430": {
+    "description": "Unspecified juvenile rheumatoid arthritis of unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "71431": {
+    "description": "Juvenile rheumatoid polyarthritis (seronegative)",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "71432": {
+    "description": "Pauciarticular juvenile rheumatoid arthritis, unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "71433": {
+    "description": "Pauciarticular juvenile rheumatoid arthritis, unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "71481": {
+    "description": "Rheumatoid lung disease with rheumatoid arthritis of unspecified site",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "71489": {
+    "description": "Inflammatory polyarthropathy",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "72081": {
+    "description": "Spondylopathy in diseases classified elsewhere, site unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "72089": {
+    "description": "Other specified inflammatory spondylopathies, site unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "72889": {
+    "description": "Other specified disorders of muscle",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "72930": {
+    "description": "Panniculitis, unspecified",
+    "comorbidities": [
+      "Rheumatoid arthritis/collagen vascular diseases"
+    ]
+  },
+  "99601": {
+    "description": "Breakdown (mechanical) of cardiac electrode, initial encounter",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "99604": {
+    "description": "Breakdown (mechanical) of cardiac electrode, initial encounter",
+    "comorbidities": [
+      "Cardiac arrhythmias"
+    ]
+  },
+  "042": {
+    "description": "Human immunodeficiency virus [HIV] disease",
+    "comorbidities": [
+      "AIDS/HIV"
+    ]
+  },
+  "07022": {
+    "description": "Chronic viral hepatitis B without delta-agent",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "07023": {
+    "description": "Chronic viral hepatitis B with delta-agent",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "07032": {
+    "description": "Chronic viral hepatitis B without delta-agent",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "07033": {
+    "description": "Chronic viral hepatitis B with delta-agent",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "07044": {
+    "description": "Chronic viral hepatitis C",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "07054": {
+    "description": "Chronic viral hepatitis C",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "0706": {
+    "description": "Unspecified viral hepatitis with hepatic coma",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "0709": {
+    "description": "Unspecified viral hepatitis without hepatic coma",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "0930": {
+    "description": "Syphilitic aneurysm of aorta",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "V113": {
+    "description": "Other specified problems related to psychosocial circumstances",
+    "comorbidities": [
+      "Alcohol abuse"
+    ]
+  },
+  "V420": {
+    "description": "Kidney transplant status",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V422": {
+    "description": "Presence of xenogenic heart valve",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "V427": {
+    "description": "Liver transplant status",
+    "comorbidities": [
+      "Liver disease"
+    ]
+  },
+  "V433": {
+    "description": "Presence of prosthetic heart valve",
+    "comorbidities": [
+      "Valvular disease"
+    ]
+  },
+  "V434": {
+    "description": "Presence of other vascular implants and grafts",
+    "comorbidities": [
+      "Peripheral vascular disorders"
+    ]
+  },
+  "V560": {
+    "description": "Encounter for adequacy testing for hemodialysis",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V561": {
+    "description": "Encounter for fitting and adjustment of extracorporeal dialysis catheter",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V562": {
+    "description": "Encounter for fitting and adjustment of peritoneal dialysis catheter",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V5631": {
+    "description": "Encounter for adequacy testing for hemodialysis",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V5632": {
+    "description": "Encounter for adequacy testing for peritoneal dialysis",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V568": {
+    "description": "Encounter for adequacy testing for peritoneal dialysis",
+    "comorbidities": [
+      "Renal failure"
+    ]
+  },
+  "V6542": {
+    "description": "Alcohol abuse counseling and surveillance of alcoholic",
+    "comorbidities": [
+      "Drug abuse"
+    ]
+  }
+}

@@ -79,10 +79,10 @@ export default function SearchPage() {
       const conversionResult = await convertCode(codeForConversion, system, targetSystem)
 
       // Obtener Elixhauser - solo para códigos específicos, no para familias
-      const elixhauserResult = codeResult.isFamily ? null : await getElixhauser(codeResult.code.replace(/\./g, ''))
+      const elixhauserResult = codeResult.isFamily ? null : await getElixhauser(codeResult.code, system)
 
       // Obtener Charlson - solo para códigos específicos, no para familias
-      const charlsonResult = codeResult.isFamily ? null : await getCharlson(codeResult.code.replace(/\./g, ''), system)
+      const charlsonResult = codeResult.isFamily ? null : await getCharlson(codeResult.code, system)
 
       setResult({
         code: codeResult,
