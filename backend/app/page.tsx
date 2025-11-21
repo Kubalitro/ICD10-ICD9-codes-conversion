@@ -9,7 +9,7 @@ import ResultsTabs from './components/ResultsTabs'
 import SearchHistory from './components/SearchHistory'
 import FavoritesList from './components/FavoritesList'
 import { ICDCode, ConversionResult, ElixhauserCategory, CharlsonResult } from './types'
-import { searchCode, convertCode, getElixhauser, getCharlson, searchFamily } from './utils/api'
+import { searchCode, convertCode, getElixhauser, getCharlson, searchFamily, getHCC } from './utils/api'
 import { addToHistory, getHistory, clearHistory } from './utils/history'
 import { SearchHistory as SearchHistoryType } from './types'
 import { useLanguage } from './context/LanguageContext'
@@ -26,6 +26,7 @@ export default function SearchPage() {
     conversions: ConversionResult[]
     elixhauser: { categories: ElixhauserCategory[], totalCategories: number } | null
     charlson: CharlsonResult | null
+    hcc: { category: string, description: string, score: number } | null
     familyData?: any
   } | null>(null)
   const [history, setHistory] = useState<SearchHistoryType[]>([])
@@ -131,17 +132,22 @@ export default function SearchPage() {
         : codeResult.code.replace(/\./g, '')
       const conversionResult = await convertCode(codeForConversion, system, targetSystem)
 
-      // Obtener Elixhauser - solo para códigos específicos, no para familias
-      const elixhauserResult = codeResult.isFamily ? null : await getElixhauser(codeResult.code, system)
+      // Obtener Elixhauser - para códigos específicos y familias
+      const elixhauserResult = await getElixhauser(codeResult.code, system)
 
-      // Obtener Charlson - solo para códigos específicos, no para familias
-      const charlsonResult = codeResult.isFamily ? null : await getCharlson(codeResult.code, system)
+      // Obtener Charlson - para códigos específicos y familias
+      const charlsonResult = await getCharlson(codeResult.code, system)
+
+      // Obtener HCC - solo para ICD-10
+      const hccResult = system === 'icd10' ? await getHCC(codeResult.code) : null
 
       setResult({
         code: codeResult,
         conversions: conversionResult?.conversions || [],
         elixhauser: elixhauserResult,
-        charlson: charlsonResult
+        charlson: charlsonResult,
+        hcc: hccResult,
+        familyData: conversionResult?.familyData
       })
 
     } catch (err) {
@@ -267,6 +273,7 @@ export default function SearchPage() {
                 conversions={result.conversions}
                 elixhauser={result.elixhauser}
                 charlson={result.charlson}
+                hcc={result.hcc}
                 familyData={result.familyData}
               />
             </motion.div>

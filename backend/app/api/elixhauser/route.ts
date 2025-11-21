@@ -27,6 +27,8 @@ export async function GET(request: NextRequest) {
 
     if (system === 'icd10') {
       // Get Elixhauser classifications for ICD-10
+      // Get Elixhauser classifications for ICD-10
+      // First try exact match
       results = await sql`
         SELECT 
           em.icd10_code,
@@ -40,6 +42,29 @@ export async function GET(request: NextRequest) {
         WHERE em.icd10_code = ${cleanCode}
         ORDER BY ec.name ASC
       `;
+
+      // If no exact match, try prefix match (for family codes like E08.6)
+      if (results.length === 0) {
+        const prefixResults = await sql`
+          SELECT 
+            em.icd10_code,
+            ic.description as code_description,
+            ec.code as category_code,
+            ec.name as category_name,
+            ec.description as category_description
+          FROM elixhauser_mappings em
+          JOIN elixhauser_categories ec ON em.category_code = ec.code
+          JOIN icd10_codes ic ON em.icd10_code = ic.code
+          WHERE em.icd10_code LIKE ${cleanCode + '%'}
+          ORDER BY LENGTH(em.icd10_code) ASC, em.icd10_code ASC, ec.name ASC
+        `;
+
+        // If we found matches via prefix, group them by the first matching code
+        if (prefixResults.length > 0) {
+          const firstMatchCode = prefixResults[0].icd10_code;
+          results = prefixResults.filter((r: any) => r.icd10_code === firstMatchCode);
+        }
+      }
     } else if (system === 'icd9') {
       // Get Elixhauser classifications for ICD-9
       // Note: We stored them without dots in the setup script
@@ -51,6 +76,24 @@ export async function GET(request: NextRequest) {
         FROM elixhauser_icd9
         WHERE code = ${cleanCode}
       `;
+
+      // If no exact match, try prefix match (finding children for a parent code)
+      if (results.length === 0) {
+        const prefixResults = await sql`
+          SELECT 
+            code as icd9_code,
+            description as code_description,
+            comorbidities
+          FROM elixhauser_icd9
+          WHERE code LIKE ${cleanCode + '%'}
+          ORDER BY code ASC
+          LIMIT 1
+        `;
+
+        if (prefixResults.length > 0) {
+          results = prefixResults;
+        }
+      }
 
 
       // Transform ICD-9 results to match response format

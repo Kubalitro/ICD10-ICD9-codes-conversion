@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Clean and normalize codes
-    const cleanCodes = codes.map(code => 
+    const cleanCodes = codes.map(code =>
       String(code).trim().toUpperCase().replace(/\./g, '')
     );
 
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
     for (const cleanCode of cleanCodes) {
       if (system === 'icd10') {
         allIcd10Codes.add(cleanCode);
-        
+
         // Convert ICD-10 to ICD-9
         let conversions = await sql`
           SELECT 
@@ -138,7 +138,7 @@ export async function POST(request: NextRequest) {
             ORDER BY m.icd10_code ASC, m.approximate ASC, m.icd9_code ASC
             LIMIT 100
           `;
-          
+
           // Add all found family codes to the set
           if (conversions.length > 0) {
             conversions.forEach(c => allIcd10Codes.add(c.source_code));
@@ -158,10 +158,10 @@ export async function POST(request: NextRequest) {
         } else {
           const targetCodes = conversions.map(c => c.target_code);
           targetCodes.forEach(code => allIcd9Codes.add(code));
-          
+
           // Get unique source codes found (for family search)
           const uniqueSourceCodes = [...new Set(conversions.map(c => c.source_code))];
-          
+
           result.conversions.push({
             sourceCode: cleanCode,
             sourceSystem: 'ICD-10-CM',
@@ -184,7 +184,7 @@ export async function POST(request: NextRequest) {
 
       } else if (system === 'icd9') {
         allIcd9Codes.add(cleanCode);
-        
+
         // Convert ICD-9 to ICD-10
         const conversions = await sql`
           SELECT 
@@ -215,7 +215,7 @@ export async function POST(request: NextRequest) {
         } else {
           const targetCodes = conversions.map(c => c.target_code);
           targetCodes.forEach(code => allIcd10Codes.add(code));
-          
+
           result.conversions.push({
             sourceCode: cleanCode,
             sourceSystem: 'ICD-9-CM',
@@ -373,6 +373,76 @@ export async function POST(request: NextRequest) {
     result.aggregatedElixhauser.categories = Array.from(elixhauserMap.values())
       .sort((a, b) => a.name.localeCompare(b.name));
     result.aggregatedElixhauser.totalCategories = result.aggregatedElixhauser.categories.length;
+
+    // Calculate HCC scores (only for ICD-10 codes)
+    const hccMap = new Map<string, { code: string, category: string, description: string }>();
+
+    if (allIcd10Codes.size > 0) {
+      for (const code of allIcd10Codes) {
+        const hccResults = await sql`
+          SELECT 
+            icd10_code,
+            hcc_category,
+            hcc_description,
+            description
+          FROM hcc_mappings
+          WHERE icd10_code = ${code}
+        `;
+
+        if (hccResults.length > 0) {
+          const hccData = hccResults[0];
+          // Only store one HCC per code (in case of duplicates)
+          if (!hccMap.has(code)) {
+            hccMap.set(code, {
+              code: code,
+              category: hccData.hcc_category,
+              description: hccData.hcc_description || hccData.description || ''
+            });
+          }
+        }
+      }
+    }
+
+    // Add per-code scores to conversions
+    result.conversions = result.conversions.map(conversion => {
+      const sourceCode = conversion.sourceCode;
+      const isIcd10 = conversion.sourceSystem === 'ICD-10-CM';
+
+      // Get scores for this specific code
+      let charlsonScore = 0;
+      let charlsonCondition = '';
+      let elixhauserCategories: string[] = [];
+      let hccCategory = '';
+
+      // Find Charlson for this code
+      result.aggregatedCharlson.conditions.forEach(cond => {
+        if (cond.codes.includes(sourceCode)) {
+          charlsonScore = Math.max(charlsonScore, cond.score);
+          charlsonCondition = cond.condition;
+        }
+      });
+
+      // Find Elixhauser for this code
+      result.aggregatedElixhauser.categories.forEach(cat => {
+        if (cat.icdCodes.includes(sourceCode)) {
+          elixhauserCategories.push(cat.name);
+        }
+      });
+
+      // Find HCC for this code (ICD-10 only)
+      if (isIcd10 && hccMap.has(sourceCode)) {
+        hccCategory = hccMap.get(sourceCode)!.category;
+      }
+
+      return {
+        ...conversion,
+        scores: {
+          charlson: charlsonScore > 0 ? { score: charlsonScore, condition: charlsonCondition } : null,
+          elixhauser: elixhauserCategories.length > 0 ? { count: elixhauserCategories.length, categories: elixhauserCategories } : null,
+          hcc: hccCategory ? { category: hccCategory } : null
+        }
+      };
+    });
 
     return NextResponse.json(result);
 

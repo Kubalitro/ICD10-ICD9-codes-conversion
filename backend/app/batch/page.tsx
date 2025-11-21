@@ -35,36 +35,28 @@ export default function BatchPage() {
         .map(c => c.trim())
         .filter(c => c.length > 0)
 
-      const from = direction === 'icd10to9' ? 'icd10' : 'icd9'
-      const to = direction === 'icd10to9' ? 'icd9' : 'icd10'
+      const system = direction === 'icd10to9' ? 'icd10' : 'icd9'
 
-      const batchResults: BatchResult[] = []
+      // Use bulk API endpoint
+      const response = await fetch('/api/batch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ codes, system })
+      })
 
-      for (const code of codes) {
-        try {
-          const response = await fetch(`/api/convert?code=${code}&from=${from}&to=${to}`)
-          const data = await response.json()
-
-          if (response.ok && data.conversions) {
-            batchResults.push({
-              code,
-              conversions: data.conversions.map((c: any) => c.targetCode)
-            })
-          } else {
-            batchResults.push({
-              code,
-              conversions: [],
-              error: t('noConversionFound')
-            })
-          }
-        } catch (error) {
-          batchResults.push({
-            code,
-            conversions: [],
-            error: t('errorProcessing')
-          })
-        }
+      if (!response.ok) {
+        throw new Error('Batch processing failed')
       }
+
+      const data = await response.json()
+
+      // Transform API response to BatchResult format
+      const batchResults: BatchResult[] = data.conversions.map((conv: any) => ({
+        code: conv.sourceCode,
+        conversions: conv.targetCodes || [],
+        error: conv.error,
+        scores: conv.scores
+      }))
 
       setResults(batchResults)
     } catch (error) {
@@ -75,14 +67,21 @@ export default function BatchPage() {
   }
 
   const handleExportText = () => {
-    const csv = ['Code,Conversions,Status,Error\n']
+    const csv = ['Code,Conversions,Charlson Score,Charlson Condition,Elixhauser Categories,HCC Category,Status,Error\n']
     results.forEach(result => {
       const escapedCode = `"${result.code.replace(/"/g, '""')}"`
       const escapedConvs = `"${result.conversions.join(', ').replace(/"/g, '""')}"`
+
+      // Add comorbidity scores
+      const charlsonScore = result.scores?.charlson?.score || ''
+      const charlsonCondition = result.scores?.charlson?.condition ? `"${result.scores.charlson.condition.replace(/"/g, '""')}"` : ''
+      const elixhauserCats = result.scores?.elixhauser?.categories ? `"${result.scores.elixhauser.categories.join(', ').replace(/"/g, '""')}"` : ''
+      const hccCategory = result.scores?.hcc?.category ? `HCC ${result.scores.hcc.category}` : ''
+
       const status = result.error ? 'Error' : 'Success'
       const escapedError = result.error ? `"${result.error?.replace(/"/g, '""') || ''}"` : ''
 
-      csv.push(`${escapedCode},${escapedConvs},${status},${escapedError}\n`)
+      csv.push(`${escapedCode},${escapedConvs},${charlsonScore},${charlsonCondition},${elixhauserCats},${hccCategory},${status},${escapedError}\n`)
     })
 
     const blob = new Blob([csv.join('')], { type: 'text/csv;charset=utf-8;' })

@@ -93,3 +93,20 @@ export async function getCharlson(code: string, system: 'icd10' | 'icd9'): Promi
     return null
   }
 }
+
+export async function getHCC(code: string): Promise<{
+  category: string
+  description: string
+  score: number
+} | null> {
+  try {
+    const response = await fetch(`${API_BASE}/hcc?code=${code}`)
+    if (!response.ok) return null
+
+    const data = await response.json()
+    return data.hcc
+  } catch (error) {
+    console.error('Error getting HCC:', error)
+    return null
+  }
+}

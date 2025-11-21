@@ -7,7 +7,7 @@ import ResultsTabs from '../components/ResultsTabs'
 import SearchHistory from '../components/SearchHistory'
 import FavoritesList from '../components/FavoritesList'
 import { ICDCode, ConversionResult, ElixhauserCategory, CharlsonResult } from '../types'
-import { searchCode, convertCode, getElixhauser, getCharlson, searchFamily } from '../utils/api'
+import { searchCode, convertCode, getElixhauser, getCharlson, getHCC, searchFamily } from '../utils/api'
 import { addToHistory, getHistory, clearHistory } from '../utils/history'
 import { SearchHistory as SearchHistoryType } from '../types'
 
@@ -20,6 +20,7 @@ export default function SearchPage() {
     conversions: ConversionResult[]
     elixhauser: { categories: ElixhauserCategory[], totalCategories: number } | null
     charlson: CharlsonResult | null
+    hcc: any | null
   } | null>(null)
   const [history, setHistory] = useState<SearchHistoryType[]>([])
 
@@ -75,11 +76,15 @@ export default function SearchPage() {
       // Obtener Charlson
       const charlsonResult = await getCharlson(codeResult.code, system)
 
+      // Obtener HCC (solo para ICD-10)
+      const hccResult = codeResult.system === 'ICD-10-CM' ? await getHCC(codeResult.code) : null
+
       setResult({
         code: codeResult,
         conversions: conversionResult?.conversions || [],
         elixhauser: elixhauserResult,
-        charlson: charlsonResult
+        charlson: charlsonResult,
+        hcc: hccResult
       })
 
     } catch (err) {
@@ -191,6 +196,7 @@ export default function SearchPage() {
               conversions={result.conversions}
               elixhauser={result.elixhauser}
               charlson={result.charlson}
+              hcc={result.hcc}
             />
           )}
         </div>

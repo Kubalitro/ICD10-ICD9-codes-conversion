@@ -14,6 +14,12 @@ const nextConfig = {
       },
     ];
   },
+  // Ensure server-side rendering for pages with database access
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb',
+    },
+  },
 }
 
 module.exports = nextConfig

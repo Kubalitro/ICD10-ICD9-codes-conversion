@@ -110,6 +110,95 @@ export async function GET(request: NextRequest) {
     // Limit to top 15 results
     const topResults = allResults.slice(0, 15)
 
+    // PHASE 3 FEATURE: Add comorbidity scores to results
+    // Get all ICD-10 codes for batch score lookup
+    const icd10Codes = topResults
+      .filter(r => r.system === 'ICD-10-CM')
+      .map(r => r.code.replace(/\./g, '')) // Remove dots for consistency
+
+    const scoreMap = new Map<string, any>()
+
+    if (icd10Codes.length > 0) {
+      // Batch query Charlson scores
+      try {
+        const charlsonResults = await sql`
+          SELECT code, condition, score
+          FROM charlson_icd10
+          WHERE code = ANY(${icd10Codes})
+        `
+        charlsonResults.forEach((row: any) => {
+          if (!scoreMap.has(row.code)) {
+            scoreMap.set(row.code, {})
+          }
+          scoreMap.get(row.code)!.charlson = {
+            score: row.score,
+            condition: row.condition
+          }
+        })
+      } catch (e) {
+        console.error('Charlson batch query error:', e)
+      }
+
+      // Batch query Elixhauser scores
+      try {
+        const elixhauserResults = await sql`
+          SELECT 
+            em.icd10_code,
+            ec.code as category_code,
+            ec.name as category_name
+          FROM elixhauser_mappings em
+          JOIN elixhauser_categories ec ON em.category_code = ec.code
+          WHERE em.icd10_code = ANY(${icd10Codes})
+        `
+
+        elixhauserResults.forEach((row: any) => {
+          if (!scoreMap.has(row.icd10_code)) {
+            scoreMap.set(row.icd10_code, {})
+          }
+          if (!scoreMap.get(row.icd10_code)!.elixhauser) {
+            scoreMap.get(row.icd10_code)!.elixhauser = {
+              count: 0,
+              categories: []
+            }
+          }
+          scoreMap.get(row.icd10_code)!.elixhauser.categories.push(row.category_name)
+          scoreMap.get(row.icd10_code)!.elixhauser.count++
+        })
+      } catch (e) {
+        console.error('Elixhauser batch query error:', e)
+      }
+
+      // Batch query HCC scores
+      try {
+        const hccResults = await sql`
+          SELECT icd10_code, hcc_category
+          FROM hcc_mappings
+          WHERE icd10_code = ANY(${icd10Codes})
+        `
+        hccResults.forEach((row: any) => {
+          if (!scoreMap.has(row.icd10_code)) {
+            scoreMap.set(row.icd10_code, {})
+          }
+          scoreMap.get(row.icd10_code)!.hcc = {
+            category: row.hcc_category
+          }
+        })
+      } catch (e) {
+        console.error('HCC batch query error:', e)
+      }
+    }
+
+    // Attach scores to results
+    const resultsWithScores = topResults.map(result => {
+      const cleanCode = result.code.replace(/\./g, '')
+      const scores = scoreMap.get(cleanCode)
+
+      return {
+        ...result,
+        scores: scores || null
+      }
+    })
+
     // PHASE 2 FEATURE: Get suggestions for typos
     const didYouMean = topResults.length === 0 ? getDidYouMeanSuggestions(query) : []
 
@@ -118,8 +207,8 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       query,
-      count: topResults.length,
-      results: topResults,
+      count: resultsWithScores.length,
+      results: resultsWithScores,
       // Include expanded queries if synonyms were used
       expandedQueries: expandedQueries.length > 1 ? expandedQueries : undefined,
       // "Did you mean?" suggestions for typos

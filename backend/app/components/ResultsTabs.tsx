@@ -15,11 +15,12 @@ interface ResultsTabsProps {
   conversions: ConversionResult[]
   elixhauser: { categories: ElixhauserCategory[], totalCategories: number } | null
   charlson: CharlsonResult | null
+  hcc: { category: string, description: string, score: number } | null
   familyData?: any
 }
 
-export default function ResultsTabs({ code, conversions, elixhauser, charlson, familyData }: ResultsTabsProps) {
-  const [activeTab, setActiveTab] = useState<'info' | 'conversion' | 'elixhauser' | 'charlson'>('info')
+export default function ResultsTabs({ code, conversions, elixhauser, charlson, hcc, familyData }: ResultsTabsProps) {
+  const [activeTab, setActiveTab] = useState<'info' | 'conversion' | 'elixhauser' | 'charlson' | 'hcc'>('info')
   const { t } = useLanguage()
 
   const tabs = [
@@ -46,7 +47,14 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
       badge: charlson?.score,
       tooltip: 'Charlson Comorbidity Index score for mortality prediction (0-6+ points)'
     },
-  ]
+    {
+      id: 'hcc' as const,
+      label: 'HCC',
+      badge: hcc ? hcc.category : undefined,
+      tooltip: 'CMS Hierarchical Condition Categories (Risk Adjustment)',
+      hidden: !hcc // Only show if HCC data exists
+    }
+  ].filter(tab => !tab.hidden)
 
   return (
     <div className="card">
@@ -59,14 +67,14 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
             aria-selected={activeTab === tab.id}
             aria-controls={`panel-${tab.id}`}
             id={`tab-${tab.id}`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => setActiveTab(tab.id as any)}
             className={`flex items-center px-4 py-2.5 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${activeTab === tab.id
               ? 'border-blue-900 text-blue-900'
               : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
           >
             {tab.label}
-            {tab.badge !== undefined && tab.badge > 0 && (
+            {tab.badge && (
               <span className="ml-2 px-2 py-0.5 text-xs font-semibold bg-blue-100 text-blue-900 rounded">
                 {tab.badge}
               </span>
@@ -95,6 +103,35 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
         </div>
         <div role="tabpanel" id="panel-charlson" aria-labelledby="tab-charlson" hidden={activeTab !== 'charlson'}>
           {activeTab === 'charlson' && <CharlsonTab charlson={charlson} />}
+        </div>
+        <div role="tabpanel" id="panel-hcc" aria-labelledby="tab-hcc" hidden={activeTab !== 'hcc'}>
+          {activeTab === 'hcc' && hcc && (
+            <div className="space-y-6 animate-fadeIn">
+              <div className="bg-blue-50 border border-blue-100 rounded-lg p-6">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-lg font-semibold text-blue-900 mb-2">CMS-HCC Risk Adjustment</h3>
+                    <p className="text-blue-700 mb-4">
+                      This code maps to a Hierarchical Condition Category (HCC) used for risk adjustment in Medicare Advantage and other value-based payment models.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="bg-white p-4 rounded-md shadow-sm border border-blue-100">
+                        <span className="text-sm text-gray-500 block mb-1">HCC Category</span>
+                        <span className="text-2xl font-bold text-blue-600">HCC {hcc.category}</span>
+                      </div>
+                      {/* RAF Score is currently null in DB, so hide if null */}
+                      {hcc.score && (
+                        <div className="bg-white p-4 rounded-md shadow-sm border border-blue-100">
+                          <span className="text-sm text-gray-500 block mb-1">RAF Score (Weight)</span>
+                          <span className="text-2xl font-bold text-blue-600">{hcc.score}</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

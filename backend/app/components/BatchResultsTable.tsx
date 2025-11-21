@@ -7,6 +7,11 @@ export interface BatchResult {
     code: string
     conversions: string[]
     error?: string
+    scores?: {
+        charlson?: { score: number, condition: string } | null
+        elixhauser?: { count: number, categories: string[] } | null
+        hcc?: { category: string } | null
+    }
 }
 
 interface BatchResultsTableProps {
@@ -128,8 +133,8 @@ export default function BatchResultsTable({ results, onExport }: BatchResultsTab
                         <div
                             key={index}
                             className={`border rounded-lg p-4 break-inside-avoid ${result.error
-                                    ? 'bg-red-50 border-red-200 print:border-red-300'
-                                    : 'bg-green-50 border-green-200 print:border-green-300'
+                                ? 'bg-red-50 border-red-200 print:border-red-300'
+                                : 'bg-green-50 border-green-200 print:border-green-300'
                                 }`}
                         >
                             <div className="flex justify-between items-start">

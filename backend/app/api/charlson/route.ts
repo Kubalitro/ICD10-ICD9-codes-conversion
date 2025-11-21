@@ -31,7 +31,23 @@ export async function GET(request: NextRequest) {
       }
     }
 
+    // For ICD-9, ensure proper dot formatting
+    if (system === 'icd9' && !cleanCode.includes('.')) {
+      // Handle E-codes (E + 3 digits + optional digit)
+      if (cleanCode.startsWith('E')) {
+        if (cleanCode.length > 4) {
+          cleanCode = cleanCode.slice(0, 4) + '.' + cleanCode.slice(4);
+        }
+      } else {
+        // Standard ICD-9 (3 digits + optional digits)
+        if (cleanCode.length > 3) {
+          cleanCode = cleanCode.slice(0, 3) + '.' + cleanCode.slice(3);
+        }
+      }
+    }
+
     if (system === 'icd10') {
+      // ... (ICD-10 logic remains same) ...
       // Direct query for ICD-10 Charlson
       const results = await sql`
         SELECT code, condition, score
@@ -91,12 +107,44 @@ export async function GET(request: NextRequest) {
 
     } else if (system === 'icd9') {
       // Direct query for ICD-9 Charlson
-      // Try exact match first (as provided)
+      // Try exact match first
       let results = await sql`
         SELECT code, condition, score
         FROM charlson_icd9
         WHERE code = ${cleanCode}
       `;
+
+      // If no exact match, try prefix match (finding children for a parent code)
+      // Example: Searching 070.3 (parent) -> matches 070.32 (child)
+      if (results.length === 0) {
+        const prefixResults = await sql`
+          SELECT code, condition, score
+          FROM charlson_icd9
+          WHERE code LIKE ${cleanCode + '%'}
+          ORDER BY code ASC
+          LIMIT 1
+        `;
+
+        if (prefixResults.length > 0) {
+          results = prefixResults;
+        }
+      }
+
+      // If still no match, try reverse prefix match (finding parent for a child code)
+      // Example: Searching 070.32 (child) -> matches 070.3 (parent) - if parent existed in DB
+      if (results.length === 0) {
+        const reversePrefixResults = await sql`
+          SELECT code, condition, score
+          FROM charlson_icd9
+          WHERE ${cleanCode} LIKE code || '%'
+          ORDER BY LENGTH(code) DESC
+          LIMIT 1
+        `;
+
+        if (reversePrefixResults.length > 0) {
+          results = reversePrefixResults;
+        }
+      }
 
       // If not found, try without dots (if input had dots) or with dots (if input didn't)
       if (results.length === 0) {
@@ -145,11 +193,12 @@ export async function GET(request: NextRequest) {
       }
 
       return NextResponse.json({
-        code: results[0].code.includes('.') ? results[0].code : formatICD9(results[0].code),
+        code: results[0].code,
         system: 'ICD-9-CM',
         condition: results[0].condition,
         score: results[0].score,
-        matchType: 'exact'
+        matchType: results[0].code === cleanCode ? 'exact' : 'prefix',
+        matchedCode: results[0].code
       });
     } else {
       return NextResponse.json(
