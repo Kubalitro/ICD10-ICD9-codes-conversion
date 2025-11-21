@@ -19,8 +19,17 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Clean the code but keep dots (stored with dots in DB)
-    const cleanCode = code.trim().toUpperCase();
+    // Clean and normalize the code
+    let cleanCode = code.trim().toUpperCase();
+
+    // For ICD-10, ensure proper dot formatting (codes are stored WITH dots in DB)
+    // ICD-10 format: X00.0000 (letter + 2 digits, dot, then up to 4 more digits)
+    if (system === 'icd10' && !cleanCode.includes('.')) {
+      // Add dot after 3rd character for ICD-10 codes
+      if (cleanCode.length > 3) {
+        cleanCode = cleanCode.slice(0, 3) + '.' + cleanCode.slice(3);
+      }
+    }
 
     if (system === 'icd10') {
       // Direct query for ICD-10 Charlson
