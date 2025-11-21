@@ -3,6 +3,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { LanguageProvider } from './context/LanguageContext'
 import AuthProvider from './components/AuthProvider'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata = {
   title: 'ICD Codes Converter - ICD-10 ↔ ICD-9',
@@ -24,6 +26,8 @@ export default function RootLayout({
             <Footer />
           </AuthProvider>
         </LanguageProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
