@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '../../auth/[...nextauth]/route';
-import { sql } from '../../../../lib/db';
+import { sql } from '@/lib/db';
 import * as XLSX from 'xlsx';
 
 export async function POST(req: Request) {
