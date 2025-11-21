@@ -278,7 +278,11 @@ export const translations = {
         saveNote: 'Save Note',
         editNote: 'Edit Note',
         addNote: 'Add Note',
-        saving: 'Saving...'
+        saving: 'Saving...',
+
+        // Dashboard
+        dashboard: 'Dashboard',
+        welcome: 'Welcome'
     },
     es: {
         // Header
@@ -556,6 +560,10 @@ export const translations = {
         saveNote: 'Guardar Nota',
         editNote: 'Editar Nota',
         addNote: 'Añadir Nota',
-        saving: 'Guardando...'
+        saving: 'Guardando...',
+
+        // Dashboard
+        dashboard: 'Panel de Control',
+        welcome: 'Bienvenido'
     }
 };
