@@ -18,7 +18,7 @@ export default function ClinicalAlerts({ code, system, isFamily }: ClinicalAlert
   const alerts: ClinicalAlert[] = []
 
   // Check if code is billable (simplified logic)
-  const isBillable = code.length >= 5 && !isFamily
+  const isBillable = !isFamily
 
   if (!isBillable && !isFamily) {
     alerts.push({

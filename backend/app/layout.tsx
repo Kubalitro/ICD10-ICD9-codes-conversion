@@ -2,6 +2,7 @@ import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { LanguageProvider } from './context/LanguageContext'
+import AuthProvider from './components/AuthProvider'
 
 export const metadata = {
   title: 'ICD Codes Converter - ICD-10 ↔ ICD-9',
@@ -17,9 +18,11 @@ export default function RootLayout({
     <html lang="es">
       <body className="min-h-screen bg-gray-50 flex flex-col">
         <LanguageProvider>
-          <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          <AuthProvider>
+            <Navbar />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </AuthProvider>
         </LanguageProvider>
       </body>
     </html>

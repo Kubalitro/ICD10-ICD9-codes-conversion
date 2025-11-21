@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import NotesButton from './NotesButton'
 
 interface QuickActionsProps {
   code: string
@@ -233,6 +234,8 @@ export default function QuickActions({ code, description, system, conversions, e
         </svg>
         Export CSV
       </button>
+
+      <NotesButton code={code} system={system || 'ICD-10-CM'} compact={true} className="btn-icon" />
     </div>
   )
 }

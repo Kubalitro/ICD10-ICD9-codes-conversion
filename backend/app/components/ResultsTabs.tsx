@@ -51,10 +51,14 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
   return (
     <div className="card">
       {/* Tabs */}
-      <div className="flex space-x-1 border-b border-gray-200 mb-6 overflow-x-auto">
+      <div className="flex space-x-1 border-b border-gray-200 mb-6 overflow-x-auto" role="tablist" aria-label="Results Tabs">
         {tabs.map((tab) => (
           <button
             key={tab.id}
+            role="tab"
+            aria-selected={activeTab === tab.id}
+            aria-controls={`panel-${tab.id}`}
+            id={`tab-${tab.id}`}
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center px-4 py-2.5 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${activeTab === tab.id
               ? 'border-blue-900 text-blue-900'
@@ -80,10 +84,18 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, f
 
       {/* Content */}
       <div>
-        {activeTab === 'info' && <InfoTab code={code} conversions={conversions} elixhauser={elixhauser} charlson={charlson} />}
-        {activeTab === 'conversion' && <ConversionTab code={code} conversions={conversions} familyData={familyData} />}
-        {activeTab === 'elixhauser' && <ElixhauserTab elixhauser={elixhauser} />}
-        {activeTab === 'charlson' && <CharlsonTab charlson={charlson} />}
+        <div role="tabpanel" id="panel-info" aria-labelledby="tab-info" hidden={activeTab !== 'info'}>
+          {activeTab === 'info' && <InfoTab code={code} conversions={conversions} elixhauser={elixhauser} charlson={charlson} />}
+        </div>
+        <div role="tabpanel" id="panel-conversion" aria-labelledby="tab-conversion" hidden={activeTab !== 'conversion'}>
+          {activeTab === 'conversion' && <ConversionTab code={code} conversions={conversions} familyData={familyData} />}
+        </div>
+        <div role="tabpanel" id="panel-elixhauser" aria-labelledby="tab-elixhauser" hidden={activeTab !== 'elixhauser'}>
+          {activeTab === 'elixhauser' && <ElixhauserTab elixhauser={elixhauser} />}
+        </div>
+        <div role="tabpanel" id="panel-charlson" aria-labelledby="tab-charlson" hidden={activeTab !== 'charlson'}>
+          {activeTab === 'charlson' && <CharlsonTab charlson={charlson} />}
+        </div>
       </div>
     </div>
   )
@@ -100,13 +112,8 @@ function InfoTab({ code, conversions, elixhauser, charlson }: {
   // Determine code specificity
   const getSpecificityStatus = () => {
     if (code.isFamily) return null
-    const codeLength = code.code.replace('.', '').length
-    if (codeLength >= 5 && code.system === 'ICD-10-CM') {
-      return { type: 'complete', label: t('completeBillable') }
-    } else if (codeLength < 5) {
-      return { type: 'incomplete', label: t('nonSpecificCode') }
-    }
-    return { type: 'incomplete', label: t('checkSpecificity') }
+    // If it's not a family code, it's a specific billable code
+    return { type: 'complete', label: t('completeBillable') }
   }
 
   const specificity = getSpecificityStatus()
@@ -119,7 +126,7 @@ function InfoTab({ code, conversions, elixhauser, charlson }: {
           <div className="flex items-start justify-between mb-4">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-2 flex-wrap">
-                <span className="text-2xl font-mono font-bold text-gray-900">{formatIcdCode(code.code)}</span>
+                <span className="text-2xl font-mono font-bold text-gray-900">{formatIcdCode(code.code, code.system)}</span>
                 <span className="badge-secondary">{code.system}</span>
                 {code.isFamily && <span className="badge-warning">{t('codeFamily')}</span>}
                 {specificity && (
@@ -168,7 +175,7 @@ function InfoTab({ code, conversions, elixhauser, charlson }: {
         </div>
         <div className="card">
           <div className="clinical-context-header">{t('codeValue')}</div>
-          <div className="font-mono text-lg font-semibold text-gray-900">{formatIcdCode(code.code)}</div>
+          <div className="font-mono text-lg font-semibold text-gray-900">{formatIcdCode(code.code, code.system)}</div>
         </div>
         <div className="card">
           <div className="clinical-context-header">{t('codeType')}</div>
@@ -239,9 +246,9 @@ function ConversionTab({ code, conversions, familyData }: { code: ICDCode, conve
                 <div className="flex items-center justify-between">
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-mono text-gray-600 dark:text-gray-400">{formatIcdCode(conversion.sourceCode || '')}</span>
+                      <span className="text-sm font-mono text-gray-600 dark:text-gray-400">{formatIcdCode(conversion.sourceCode || '', code.system)}</span>
                       <span className="text-gray-400">→</span>
-                      <span className="text-sm font-mono font-semibold text-gray-900 dark:text-gray-100">{formatIcdCode(conversion.targetCode)}</span>
+                      <span className="text-sm font-mono font-semibold text-gray-900 dark:text-gray-100">{formatIcdCode(conversion.targetCode, targetSystem)}</span>
                     </div>
                     {conversion.sourceDescription && (
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{conversion.sourceDescription}</p>
@@ -265,9 +272,9 @@ function ConversionTab({ code, conversions, familyData }: { code: ICDCode, conve
           <div key={index} className="clinical-context">
             <div className="flex items-start justify-between">
               <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
+                <div className="flex items-center gap-6 mb-1">
                   <span className="text-lg font-mono font-semibold text-gray-900 dark:text-gray-100">
-                    {formatIcdCode(conversion.targetCode)}
+                    {formatIcdCode(conversion.targetCode, targetSystem)}
                   </span>
                   {conversion.approximate && (
                     <span className="badge-warning">{t('approximate')}</span>

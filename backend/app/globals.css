@@ -22,7 +22,7 @@
   --color-warning: #d97706;
   --color-error: #dc2626;
   --color-info: #0284c7;
-  
+
   /* Light mode colors */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
@@ -44,7 +44,7 @@
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-info: #06b6d4;
-  
+
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
@@ -63,8 +63,13 @@ body {
 
 /* Minimal professional animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .animate-fadeIn {
@@ -260,8 +265,13 @@ body {
 }
 
 @keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Override Tailwind gray colors for better dark mode visibility */
@@ -313,4 +323,56 @@ body {
 
 .dark .border-gray-300 {
   border-color: #64748b !important;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    /* Larger touch target */
+  }
+
+  .input {
+    padding: 0.75rem 1rem;
+    /* Larger touch target */
+  }
+
+  /* Horizontal scroll for tabs and tables */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #cbd5e1 transparent;
+    /* Firefox */
+  }
+
+  .dark .overflow-x-auto {
+    scrollbar-color: #475569 transparent;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+    /* Visible but thin */
+    display: block;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+  }
+
+  .dark .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #475569;
+  }
 }

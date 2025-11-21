@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSession } from 'next-auth/react'
 import { useLanguage } from '../context/LanguageContext'
 import { addToFavorites, removeFromFavorites, isFavorite as checkIsFavorite } from '../utils/favorites'
 
@@ -14,29 +15,66 @@ interface FavoriteButtonProps {
 
 export default function FavoriteButton({ code, description, system, compact = false, className = '' }: FavoriteButtonProps) {
   const { t } = useLanguage()
+  const { data: session } = useSession()
   const [isFavorite, setIsFavorite] = useState(false)
   const [isAnimating, setIsAnimating] = useState(false)
 
+  const checkStatus = async () => {
+    if (session?.user) {
+      try {
+        const res = await fetch('/api/favorites')
+        if (res.ok) {
+          const data = await res.json()
+          const found = data.favorites.some((f: any) => f.code === code && f.system === system)
+          setIsFavorite(found)
+        }
+      } catch (error) {
+        console.error('Failed to check favorite status', error)
+      }
+    } else {
+      setIsFavorite(checkIsFavorite(code, system))
+    }
+  }
+
   useEffect(() => {
-    setIsFavorite(checkIsFavorite(code, system))
-  }, [code, system])
+    checkStatus()
+  }, [code, system, session])
 
   useEffect(() => {
     const handleUpdate = () => {
-      setIsFavorite(checkIsFavorite(code, system))
+      checkStatus()
     }
 
     window.addEventListener('favoritesUpdated', handleUpdate)
     return () => window.removeEventListener('favoritesUpdated', handleUpdate)
-  }, [code, system])
+  }, [code, system, session])
 
-  const handleToggle = () => {
+  const handleToggle = async () => {
     setIsAnimating(true)
 
-    if (isFavorite) {
-      removeFromFavorites(code, system)
+    if (session?.user) {
+      try {
+        if (isFavorite) {
+          await fetch(`/api/favorites?code=${code}&system=${system}`, { method: 'DELETE' })
+        } else {
+          await fetch('/api/favorites', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ code, system, notes: description }) // Saving description as notes for now
+          })
+        }
+        // Dispatch event to update other components
+        window.dispatchEvent(new CustomEvent('favoritesUpdated'))
+        checkStatus()
+      } catch (error) {
+        console.error('Failed to toggle favorite', error)
+      }
     } else {
-      addToFavorites(code, system, description)
+      if (isFavorite) {
+        removeFromFavorites(code, system)
+      } else {
+        addToFavorites(code, system, description)
+      }
     }
 
     setTimeout(() => setIsAnimating(false), 300)

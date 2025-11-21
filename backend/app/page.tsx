@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSession } from 'next-auth/react'
+import { motion } from 'framer-motion'
 import SearchBox from './components/SearchBox'
 import DescriptionSearch from './components/DescriptionSearch'
 import ResultsTabs from './components/ResultsTabs'
@@ -11,9 +13,11 @@ import { searchCode, convertCode, getElixhauser, getCharlson, searchFamily } fro
 import { addToHistory, getHistory, clearHistory } from './utils/history'
 import { SearchHistory as SearchHistoryType } from './types'
 import { useLanguage } from './context/LanguageContext'
+import { fadeIn, slideUp, staggerContainer } from './utils/animations'
 
 export default function SearchPage() {
   const { t } = useLanguage()
+  const { data: session } = useSession()
   const [searchMode, setSearchMode] = useState<'code' | 'description'>('code')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -26,14 +30,42 @@ export default function SearchPage() {
   } | null>(null)
   const [history, setHistory] = useState<SearchHistoryType[]>([])
 
-  // Load history on client side only to prevent hydration mismatch
+  // Load history
   useEffect(() => {
-    setHistory(getHistory())
-  }, [])
+    const loadHistory = async () => {
+      if (session?.user) {
+        try {
+          const res = await fetch('/api/history')
+          if (res.ok) {
+            const data = await res.json()
+            setHistory(data.history.map((h: any) => ({
+              code: h.code,
+              system: h.system,
+              timestamp: new Date(h.searched_at).getTime()
+            })))
+          }
+        } catch (error) {
+          console.error('Failed to load history from API', error)
+        }
+      } else {
+        setHistory(getHistory())
+      }
+    }
+    loadHistory()
+  }, [session])
 
-  const handleClearHistory = () => {
-    clearHistory()
-    setHistory([])
+  const handleClearHistory = async () => {
+    if (session?.user) {
+      try {
+        await fetch('/api/history', { method: 'DELETE' })
+        setHistory([])
+      } catch (error) {
+        console.error('Failed to clear history', error)
+      }
+    } else {
+      clearHistory()
+      setHistory([])
+    }
   }
 
   const handleSearch = async (code: string) => {
@@ -67,8 +99,29 @@ export default function SearchPage() {
       }
 
       // Add to history
-      addToHistory(codeResult.code, codeResult.system)
-      setHistory(getHistory())
+      if (session?.user) {
+        // API call (fire and forget to not block UI)
+        fetch('/api/history', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: codeResult.code, system: codeResult.system })
+        }).then(async () => {
+          // Refresh history
+          const res = await fetch('/api/history')
+          if (res.ok) {
+            const data = await res.json()
+            setHistory(data.history.map((h: any) => ({
+              code: h.code,
+              system: h.system,
+              timestamp: new Date(h.searched_at).getTime()
+            })))
+          }
+        })
+      } else {
+        addToHistory(codeResult.code, codeResult.system)
+        setHistory(getHistory())
+      }
+
       // Obtener conversiones - preserve .x notation for family searches
       const system = codeResult.system === 'ICD-10-CM' ? 'icd10' : 'icd9'
       const targetSystem = system === 'icd10' ? 'icd9' : 'icd10'
@@ -100,9 +153,14 @@ export default function SearchPage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={staggerContainer}
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
+    >
       {/* Professional Header */}
-      <div className="mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
+      <motion.div variants={fadeIn} className="mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
         <h1 className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
           {t('title')}
         </h1>
@@ -119,12 +177,12 @@ export default function SearchPage() {
           <span className="text-gray-400 dark:text-gray-600">|</span>
           <span className="font-mono">14,568 ICD-9-CM codes</span>
         </div>
-      </div>
+      </motion.div>
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left Column - Search */}
-        <div className="lg:col-span-1 space-y-6">
+        <motion.div variants={slideUp} className="lg:col-span-1 space-y-6">
           {/* Search Mode Tabs */}
           <div className="card bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
             <div className="flex border-b border-gray-200 dark:border-gray-700">
@@ -161,12 +219,16 @@ export default function SearchPage() {
 
           {/* Search History */}
           <SearchHistory history={history} onSelect={handleSearch} onClear={handleClearHistory} />
-        </div>
+        </motion.div>
 
         {/* Right Column - Results */}
-        <div className="lg:col-span-2">
+        <motion.div variants={slideUp} className="lg:col-span-2">
           {error && (
-            <div className="card bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="card bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800"
+            >
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0">
                   <svg className="w-5 h-5 text-red-600 dark:text-red-400" fill="currentColor" viewBox="0 0 20 20">
@@ -178,7 +240,7 @@ export default function SearchPage() {
                   <p className="text-sm text-red-700 dark:text-red-300">{error}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {!loading && !error && !result && (
@@ -195,40 +257,46 @@ export default function SearchPage() {
           )}
 
           {result && (
-            <ResultsTabs
-              code={result.code}
-              conversions={result.conversions}
-              elixhauser={result.elixhauser}
-              charlson={result.charlson}
-              familyData={result.familyData}
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ResultsTabs
+                code={result.code}
+                conversions={result.conversions}
+                elixhauser={result.elixhauser}
+                charlson={result.charlson}
+                familyData={result.familyData}
+              />
+            </motion.div>
           )}
-        </div>
+        </motion.div>
       </div>
 
       {/* Info Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        <div className="card">
+      <motion.div variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <motion.div variants={slideUp} className="card">
           <h3 className="card-header">{t('bidirectionalConversion')}</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {t('bidirectionalDesc')}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="card">
+        <motion.div variants={slideUp} className="card">
           <h3 className="card-header">{t('elixhauserTitle')}</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {t('elixhauserDesc')}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="card">
+        <motion.div variants={slideUp} className="card">
           <h3 className="card-header">{t('charlsonTitle')}</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {t('charlsonDesc')}
           </p>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   )
 }

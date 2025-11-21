@@ -14,14 +14,14 @@ const FAVORITES_KEY = 'icd_favorites'
  */
 export function getFavorites(): FavoriteCode[] {
   if (typeof window === 'undefined') return []
-  
+
   try {
     const stored = localStorage.getItem(FAVORITES_KEY)
     if (!stored) return []
-    
+
     const favorites = JSON.parse(stored) as FavoriteCode[]
     // Sort by most recently added
-    return favorites.sort((a, b) => 
+    return favorites.sort((a, b) =>
       new Date(b.addedAt).getTime() - new Date(a.addedAt).getTime()
     )
   } catch (error) {
@@ -34,41 +34,41 @@ export function getFavorites(): FavoriteCode[] {
  * Add a code to favorites
  */
 export function addToFavorites(
-  code: string, 
-  system: 'ICD-10-CM' | 'ICD-9-CM', 
+  code: string,
+  system: 'ICD-10-CM' | 'ICD-9-CM',
   description: string
 ): void {
   if (typeof window === 'undefined') return
-  
+
   try {
     const favorites = getFavorites()
-    
+
     // Check if already exists
-    const exists = favorites.some(fav => 
+    const exists = favorites.some(fav =>
       fav.code === code && fav.system === system
     )
-    
+
     if (exists) {
-      console.log('Code already in favorites')
+
       return
     }
-    
+
     const newFavorite: FavoriteCode = {
       code,
       system,
       description,
       addedAt: new Date().toISOString()
     }
-    
+
     const updated = [newFavorite, ...favorites]
-    
+
     // Limit to 50 favorites
     if (updated.length > 50) {
       updated.pop()
     }
-    
+
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(updated))
-    
+
     // Dispatch custom event for UI updates
     window.dispatchEvent(new CustomEvent('favoritesUpdated'))
   } catch (error) {
@@ -81,15 +81,15 @@ export function addToFavorites(
  */
 export function removeFromFavorites(code: string, system: string): void {
   if (typeof window === 'undefined') return
-  
+
   try {
     const favorites = getFavorites()
-    const updated = favorites.filter(fav => 
+    const updated = favorites.filter(fav =>
       !(fav.code === code && fav.system === system)
     )
-    
+
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(updated))
-    
+
     // Dispatch custom event for UI updates
     window.dispatchEvent(new CustomEvent('favoritesUpdated'))
   } catch (error) {
@@ -110,7 +110,7 @@ export function isFavorite(code: string, system: string): boolean {
  */
 export function clearFavorites(): void {
   if (typeof window === 'undefined') return
-  
+
   try {
     localStorage.removeItem(FAVORITES_KEY)
     window.dispatchEvent(new CustomEvent('favoritesUpdated'))

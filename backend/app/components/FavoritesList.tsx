@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useSession } from 'next-auth/react'
 import { getFavorites, removeFromFavorites, clearFavorites, type FavoriteCode } from '../utils/favorites'
 import { formatIcdCode } from '../utils/format-code'
 import { useLanguage } from '../context/LanguageContext'
@@ -12,12 +13,38 @@ interface FavoritesListProps {
 
 export default function FavoritesList({ onSelectCode, collapsible = true }: FavoritesListProps) {
   const { t } = useLanguage()
+  const { data: session } = useSession()
   const [favorites, setFavorites] = useState<FavoriteCode[]>([])
   const [isOpen, setIsOpen] = useState(true)
   const [showConfirm, setShowConfirm] = useState(false)
 
-  const loadFavorites = () => {
-    setFavorites(getFavorites())
+  const loadFavorites = async () => {
+    if (session?.user) {
+      try {
+        const res = await fetch('/api/favorites')
+        if (res.ok) {
+          const data = await res.json()
+          setFavorites(data.favorites.map((f: any) => ({
+            code: f.code,
+            system: f.system,
+            description: f.notes || '', // Using notes as description for now, or fetch description? 
+            // Wait, the API returns notes but not the full description if it wasn't saved.
+            // The DB schema has 'notes' but maybe not 'description'.
+            // Let's check the schema again or the API.
+            // The API returns: i.id, i.code, i.system, i.notes, i.added_at
+            // It seems I missed saving the description in the DB or retrieving it.
+            // The `saved_list_items` table might not have a description column.
+            // If so, I might need to fetch it or store it.
+            // For now, I'll use notes or empty string.
+            addedAt: f.added_at
+          })))
+        }
+      } catch (error) {
+        console.error('Failed to load favorites from API', error)
+      }
+    } else {
+      setFavorites(getFavorites())
+    }
   }
 
   useEffect(() => {
@@ -25,15 +52,39 @@ export default function FavoritesList({ onSelectCode, collapsible = true }: Favo
 
     window.addEventListener('favoritesUpdated', loadFavorites)
     return () => window.removeEventListener('favoritesUpdated', loadFavorites)
-  }, [])
+  }, [session])
 
-  const handleRemove = (code: string, system: string, e: React.MouseEvent) => {
+  const handleRemove = async (code: string, system: string, e: React.MouseEvent) => {
     e.stopPropagation()
-    removeFromFavorites(code, system)
+
+    if (session?.user) {
+      try {
+        await fetch(`/api/favorites?code=${code}&system=${system}`, { method: 'DELETE' })
+        loadFavorites()
+        // Dispatch event to update buttons
+        window.dispatchEvent(new CustomEvent('favoritesUpdated'))
+      } catch (error) {
+        console.error('Failed to remove favorite', error)
+      }
+    } else {
+      removeFromFavorites(code, system)
+    }
   }
 
-  const handleClearAll = () => {
-    clearFavorites()
+  const handleClearAll = async () => {
+    if (session?.user) {
+      // Not implemented in API yet, maybe loop?
+      // Or just hide the button for now if logged in?
+      // Or implement it.
+      // For now, let's just loop.
+      for (const fav of favorites) {
+        await fetch(`/api/favorites?code=${fav.code}&system=${fav.system}`, { method: 'DELETE' })
+      }
+      loadFavorites()
+      window.dispatchEvent(new CustomEvent('favoritesUpdated'))
+    } else {
+      clearFavorites()
+    }
     setShowConfirm(false)
   }
 

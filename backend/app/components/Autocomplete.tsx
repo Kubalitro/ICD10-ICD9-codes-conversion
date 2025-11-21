@@ -22,18 +22,18 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const [loading, setLoading] = useState(false)
   const wrapperRef = useRef<HTMLDivElement>(null)
-  
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
         setShowSuggestions(false)
       }
     }
-    
+
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
-  
+
   useEffect(() => {
     const fetchSuggestions = async () => {
       if (value.length < 2) {
@@ -41,7 +41,7 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
         setShowSuggestions(false)
         return
       }
-      
+
       setLoading(true)
       try {
         // Buscar en la familia de códigos
@@ -57,14 +57,14 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
         setLoading(false)
       }
     }
-    
+
     const debounce = setTimeout(fetchSuggestions, 300)
     return () => clearTimeout(debounce)
   }, [value])
-  
+
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!showSuggestions) return
-    
+
     if (e.key === 'ArrowDown') {
       e.preventDefault()
       setSelectedIndex(prev => (prev < suggestions.length - 1 ? prev + 1 : prev))
@@ -79,14 +79,14 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
       setSelectedIndex(-1)
     }
   }
-  
+
   const handleSelect = (code: string) => {
     onChange(code)
     onSelect(code)
     setShowSuggestions(false)
     setSelectedIndex(-1)
   }
-  
+
   return (
     <div ref={wrapperRef} className="relative">
       <input
@@ -97,8 +97,13 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
         placeholder="Ej: E10.10, E10, 25000, 250"
         className="input"
         disabled={disabled}
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded={showSuggestions}
+        aria-controls="autocomplete-list"
+        aria-activedescendant={selectedIndex >= 0 ? `option-${selectedIndex}` : undefined}
       />
-      
+
       {loading && (
         <div className="absolute right-3 top-3">
           <svg className="animate-spin h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -107,24 +112,30 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
           </svg>
         </div>
       )}
-      
+
       {showSuggestions && suggestions.length > 0 && (
-        <div className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl max-h-80 overflow-y-auto">
+        <ul
+          id="autocomplete-list"
+          role="listbox"
+          className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-xl max-h-80 overflow-y-auto"
+        >
           {suggestions.map((suggestion, index) => (
-            <button
+            <li
               key={suggestion.code}
+              id={`option-${index}`}
+              role="option"
+              aria-selected={index === selectedIndex}
               onClick={() => handleSelect(suggestion.code)}
-              className={`w-full text-left px-4 py-3 border-b border-gray-100 transition-colors ${
-                index === selectedIndex
-                  ? 'bg-blue-50'
-                  : 'hover:bg-gray-50'
-              }`}
+              className={`w-full text-left px-4 py-3 border-b border-gray-100 transition-colors cursor-pointer ${index === selectedIndex
+                ? 'bg-blue-50'
+                : 'hover:bg-gray-50'
+                }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="font-mono font-semibold text-blue-600">
-                      {formatIcdCode(suggestion.code)}
+                      {formatIcdCode(suggestion.code, suggestion.system)}
                     </span>
                     <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
                       {suggestion.system}
@@ -135,9 +146,9 @@ export default function Autocomplete({ value, onChange, onSelect, disabled }: Au
                   </p>
                 </div>
               </div>
-            </button>
+            </li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   )

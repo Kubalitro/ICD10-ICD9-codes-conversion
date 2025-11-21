@@ -122,6 +122,10 @@ export const translations = {
         batchTip4: 'Large batches may take a moment to process',
         noConversionFound: 'No conversion found',
         errorProcessing: 'Error processing',
+        showAll: 'Show All',
+        showSuccess: 'Success Only',
+        showErrors: 'Errors Only',
+        conversions: 'Conversions',
 
         // Docs Page
         docsTitle: 'Documentation',
@@ -202,7 +206,79 @@ export const translations = {
 
         // Search History
         searchHistory: 'Search History',
-        clearHistory: 'Clear'
+        clearHistory: 'Clear',
+
+        // User Features Docs
+        userFeaturesTitle: 'User Features',
+        accountManagementTitle: 'Account Management',
+        accountManagementDesc: 'Create a secure account to access personalized features. Your data is protected with industry-standard encryption.',
+        personalizationTitle: 'Personalization',
+        historyDesc: 'Automatically save your search history to the cloud. Access your past queries from any device.',
+        favoritesDesc: 'Star frequently used codes for quick access. Manage your favorites list from the dashboard.',
+        dashboardDesc: 'A central hub to view your profile, usage statistics, and manage your saved data.',
+
+        // Batch Processing Docs
+        batchDocsTitle: 'Batch Operations',
+        batchDocsIntro: 'Process multiple codes simultaneously using our advanced batch tools.',
+        textInputMode: 'Text Input Mode',
+        textInputDesc: 'Paste a list of codes (one per line or comma-separated) for quick conversion. Ideal for small to medium batches.',
+        fileUploadMode: 'File Upload Mode',
+        fileUploadDesc: 'Upload CSV or Excel files for processing large datasets. The system automatically detects code columns.',
+        exportOptions: 'Export Options',
+        exportDesc: 'Download your results as a formatted CSV file, ready for import into other systems.',
+        batchHistoryDesc: 'Track your batch jobs and re-download results from the history log.',
+
+        // API Docs Updates
+        apiHistory: 'Manage search history',
+        apiFavorites: 'Manage favorite codes',
+        apiBatchUpload: 'Upload file for batch processing',
+        apiBatchJobs: 'List batch jobs',
+        apiBatchJobDetails: 'Get batch job details',
+        apiBatchDownload: 'Download batch results',
+
+        // Authentication
+        signInToAccount: 'Sign in to your account',
+        orRegister: 'Or',
+        createNewAccount: 'create a new account',
+        email: 'Email address',
+        password: 'Password',
+        signingIn: 'Signing in...',
+        signIn: 'Sign in',
+        createAccount: 'Create your account',
+        alreadyHaveAccount: 'Already have an account?',
+        name: 'Name',
+        optional: 'optional',
+        passwordMinLength: 'Minimum 6 characters',
+        confirmPassword: 'Confirm Password',
+        creatingAccount: 'Creating account...',
+        signOut: 'Sign Out',
+        profile: 'Profile',
+        register: 'Register',
+
+        // Description Search
+        searchByDescriptionHeader: 'Search by Clinical Description',
+        clinicalConditionLabel: 'Clinical Condition or Description',
+        descriptionPlaceholder: 'e.g., MI, CHF, diabetes with ketoacidosis, acute MI...',
+        descriptionSearchButton: 'Search by Description',
+        searchingWithAI: 'Searching with AI...',
+        descriptionSearchTip: 'Supports medical abbreviations (MI, CHF, DM) and tolerates typos. Minimum 2 characters.',
+        expandedWithSynonyms: 'Expanded with synonyms:',
+        searchedFor: 'Searched:',
+        didYouMean: 'Did you mean:',
+        foundMatchingCodes: 'Found matching code(s)',
+        highMatch: 'High Match',
+        sampleDescriptions: 'Sample Descriptions',
+        proTip: 'Pro tip: Use medical abbreviations like MI (myocardial infarction), CHF (congestive heart failure), or DM (diabetes mellitus)',
+
+        // Notes
+        notesFor: 'Notes for',
+        personalNote: 'Personal Note',
+        addNotePlaceholder: 'Add a private note about this code...',
+        notesPrivate: 'Notes are private and only visible to you.',
+        saveNote: 'Save Note',
+        editNote: 'Edit Note',
+        addNote: 'Add Note',
+        saving: 'Saving...'
     },
     es: {
         // Header
@@ -324,6 +400,10 @@ export const translations = {
         batchTip4: 'Los lotes grandes pueden tardar un momento en procesarse',
         noConversionFound: 'No se encontró conversión',
         errorProcessing: 'Error al procesar',
+        showAll: 'Mostrar Todo',
+        showSuccess: 'Solo Éxitos',
+        showErrors: 'Solo Errores',
+        conversions: 'Conversiones',
 
         // Docs Page
         docsTitle: 'Documentación',
@@ -377,6 +457,34 @@ export const translations = {
         disclaimerFull2: 'NO sustituye el consejo médico profesional, diagnóstico o tratamiento. TAMPOCO sustituye la codificación médica certificada profesional.',
         disclaimerFull3: 'Si bien nos esforzamos por la precisión utilizando los GEMs oficiales de CMS, las pautas de codificación cambian y los matices clínicos requieren juicio humano. Verifique siempre los códigos con los manuales oficiales.',
 
+        // User Features Docs
+        userFeaturesTitle: 'Funciones de Usuario',
+        accountManagementTitle: 'Gestión de Cuenta',
+        accountManagementDesc: 'Cree una cuenta segura para acceder a funciones personalizadas. Sus datos están protegidos con cifrado estándar de la industria.',
+        personalizationTitle: 'Personalización',
+        historyDesc: 'Guarde automáticamente su historial de búsqueda en la nube. Acceda a sus consultas anteriores desde cualquier dispositivo.',
+        favoritesDesc: 'Marque los códigos utilizados con frecuencia para un acceso rápido. Gestione su lista de favoritos desde el panel.',
+        dashboardDesc: 'Un centro central para ver su perfil, estadísticas de uso y administrar sus datos guardados.',
+
+        // Batch Processing Docs
+        batchDocsTitle: 'Operaciones por Lotes',
+        batchDocsIntro: 'Procese múltiples códigos simultáneamente utilizando nuestras herramientas avanzadas por lotes.',
+        textInputMode: 'Modo de Entrada de Texto',
+        textInputDesc: 'Pegue una lista de códigos (uno por línea o separados por comas) para una conversión rápida. Ideal para lotes pequeños y medianos.',
+        fileUploadMode: 'Modo de Carga de Archivos',
+        fileUploadDesc: 'Cargue archivos CSV o Excel para procesar grandes conjuntos de datos. El sistema detecta automáticamente las columnas de códigos.',
+        exportOptions: 'Opciones de Exportación',
+        exportDesc: 'Descargue sus resultados como un archivo CSV formateado, listo para importar en otros sistemas.',
+        batchHistoryDesc: 'Rastree sus trabajos por lotes y vuelva a descargar los resultados desde el registro histórico.',
+
+        // API Docs Updates
+        apiHistory: 'Gestionar historial de búsqueda',
+        apiFavorites: 'Gestionar códigos favoritos',
+        apiBatchUpload: 'Cargar archivo para procesamiento por lotes',
+        apiBatchJobs: 'Listar trabajos por lotes',
+        apiBatchJobDetails: 'Obtener detalles del trabajo por lotes',
+        apiBatchDownload: 'Descargar resultados por lotes',
+
         // Quick Actions
         copyCode: 'Copiar Código',
         copyDesc: 'Copiar Descripción',
@@ -404,6 +512,50 @@ export const translations = {
 
         // Search History
         searchHistory: 'Historial de búsqueda',
-        clearHistory: 'Borrar'
+        clearHistory: 'Borrar',
+
+        // Authentication
+        signInToAccount: 'Iniciar sesión en tu cuenta',
+        orRegister: 'O',
+        createNewAccount: 'crear una cuenta nueva',
+        email: 'Correo electrónico',
+        password: 'Contraseña',
+        signingIn: 'Iniciando sesión...',
+        signIn: 'Iniciar sesión',
+        createAccount: 'Crear tu cuenta',
+        alreadyHaveAccount: '¿Ya tienes una cuenta?',
+        name: 'Nombre',
+        optional: 'opcional',
+        passwordMinLength: 'Mínimo 6 caracteres',
+        confirmPassword: 'Confirmar Contraseña',
+        creatingAccount: 'Creando cuenta...',
+        signOut: 'Cerrar sesión',
+        profile: 'Perfil',
+        register: 'Registrarse',
+
+        // Description Search
+        searchByDescriptionHeader: 'Búsqueda por Descripción Clínica',
+        clinicalConditionLabel: 'Condición Clínica o Descripción',
+        descriptionPlaceholder: 'ej., IM, ICC, diabetes con cetoacidosis, IM agudo...',
+        descriptionSearchButton: 'Buscar por Descripción',
+        searchingWithAI: 'Buscando con IA...',
+        descriptionSearchTip: 'Soporta abreviaturas médicas (IM, ICC, DM) y tolera errores tipográficos. Mínimo 2 caracteres.',
+        expandedWithSynonyms: 'Expandido con sinónimos:',
+        searchedFor: 'Buscado:',
+        didYouMean: '¿Quisiste decir:',
+        foundMatchingCodes: 'Se encontraron código(s) coincidente(s)',
+        highMatch: 'Alta Coincidencia',
+        sampleDescriptions: 'Descripciones de Ejemplo',
+        proTip: 'Consejo: Use abreviaturas médicas como IM (infarto de miocardio), ICC (insuficiencia cardíaca congestiva) o DM (diabetes mellitus)',
+
+        // Notes
+        notesFor: 'Notas para',
+        personalNote: 'Nota Personal',
+        addNotePlaceholder: 'Añadir una nota privada sobre este código...',
+        notesPrivate: 'Las notas son privadas y solo visibles para ti.',
+        saveNote: 'Guardar Nota',
+        editNote: 'Editar Nota',
+        addNote: 'Añadir Nota',
+        saving: 'Guardando...'
     }
 };

@@ -121,6 +121,47 @@ export default function DocsPage() {
           </div>
         </section>
 
+        {/* User Features */}
+        <section className="card">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">{t('userFeaturesTitle')}</h2>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">{t('accountManagementTitle')}</h3>
+          <p className="text-gray-700 mb-4">
+            {t('accountManagementDesc')}
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">{t('personalizationTitle')}</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+            <li><strong>{t('searchHistory')}</strong>: {t('historyDesc')}</li>
+            <li><strong>{t('favoriteCodes')}</strong>: {t('favoritesDesc')}</li>
+            <li><strong>{t('profile')}</strong>: {t('dashboardDesc')}</li>
+          </ul>
+        </section>
+
+        {/* Batch Operations */}
+        <section className="card">
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">{t('batchDocsTitle')}</h2>
+          <p className="text-gray-700 mb-4">
+            {t('batchDocsIntro')}
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">{t('textInputMode')}</h3>
+          <p className="text-gray-700 mb-4">
+            {t('textInputDesc')}
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">{t('fileUploadMode')}</h3>
+          <p className="text-gray-700 mb-4">
+            {t('fileUploadDesc')}
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 mb-3 mt-6">{t('exportOptions')}</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+            <li>{t('exportDesc')}</li>
+            <li>{t('batchHistoryDesc')}</li>
+          </ul>
+        </section>
+
         {/* API */}
         <section className="card">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">{t('apiEndpointsTitle')}</h2>
@@ -143,6 +184,24 @@ export default function DocsPage() {
             <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono">
               <div className="text-blue-600 dark:text-blue-400 font-semibold mb-1">GET /api/charlson?code=E10&system=icd10</div>
               <div className="text-gray-600 dark:text-gray-400">{t('calcCharlson')}</div>
+            </div>
+
+            {/* New Endpoints */}
+            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono">
+              <div className="text-blue-600 dark:text-blue-400 font-semibold mb-1">GET /api/history</div>
+              <div className="text-gray-600 dark:text-gray-400">{t('apiHistory')}</div>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono">
+              <div className="text-blue-600 dark:text-blue-400 font-semibold mb-1">GET /api/favorites</div>
+              <div className="text-gray-600 dark:text-gray-400">{t('apiFavorites')}</div>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono">
+              <div className="text-blue-600 dark:text-blue-400 font-semibold mb-1">POST /api/batch/upload</div>
+              <div className="text-gray-600 dark:text-gray-400">{t('apiBatchUpload')}</div>
+            </div>
+            <div className="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded p-3 font-mono">
+              <div className="text-blue-600 dark:text-blue-400 font-semibold mb-1">GET /api/batch/jobs</div>
+              <div className="text-gray-600 dark:text-gray-400">{t('apiBatchJobs')}</div>
             </div>
           </div>
         </section>

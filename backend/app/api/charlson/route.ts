@@ -19,8 +19,8 @@ export async function GET(request: NextRequest) {
       );
     }
 
-    // Remove dots from ICD codes (stored without dots in DB)
-    const cleanCode = code.trim().toUpperCase().replace(/\./g, '');
+    // Clean the code but keep dots (stored with dots in DB)
+    const cleanCode = code.trim().toUpperCase();
 
     if (system === 'icd10') {
       // Direct query for ICD-10 Charlson
@@ -42,9 +42,9 @@ export async function GET(request: NextRequest) {
 
         if (prefixResults.length === 0) {
           return NextResponse.json(
-            { 
+            {
               error: 'No Charlson score found for this ICD-10 code',
-              code: cleanCode 
+              code: cleanCode
             },
             { status: 404 }
           );
@@ -82,34 +82,51 @@ export async function GET(request: NextRequest) {
 
     } else if (system === 'icd9') {
       // Direct query for ICD-9 Charlson
-      const results = await sql`
+      // Try exact match first (as provided)
+      let results = await sql`
         SELECT code, condition, score
         FROM charlson_icd9
         WHERE code = ${cleanCode}
       `;
 
+      // If not found, try without dots (if input had dots) or with dots (if input didn't)
+      if (results.length === 0) {
+        const cleanCodeNoDots = cleanCode.replace(/\./g, '');
+
+        // Try finding it by stripping dots from DB column too, or just checking the alternate format
+        // Since we don't know exactly how it's stored for every code, we check both
+        results = await sql`
+          SELECT code, condition, score
+          FROM charlson_icd9
+          WHERE replace(code, '.', '') = ${cleanCodeNoDots}
+        `;
+      }
+
       if (results.length === 0) {
         // Try prefix match for family codes
+        // For prefix matching, we should probably use the no-dot version for comparison
+        const cleanCodeNoDots = cleanCode.replace(/\./g, '');
+
         const prefixResults = await sql`
           SELECT code, condition, score
           FROM charlson_icd9
-          WHERE ${cleanCode} LIKE code || '%'
+          WHERE ${cleanCodeNoDots} LIKE replace(code, '.', '') || '%'
           ORDER BY LENGTH(code) DESC
           LIMIT 1
         `;
 
         if (prefixResults.length === 0) {
           return NextResponse.json(
-            { 
+            {
               error: 'No Charlson score found for this ICD-9 code',
-              code: cleanCode 
+              code: cleanCode
             },
             { status: 404 }
           );
         }
 
         return NextResponse.json({
-          code: cleanCode,
+          code: prefixResults[0].code.includes('.') ? prefixResults[0].code : formatICD9(prefixResults[0].code),
           system: 'ICD-9-CM',
           condition: prefixResults[0].condition,
           score: prefixResults[0].score,
@@ -119,13 +136,12 @@ export async function GET(request: NextRequest) {
       }
 
       return NextResponse.json({
-        code: cleanCode,
+        code: results[0].code.includes('.') ? results[0].code : formatICD9(results[0].code),
         system: 'ICD-9-CM',
         condition: results[0].condition,
         score: results[0].score,
         matchType: 'exact'
       });
-
     } else {
       return NextResponse.json(
         { error: 'Invalid system parameter. Use icd10 or icd9' },
@@ -140,4 +156,19 @@ export async function GET(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+function formatICD9(code: string): string {
+  if (code.includes('.')) return code;
+
+  // Handle E-codes (E + 3 digits + optional digit)
+  if (code.startsWith('E')) {
+    if (code.length > 4) {
+      return `${code.slice(0, 4)}.${code.slice(4)}`;
+    }
+    return code;
+  }
+
+  if (code.length <= 3) return code;
+  return `${code.slice(0, 3)}.${code.slice(3)}`;
 }

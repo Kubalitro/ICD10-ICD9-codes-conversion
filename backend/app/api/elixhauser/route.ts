@@ -114,6 +114,15 @@ export async function GET(request: NextRequest) {
 
 function formatICD9(code: string): string {
   if (code.includes('.')) return code;
+
+  // Handle E-codes (E + 3 digits + optional digit)
+  if (code.startsWith('E')) {
+    if (code.length > 4) {
+      return `${code.slice(0, 4)}.${code.slice(4)}`;
+    }
+    return code;
+  }
+
   if (code.length <= 3) return code;
   return `${code.slice(0, 3)}.${code.slice(3)}`;
 }

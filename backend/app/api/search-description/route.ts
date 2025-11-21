@@ -10,16 +10,16 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
     const query = searchParams.get('query')
-    
+
     if (!query || query.trim().length < 3) {
       return NextResponse.json(
         { error: 'Query must be at least 3 characters' },
         { status: 400 }
       )
     }
-    
+
     const searchTerms = query.trim().toLowerCase().split(/\s+/)
-    
+
     // Search in ICD-10-CM descriptions
     // Using word boundary regex for proper matching (not substring)
     // This prevents matching "MI" in "miosis" or "anosmia"
@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
       ORDER BY LENGTH(description)
       LIMIT 20
     `
-    
+
     // Note: ICD-9 table structure might be different
     // Adjust if there's no description column
     let icd9Results: any[] = []
@@ -44,14 +44,14 @@ export async function GET(request: NextRequest) {
       `
     } catch (e) {
       // ICD-9 might not have descriptions, skip errors
-      console.log('ICD-9 search skipped:', e)
+
     }
-    
+
     // Combine results and calculate relevance
     const allResults = [...icd10Results, ...icd9Results].map(row => {
       const desc = (row.description || '').toLowerCase()
       let relevance = 0
-      
+
       // Exact phrase match
       if (desc.includes(query.toLowerCase())) {
         relevance = 1.0
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
         const matchCount = searchTerms.filter(term => desc.includes(term)).length
         relevance = matchCount / searchTerms.length
       }
-      
+
       return {
         code: row.code,
         system: icd10Results.includes(row) ? 'ICD-10-CM' : 'ICD-9-CM',
@@ -68,7 +68,7 @@ export async function GET(request: NextRequest) {
         relevance
       }
     })
-    
+
     // Sort by relevance (highest first), then by description length
     allResults.sort((a, b) => {
       if (b.relevance !== a.relevance) {
@@ -76,16 +76,16 @@ export async function GET(request: NextRequest) {
       }
       return a.description.length - b.description.length
     })
-    
+
     // Limit to top 15 results
     const topResults = allResults.slice(0, 15)
-    
+
     return NextResponse.json({
       query,
       count: topResults.length,
       results: topResults
     })
-    
+
   } catch (error) {
     console.error('Description search error:', error)
     return NextResponse.json(

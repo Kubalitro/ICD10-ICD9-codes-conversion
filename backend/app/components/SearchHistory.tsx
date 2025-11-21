@@ -1,5 +1,7 @@
 'use client'
 
+import { useState, useEffect } from 'react'
+
 import { useLanguage } from '../context/LanguageContext'
 import { SearchHistory as SearchHistoryType } from '../types'
 import { Clock, Trash2 } from 'lucide-react' // Assuming these icons are from lucide-react
@@ -13,7 +15,13 @@ interface SearchHistoryProps {
 export default function SearchHistory({ history, onSelect, onClear }: SearchHistoryProps) {
   const { t } = useLanguage()
 
-  if (history.length === 0) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted || history.length === 0) {
     return null
   }
 
