@@ -157,6 +157,43 @@ export default function BatchResultsTable({ results, onExport }: BatchResultsTab
                                     <div className="font-mono text-gray-900 font-medium">
                                         {result.conversions.join(', ')}
                                     </div>
+
+                                    {/* Comorbidity Scores */}
+                                    {result.scores && (
+                                        <div className="mt-3 pt-3 border-t border-green-200 space-y-2">
+                                            {/* Charlson Score */}
+                                            {result.scores.charlson && (
+                                                <div className="text-sm">
+                                                    <span className="font-semibold text-gray-700">Charlson:</span>
+                                                    <span className="ml-2 text-gray-900">
+                                                        {result.scores.charlson.condition} (Score: {result.scores.charlson.score})
+                                                    </span>
+                                                </div>
+                                            )}
+
+                                            {/* Elixhauser Categories */}
+                                            {result.scores.elixhauser && result.scores.elixhauser.categories.length > 0 && (
+                                                <div className="text-sm">
+                                                    <span className="font-semibold text-gray-700">Elixhauser:</span>
+                                                    <span className="ml-2 text-gray-900">
+                                                        {result.scores.elixhauser.categories.slice(0, 3).join(', ')}
+                                                        {result.scores.elixhauser.categories.length > 3 &&
+                                                            ` (+${result.scores.elixhauser.categories.length - 3} more)`}
+                                                    </span>
+                                                </div>
+                                            )}
+
+                                            {/* HCC Category */}
+                                            {result.scores.hcc && (
+                                                <div className="text-sm">
+                                                    <span className="font-semibold text-gray-700">HCC:</span>
+                                                    <span className="ml-2 text-gray-900">
+                                                        Category {result.scores.hcc.category}
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
                                 </div>
                             )}
                         </div>

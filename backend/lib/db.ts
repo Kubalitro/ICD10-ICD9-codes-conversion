@@ -8,6 +8,8 @@ if (!process.env.DATABASE_URL) {
   throw new Error('DATABASE_URL environment variable is not set');
 }
 
+console.log('DB_URL in db.ts:', process.env.DATABASE_URL.replace(/:[^:@]+@/, ':***@'));
+
 // Create a connection pool for reuse
 export const sql = neon(process.env.DATABASE_URL);
 

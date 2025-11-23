@@ -243,18 +243,18 @@ export async function POST(request: NextRequest) {
     if (allIcd10Codes.size > 0) {
       for (const code of allIcd10Codes) {
         const charlsonResults = await sql`
-          SELECT code, condition, score
+          SELECT icd10_code as code, condition, score
           FROM charlson_icd10
-          WHERE code = ${code}
+          WHERE icd10_code = ${code}
         `;
 
         if (charlsonResults.length === 0) {
           // Try prefix match
           const prefixResults = await sql`
-            SELECT code, condition, score
+            SELECT icd10_code as code, condition, score
             FROM charlson_icd10
-            WHERE ${code} LIKE code || '%'
-            ORDER BY LENGTH(code) DESC
+            WHERE ${code} LIKE icd10_code || '%'
+            ORDER BY LENGTH(icd10_code) DESC
             LIMIT 1
           `;
 
@@ -286,21 +286,23 @@ export async function POST(request: NextRequest) {
     }
 
     // Check ICD-9 codes for Charlson (if not already found in ICD-10)
+    // Note: charlson_icd9 table does not exist in current schema, skipping
+    /*
     if (allIcd9Codes.size > 0) {
       for (const code of allIcd9Codes) {
         const charlsonResults = await sql`
-          SELECT code, condition, score
+          SELECT icd9_code as code, condition, score
           FROM charlson_icd9
-          WHERE code = ${code}
+          WHERE icd9_code = ${code}
         `;
 
         if (charlsonResults.length === 0) {
           // Try prefix match
           const prefixResults = await sql`
-            SELECT code, condition, score
+            SELECT icd9_code as code, condition, score
             FROM charlson_icd9
-            WHERE ${code} LIKE code || '%'
-            ORDER BY LENGTH(code) DESC
+            WHERE ${code} LIKE icd9_code || '%'
+            ORDER BY LENGTH(icd9_code) DESC
             LIMIT 1
           `;
 
@@ -330,6 +332,7 @@ export async function POST(request: NextRequest) {
         }
       }
     }
+    */
 
     // Finalize Charlson results
     result.aggregatedCharlson.conditions = Array.from(charlsonMap.values())

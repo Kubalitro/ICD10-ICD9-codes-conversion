@@ -50,6 +50,9 @@ export default function BatchPage() {
 
       const data = await response.json()
 
+      console.log('Raw API response:', data)
+      console.log('Conversions array:', data.conversions)
+
       // Transform API response to BatchResult format
       const batchResults: BatchResult[] = data.conversions.map((conv: any) => ({
         code: conv.sourceCode,
@@ -58,9 +61,16 @@ export default function BatchPage() {
         scores: conv.scores
       }))
 
+      console.log('Transformed results:', batchResults)
+      console.log('Setting results to state...')
       setResults(batchResults)
+      console.log('Results set, length:', batchResults.length)
+
+      // Force a small delay to ensure state update completes
+      await new Promise(resolve => setTimeout(resolve, 100))
     } catch (error) {
       console.error('Batch processing error:', error)
+      alert(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`)
     } finally {
       setLoading(false)
     }
