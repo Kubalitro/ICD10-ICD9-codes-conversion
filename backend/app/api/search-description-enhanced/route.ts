@@ -34,14 +34,32 @@ export async function GET(request: NextRequest) {
     const allIcd10Results: any[] = []
 
     for (const expandedQuery of expandedQueries) {
-      const searchPattern = expandedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-      const results = await sql`
+      // Split into individual terms for "AND" matching
+      // This allows "chronic kidney disease stage 3" to match "Chronic kidney disease, stage 3"
+      // (ignoring the comma and case)
+      const terms = expandedQuery.trim().split(/\s+/).filter(t => t.length > 0)
+
+      if (terms.length === 0) continue
+
+      // Build dynamic SQL query with parameters
+      // Each term gets its own parameter $1, $2, etc.
+      const conditions = terms.map((_, i) => `description ~* $${i + 1}`).join(' AND ')
+
+      const query = `
         SELECT code, description
         FROM icd10_codes
-        WHERE description ~* ${`(^|[^a-z])${searchPattern}([^a-z]|$)`}
+        WHERE ${conditions}
         ORDER BY LENGTH(description)
         LIMIT 20
       `
+
+      // Prepare parameters with regex boundaries
+      const params = terms.map(term => {
+        const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        return `(^|[^a-z])${escapedTerm}([^a-z]|$)`
+      })
+
+      const results = await sql(query, params) as any[]
       allIcd10Results.push(...results)
     }
 

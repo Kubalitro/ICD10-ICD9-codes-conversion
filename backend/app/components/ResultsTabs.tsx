@@ -52,9 +52,9 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, h
       label: 'HCC',
       badge: hcc ? hcc.category : undefined,
       tooltip: 'CMS Hierarchical Condition Categories (Risk Adjustment)',
-      hidden: !hcc // Only show if HCC data exists
+      // hidden: !hcc // Always show HCC tab as per user request
     }
-  ].filter(tab => !tab.hidden)
+  ].filter(tab => !(tab as any).hidden)
 
   return (
     <div className="card">
@@ -105,32 +105,52 @@ export default function ResultsTabs({ code, conversions, elixhauser, charlson, h
           {activeTab === 'charlson' && <CharlsonTab charlson={charlson} />}
         </div>
         <div role="tabpanel" id="panel-hcc" aria-labelledby="tab-hcc" hidden={activeTab !== 'hcc'}>
-          {activeTab === 'hcc' && hcc && (
-            <div className="space-y-6 animate-fadeIn">
-              <div className="bg-blue-50 border border-blue-100 rounded-lg p-6">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-900 mb-2">CMS-HCC Risk Adjustment</h3>
-                    <p className="text-blue-700 mb-4">
-                      This code maps to a Hierarchical Condition Category (HCC) used for risk adjustment in Medicare Advantage and other value-based payment models.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="bg-white p-4 rounded-md shadow-sm border border-blue-100">
-                        <span className="text-sm text-gray-500 block mb-1">HCC Category</span>
-                        <span className="text-2xl font-bold text-blue-600">HCC {hcc.category}</span>
-                      </div>
-                      {/* RAF Score is currently null in DB, so hide if null */}
-                      {hcc.score && (
+          {activeTab === 'hcc' && (
+            hcc ? (
+              <div className="space-y-6 animate-fadeIn">
+                <div className="bg-blue-50 border border-blue-100 rounded-lg p-6">
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h3 className="text-lg font-semibold text-blue-900 mb-2">CMS-HCC Risk Adjustment</h3>
+                      <p className="text-blue-700 mb-4">
+                        This code maps to a Hierarchical Condition Category (HCC) used for risk adjustment in Medicare Advantage and other value-based payment models.
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="bg-white p-4 rounded-md shadow-sm border border-blue-100">
-                          <span className="text-sm text-gray-500 block mb-1">RAF Score (Weight)</span>
-                          <span className="text-2xl font-bold text-blue-600">{hcc.score}</span>
+                          <span className="text-sm text-gray-500 block mb-1">HCC Category</span>
+                          <span className="text-2xl font-bold text-blue-600">HCC {hcc.category}</span>
                         </div>
-                      )}
+                        {/* RAF Score is currently null in DB, so hide if null */}
+                        {hcc.score && (
+                          <div className="bg-white p-4 rounded-md shadow-sm border border-blue-100">
+                            <span className="text-sm text-gray-500 block mb-1">RAF Score (Weight)</span>
+                            <span className="text-2xl font-bold text-blue-600">{hcc.score}</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="clinical-context bg-gray-50 dark:bg-gray-800/50 text-center py-12">
+                <svg className="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                  No HCC Mapping Found
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 max-w-md mx-auto">
+                  This code is not currently mapped to any CMS-HCC category. HCCs are used for risk adjustment in Medicare Advantage and other value-based payment models.
+                </p>
+                <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg inline-block text-left max-w-md">
+                  <p className="text-xs text-gray-700 dark:text-gray-300 font-semibold mb-2">📊 About CMS-HCC</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    The CMS Hierarchical Condition Categories (HCC) model is used to calculate risk scores for patients. Not all ICD-10 codes map to an HCC.
+                  </p>
+                </div>
+              </div>
+            )
           )}
         </div>
       </div>
