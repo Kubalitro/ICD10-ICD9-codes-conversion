@@ -1,6 +1,3 @@
-import * as dotenv from 'dotenv';
-import path from 'path';
-dotenv.config({ path: path.resolve(__dirname, '../.env.local') });
 import { sql } from '../lib/db';
 
 const NEW_CATEGORIES = [
@@ -8,7 +5,7 @@ const NEW_CATEGORIES = [
     { code: 'FLUID_ELECTRO', name: 'Fluid and electrolyte disorders', description: 'Fluid and electrolyte disorders' }
 ];
 
-const MAPPINGS = {
+const MAPPINGS: Record<string, string[]> = {
     'ARRHYTHMIA': ['I44.1-I44.3', 'I45.6', 'I45.9', 'I47.x-I49.x', 'R00.0', 'R00.1', 'R00.8', 'T82.1', 'Z45.0', 'Z95.0'],
     'FLUID_ELECTRO': ['E22.2', 'E86.x', 'E87.x'],
     'VALVE': ['A52.0', 'I05.x-I08.x', 'I09.1', 'I09.8', 'I34.x-I39.x', 'Q23.0-Q23.3', 'Z95.2', 'Z95.4'],
@@ -54,7 +51,7 @@ async function expandPattern(pattern: string): Promise<string[]> {
       SELECT code FROM icd10_codes 
       WHERE code >= ${cleanStart} AND code <= ${cleanEnd + '9999'}
     `;
-        return codes.map(c => c.code);
+        return codes.map((c: any) => c.code);
     }
 
     if (pattern.endsWith('.x') || pattern.endsWith('x')) {
@@ -63,7 +60,7 @@ async function expandPattern(pattern: string): Promise<string[]> {
       SELECT code FROM icd10_codes 
       WHERE code LIKE ${prefix + '%'}
     `;
-        return codes.map(c => c.code);
+        return codes.map((c: any) => c.code);
     }
 
     // Exact code
@@ -71,7 +68,7 @@ async function expandPattern(pattern: string): Promise<string[]> {
     SELECT code FROM icd10_codes 
     WHERE code = ${cleanPattern}
   `;
-    return codes.map(c => c.code);
+    return codes.map((c: any) => c.code);
 }
 
 async function update() {
@@ -96,7 +93,7 @@ async function update() {
         const existing = await sql`
       SELECT icd10_code FROM elixhauser_mappings WHERE category_code = ${category}
     `;
-        const existingSet = new Set(existing.map(r => r.icd10_code));
+        const existingSet = new Set(existing.map((r: any) => r.icd10_code));
 
         for (const pattern of patterns) {
             const codes = await expandPattern(pattern);

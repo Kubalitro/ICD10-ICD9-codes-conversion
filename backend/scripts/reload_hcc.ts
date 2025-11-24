@@ -1,9 +1,6 @@
-import * as dotenv from 'dotenv';
+import { sql } from '../lib/db';
 import path from 'path';
 import fs from 'fs';
-import { sql } from '../lib/db';
-
-dotenv.config({ path: path.resolve(__dirname, '../.env.local') });
 
 // Simple CSV parser that handles quoted fields
 function parseCSVLine(text: string): string[] {
@@ -26,6 +23,18 @@ function parseCSVLine(text: string): string[] {
     return result;
 }
 
+async function insertBatch(batch: any[]) {
+    for (const item of batch) {
+        await sql`
+            INSERT INTO hcc_mappings (icd10_code, description, hcc_category)
+            VALUES (${item.icd10_code}, ${item.description}, ${item.hcc_category})
+            ON CONFLICT (icd10_code) DO UPDATE SET
+                description = EXCLUDED.description,
+                hcc_category = EXCLUDED.hcc_category
+        `;
+    }
+}
+
 async function reloadHCC() {
     try {
         console.log('Reloading HCC data...');
@@ -40,6 +49,7 @@ async function reloadHCC() {
         const content = fs.readFileSync(csvPath, 'utf8');
         // Handle Windows line endings
         const lines = content.split(/\r?\n/);
+
 
         console.log(`Total lines in CSV: ${lines.length}`);
 
@@ -64,12 +74,6 @@ async function reloadHCC() {
             // Basic validation: Code should look like an ICD code (start with letter, contain numbers)
             // And we only care if it has an HCC mapping (V28 is not empty)
             if (code && /^[A-Z][0-9]/.test(code) && hccV28) {
-                // Normalize code: The CSV has "A0104" (no dot).
-                // Our DB usually expects "A0104" for storage if we want to match exact, 
-                // OR we might want to store it as is.
-                // The previous script stored it as is.
-                // E119 is in the file as E119.
-
                 batch.push({
                     icd10_code: code,
                     description: description,
@@ -77,7 +81,7 @@ async function reloadHCC() {
                 });
 
                 if (batch.length >= BATCH_SIZE) {
-                    await insertBatch(batch);
+                    await insertBatch(batch, sql);
                     count += batch.length;
                     console.log(`Loaded ${count} records...`);
                     batch = [];
@@ -86,7 +90,7 @@ async function reloadHCC() {
         }
 
         if (batch.length > 0) {
-            await insertBatch(batch);
+            await insertBatch(batch, sql);
             count += batch.length;
         }
 
@@ -94,27 +98,6 @@ async function reloadHCC() {
 
     } catch (error) {
         console.error('Error reloading HCC data:', error);
-    }
-}
-
-async function insertBatch(batch: any[]) {
-    // Construct values for bulk insert
-    // We can't use ${...} for array of objects directly with neon/postgres helper usually in this way without a helper
-    // So we'll loop or use a constructed query.
-    // For safety and simplicity with the `sql` tag, we can loop. 
-    // BUT looping 1000 times is slow.
-    // Let's try to do it in parallel or use a transaction?
-    // Or just loop. 70k records might take a while.
-    // Actually, let's just loop for now, it's robust.
-
-    for (const item of batch) {
-        await sql`
-            INSERT INTO hcc_mappings (icd10_code, description, hcc_category)
-            VALUES (${item.icd10_code}, ${item.description}, ${item.hcc_category})
-            ON CONFLICT (icd10_code) DO UPDATE SET
-                description = EXCLUDED.description,
-                hcc_category = EXCLUDED.hcc_category
-        `;
     }
 }
 
